@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SmartphonesList =({smartphone})=>{
+const SmartphonesList =({smartphone,smart})=>{
   return(
     <div>
       {smartphone.map(smartphone=>
