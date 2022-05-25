@@ -1,4 +1,5 @@
 import React from 'react'
+import SmartphonesList from "./SmartphonesList"
 
 const Smartphones=()=>{
   const smartphone =[
@@ -7,7 +8,7 @@ const Smartphones=()=>{
   ] 
   return (
     <div className="smartphones">
-
+        <SmartphonesList smartphone={smartphone}/>
     </div>
   )
 }
