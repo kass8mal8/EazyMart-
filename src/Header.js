@@ -10,13 +10,7 @@ const Header =()=>{
     document.getElementById("toggle").classList.toggle("active")
   }
   const handleCart=()=>{
-       return(
-        <div className="h-cart">
-            <div className="h-cart--">
-           
-            </div>
-        </div>
-       ) 
+       
   }
   return(
     <div>
@@ -25,12 +19,10 @@ const Header =()=>{
         <div className="top-nav" id="toggle">
           <FontAwesomeIcon icon={faClose} className="top-nav--close" onClick={handleToggle}></FontAwesomeIcon>
         <ul className="top-nav--wrapper">
-          <li>collections</li>
-          <li>men</li>
-          <li>women</li>
-          <li>about</li>
-          <li>contacts</li>
-
+          <li>smartphones</li>
+          <li>foodstuff</li>
+          <li>home accessories </li>
+          <li>about</li>      
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping} className="h-div--cart" onClick={handleCart}></FontAwesomeIcon>
