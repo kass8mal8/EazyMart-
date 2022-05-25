@@ -9,17 +9,11 @@ const Smartphones=()=>{
     {src:"https://d30skdkspqmhrr.cloudfront.net/3VEa.jpg",name:"IPhone 12",price:17000,id:4}
     
   ] 
-  const smart=[
-    {name:"Infinix zero 8",price:10200,id:1},
-    {name:"Infinix Hot 10",price:8999,id:2},
-    {name:"Huawei P40 Pro",price:11100,id:3},
-    {name:"IPhone 12",price:17000,id:4},
 
 
-  ]
   return (
     <div className="smartphones">
-        <SmartphonesList smartphone={smartphone} smart={smart} />
+        <SmartphonesList smartphone={smartphone} />
     </div>
   )
 }
