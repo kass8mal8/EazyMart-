@@ -9,7 +9,7 @@ body{
   height: 30px;
   padding:10px;
   margin:5px -10px;
-
+  border-bottom: 1px solid gray;
 }
 .h-div h3{
   font-size: 23px;
@@ -68,6 +68,10 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
+  margin: 10px -10px;
+}
+.smartphone-product h4{
+  margin-left: 25px;
 }
 /*Main page styles*/
 .container{
