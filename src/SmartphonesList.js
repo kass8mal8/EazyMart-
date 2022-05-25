@@ -5,8 +5,9 @@ const SmartphonesList =({smartphone})=>{
     <div>
       {smartphone.map(smartphone=>
         (<div className="smartphone-product">
+          <h3>Smartphones</h3>
           <img src={smartphone.src} width="170" />
-          <h5>{smartphone.name} </h5>
+          <h4>{smartphone.name} </h4>
         </div>)
         )}
     </div>
