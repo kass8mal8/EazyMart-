@@ -21,7 +21,7 @@ const Header =()=>{
   return(
     <div>
         <div className="h-div">
-        <FontAwesomeIcon icon={faBars} className="h-div--bars" onClick={handleToggle}></FontAwesomeIcon><h3>sneakers</h3>
+        <FontAwesomeIcon icon={faBars} className="h-div--bars" onClick={handleToggle}></FontAwesomeIcon><h3>EazyMart</h3>
         <div className="top-nav" id="toggle">
           <FontAwesomeIcon icon={faClose} className="top-nav--close" onClick={handleToggle}></FontAwesomeIcon>
         <ul className="top-nav--wrapper">
