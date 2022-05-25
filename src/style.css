@@ -63,12 +63,23 @@ body{
   display: none;
   height: 25px;
 }
+/*Smartphones styles*/
+.smartphone-product{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 /*Main page styles*/
 .container{
   width: 95%;
   margin:auto 10px;
   
 }
+.smartphones{
+  width: 100%;
+  
+}
+
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
     display: block;
