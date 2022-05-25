@@ -66,18 +66,18 @@ body{
 /*Smartphones styles*/
 .smartphone-product{
   width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin: 10px -10px;
+  display: inline-flex;
+  margin-left: -10px;
 }
 .smartphone-product h4{
-  margin-left: 25px;
+  margin-left: 10px;
 }
 /*Main page styles*/
 .container{
   width: 95%;
   margin:auto 10px;
-  
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .smartphones{
   width: 100%;
