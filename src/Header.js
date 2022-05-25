@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faBars,faCartShopping, faClose } from '@fortawesome/free-solid-svg-icons' 
+  import { faBars,faCartShopping, faClose, faUserCircle } from '@fortawesome/free-solid-svg-icons' 
 import "./style.css"
 
 const Header =()=>{
@@ -27,6 +27,7 @@ const Header =()=>{
         </div>
         <FontAwesomeIcon icon={faCartShopping} className="h-div--cart" onClick={handleCart}></FontAwesomeIcon>
         <img src={avatar} width="50px" alt="avatar"/>
+        <FontAwesomeIcon icon={faUserCircle}className="h-div-user"></FontAwesomeIcon>
         </div>
     </div>
   )
