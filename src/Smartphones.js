@@ -12,14 +12,19 @@ const Smartphones=()=>{
     
 
   return (
-    <div className="smartphones">
+    <div className="smartphones-container">
+      <h3>Smartphones</h3>
+      <div className="smartphones">
       <div>
-       <img src={Iphone} width="170"/>
-       <h5>IPhone 12</h5>
+       <img src={Iphone} width=""/>
+       <h5>IPhone 12  </h5>
+       <h5>ksh 17000</h5>
       </div>
       <div>
-        <img src={Huawei} width="170" />
+        <img src={Huawei} width="" />
         <h5>Huawei P40 Pro</h5>
+        <h5>ksh 16549</h5>
+      </div>
       </div>
     </div>
   )
