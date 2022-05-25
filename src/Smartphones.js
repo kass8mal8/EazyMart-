@@ -1,8 +1,11 @@
 import React from 'react'
 
 const Smartphones=()=>{
+  const smartphone =[
+    {src:""}
+  ] 
   return (
-    <div>
+    <div className="smartphones">
 
     </div>
   )
