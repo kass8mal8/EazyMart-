@@ -4,8 +4,8 @@ const SmartphonesList =({smartphone})=>{
   return(
     <div>
       {smartphone.map(smartphone=>
-        (<div>
-          <img src={smartphone.src} width="200" />
+        (<div className="smartphone-product">
+          <img src={smartphone.src} width="170" />
           <h5>{smartphone.name} </h5>
         </div>)
         )}
