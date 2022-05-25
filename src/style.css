@@ -45,7 +45,7 @@ body{
   right: 10px;
   width: 30px;
   height: 25px;
-  top: px;
+  top: 18px;
 }
 .top-nav{
   align-items: center;
@@ -63,11 +63,11 @@ body{
   display: none;
   height: 25px;
 }
-.m-div--image{
-  width:100%;
-}
-.m-div--image img{
-  width:100%;
+/*Main page styles*/
+.container{
+  width: 96%;
+  margin:auto 10px;
+  
 }
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
@@ -91,7 +91,7 @@ body{
   }
   .top-nav--close{
     display: block;
-    margin-top: 32px;
+    margin-top: 35px;
     opacity: 65%;
     margin-left:38px ;
   }

@@ -1,8 +1,9 @@
 import React from "react"
 const Main=()=>{
   return(
-    <div>
-     </div>   
+    <div className="container">
+       <p>Hello world</p>
+    </div>   
   )
 }
 export default Main
