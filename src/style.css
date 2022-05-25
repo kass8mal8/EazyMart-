@@ -64,14 +64,7 @@ body{
   height: 25px;
 }
 /*Smartphones styles*/
-.smartphone-product{
-  width: 100%;
-  display: inline-flex;
-  margin-left: -10px;
-}
-.smartphone-product h4{
-  margin-left: 10px;
-}
+
 /*Main page styles*/
 .container{
   width: 95%;
@@ -81,7 +74,10 @@ body{
 }
 .smartphones{
   width: 100%;
-  
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-left:-20px;
 }
 
 @media screen and (max-width:500px){
