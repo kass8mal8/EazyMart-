@@ -132,6 +132,10 @@ h3{
 .homestuff p{
   color: gray;
 }
+.homestuff.hidden{
+   display: none;
+}
+
 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{

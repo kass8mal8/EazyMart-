@@ -10,12 +10,25 @@ const HomeAccessories=()=>{
   const  blacklady="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/44/055623/1.jpg?3283"
 
   const sportshoe="https://ke.jumia.is/unsafe/fit-in/0x0/filters:fill(white)/product/97/5024/1.jpg?4411"
+
+  const handleClose=()=>{
+    document.querySelector('.homestuff').classList.toggle('hidden')
+    document.querySelector('.product-page').classList.toggle('visible')
+    
+  }
+  const handleClick=(e)=>{
+    document.querySelector('.homestuff').classList.toggle('hidden')
+    document.querySelector('.product-page img').src=e
+    document.querySelector('.product-page').classList.toggle('visible')
+    
+  }
+
   return (
     <div className="homestuff-wrapper">
       <h3>Home accessories and footwear</h3>
       <div className="homestuff">
         <div>
-          <img src={blacksneaker} width=""/>
+          <img src={blacksneaker} width="" onClick={()=>handleClick(blacksneaker)} />
           <p>Black fashion sneakers <br/>ksh 999</p>
         </div>
         <div>
@@ -31,7 +44,8 @@ const HomeAccessories=()=>{
           <p>Sports fit <br/>ksh 599</p>
         </div>
         <div className="product-page">
-          <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faClose} onClick={handleClose}></FontAwesomeIcon>
+          <img src={whitesneaker} />
         </div>
       </div> 
      
