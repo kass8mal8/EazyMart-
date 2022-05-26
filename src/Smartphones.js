@@ -5,10 +5,10 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 const Smartphones=()=>{
     
-    const Iphone ="https://d30skdkspqmhrr.cloudfront.net/3VEa.jpg"
-    const Huawei="https://acabuy.com/wp-content/uploads/2020/08/Huawei-P40-Pro.jpg "
+    const Iphone ="https://www.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_12_blue-full-product-front-600.png"
+    const Huawei="https://androidgreek.com/wp-content/uploads/2021/05/Techno.png"
     
-    const Hot10="https://www.pakmobizone.pk/wp-content/uploads/2020/09/infinix-Hot-10-Ocean-Wave-5.jpg"
+    const Hot10="https://www.pakmobizone.pk/wp-content/uploads/2020/03/TECNO-Camon-15-Pro-33.png"
   
     const zero8="https://www.pakmobizone.pk/wp-content/uploads/2020/11/Infinix-Zero-8-Green-Diamond-1.jpg"
 
@@ -36,12 +36,12 @@ const Smartphones=()=>{
       </div>
       <div>
         <img src={Huawei} width="200" onClick={()=>handleClick(Huawei) } />
-        <p>Huawei P40 Pro
+        <p>Camon 17
         <br/>ksh 16549</p>
       </div>
       <div>
         <img src={Hot10} onClick={()=>handleClick(Hot10)} />
-        <p>Infinix Hot 10<br/>ksh 8999</p>
+      <p>Camon 15 pro<br/>ksh 8999</p>
       </div>
       <div>
          <img src={zero8} onClick={() =>handleClick(zero8)} />
