@@ -30,18 +30,22 @@ const HomeAccessories=()=>{
         <div>
           <img src={blacksneaker} width="" onClick={()=>handleClick(blacksneaker)} />
           <p>Black fashion sneakers <br/>ksh 999</p>
+          <button>add to cart</button>
         </div>
         <div>
           <img src={whitesneaker} />
           <p>White high profile...<br/>ksh 1199</p>
+          <button>add to cart </button>
         </div>
         <div>
           <img src={blacklady} />
           <p>Low heels ladies... <br/>ksh 525</p>
+          <button>add to cart </button>
         </div>
         <div>
           <img src={sportshoe} alt=""/>
           <p>Sports fit <br/>ksh 599</p>
+          <button>add to cart </button>
         </div>
         <div className="product-page">
           <FontAwesomeIcon icon={faClose} onClick={handleClose}></FontAwesomeIcon>

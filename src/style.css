@@ -93,10 +93,10 @@ a{
   width: 100%;
   height: 70%;
   border-radius: 5px;
-  background-color: hsl(25, 100%, 75%);
+  background-color: whitesmoke;
   padding:7px 2px;
 }
-.smartphones button{
+.smartphones button, .homestuff button{
   width: 100%;
   background:hsl(25, 100%, 60%);
   border-radius: 2px;
