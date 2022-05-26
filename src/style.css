@@ -78,6 +78,9 @@ body{
   justify-content: space-between;
    column-gap: 10px;
 } 
+.smartphones p{
+  color:gray;
+}
 .smartphones.hidden{
   display: none;
 }
@@ -124,9 +127,10 @@ h3{
 .homestuff img{
   width: 100%;
   border-radius: 5px;
+  border:3px solid whitesmoke;
 }
-.homestuff h3{
-  margin-top: 40px;
+.homestuff p{
+  color: gray;
 }
 
 @media screen and (max-width:500px){

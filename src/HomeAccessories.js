@@ -5,7 +5,7 @@ const HomeAccessories=()=>{
 
   const whitesneaker="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/568724/1.jpg?6621"
 
-  const  image="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/44/055623/1.jpg?3283"
+  const  blacklady="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/44/055623/1.jpg?3283"
   return (
     <div className="homestuff-wrapper">
       <h3>Home accessories and footwear</h3>
@@ -19,8 +19,8 @@ const HomeAccessories=()=>{
           <p>White high profile...<br/>ksh 1199</p>
         </div>
         <div>
-          <img src={image} />
-          <p>Black Lady shoes <br/>ksh 525</p>
+          <img src={blacklady} />
+          <p>Low heels ladies... <br/>ksh 525</p>
         </div>
       </div>  
     </div>
