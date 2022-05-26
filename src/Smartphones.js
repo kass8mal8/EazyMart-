@@ -13,11 +13,11 @@ const Smartphones=()=>{
   
     const zero8="https://www.pakmobizone.pk/wp-content/uploads/2020/11/Infinix-Zero-8-Green-Diamond-1.jpg"
 
-   const phones=document.querySelectorAll(".smartphones img")
-   phones.forEach(phone=>{
-      phone.onclick=()=>{
-        alert("Hello")
-      }
+   document.querySelectorAll(".smartphones img").forEach(phone=>{
+     phone.addEventListener('click', ()=>{
+       document.querySelector("product-page").style.display="block"
+       alert("hello")
+     })
    })
   
   const image="https://www.pakmobizone.pk/wp-content/uploads/2020/09/infinix-Hot-10-Ocean-Wave-5.jpg"
@@ -26,7 +26,7 @@ const Smartphones=()=>{
     <div className="smartphones-container">
       <h3>Smartphones</h3>
       <div className="smartphones">
-      <div>
+      <div className="smartphone-image">
        <img src={Iphone} width=""/> 
        <h5>IPhone 12 
        <br/>ksh 17000</h5>
