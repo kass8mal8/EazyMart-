@@ -1,13 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-  import { faClose } from '@fortawesome/free-solid-svg-icons' 
+import { faClose } from '@fortawesome/free-solid-svg-icons' 
 
 
 const Smartphones=()=>{
-  const smartphone =[
     
-  ] 
-
     const Iphone ="https://d30skdkspqmhrr.cloudfront.net/3VEa.jpg"
     const Huawei="https://acabuy.com/wp-content/uploads/2020/08/Huawei-P40-Pro.jpg "
     
@@ -19,6 +16,11 @@ const Smartphones=()=>{
       document.querySelector('.product-page').classList.toggle('visible')
       document.querySelector('.product-page img').src=e
      document.querySelector('.smartphones ').classList.toggle('hidden')
+  }
+  const handleClose=()=>{
+    document.querySelector('.smartphones ').classList.toggle('hidden')
+    document.querySelector('.product-page').classList.toggle('visible')
+     
   }
   const image="https://www.pakmobizone.pk/wp-content/uploads/2020/09/infinix-Hot-10-Ocean-Wave-5.jpg"
     
@@ -48,7 +50,7 @@ const Smartphones=()=>{
       </div>
 
         <div className="product-page">
-          <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faClose} onClick={handleClose}></FontAwesomeIcon>
           <img src={image} />
         </div>
     </div>
