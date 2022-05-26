@@ -5,12 +5,12 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 const Smartphones=()=>{
     
-    const Iphone ="https://www.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_12_blue-full-product-front-600.png"
+    const Iphone ="https://1.bp.blogspot.com/-XWmUPb6yArc/X92DrUq2-gI/AAAAAAAAI2E/AeODkTL8utkua5_lJn0JdjxmAKc7e-rAwCLcBGAsYHQ/s1788/Iphone%2B12.png"
     const Huawei="https://androidgreek.com/wp-content/uploads/2021/05/Techno.png"
     
     const Hot10="https://www.pakmobizone.pk/wp-content/uploads/2020/03/TECNO-Camon-15-Pro-33.png"
   
-    const zero8="https://www.pakmobizone.pk/wp-content/uploads/2020/11/Infinix-Zero-8-Green-Diamond-1.jpg"
+    const zero8="https://www.telkomsel.com/sites/default/files/box_media/left/desktop/samsung_S21%2B_device.png"
 
   const handleClick=(e)=>{
       document.querySelector('.product-page').classList.toggle('visible')
@@ -48,7 +48,7 @@ const Smartphones=()=>{
       </div>
       <div>
          <img src={zero8} onClick={() =>handleClick(zero8)} />
-        <p>Infinix 08 <br/>ksh 9499</p>
+        <p>Samsung S21<br/>ksh 9499</p>
        <button>add to cart</button>
       </div>
       </div>
