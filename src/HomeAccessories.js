@@ -25,7 +25,7 @@ const HomeAccessories=()=>{
 
   return (
     <div className="homestuff-wrapper">
-      <h3>Home accessories and footwear</h3>
+      <h3>Footwear</h3>
       <div className="homestuff">
         <div>
           <img src={blacksneaker} width="" onClick={()=>handleClick(blacksneaker)} />
