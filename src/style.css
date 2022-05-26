@@ -76,7 +76,7 @@ body{
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: space-between;
-  gap: 10px;
+   column-gap: 10px;
 }
 .smartphones.hidden{
   display: none;
@@ -84,7 +84,7 @@ body{
 .smartphones img{
   width: 100%;
   height: 70%;
-  border: 1px solid gray;
+  border: 3px solid whitesmoke;
   margin-top: 40px;
   border-radius: 5px;
 }
@@ -117,9 +117,13 @@ h3{
 /*home accessories styles*/
 .homestuff{
    width: 100%;
+   display: grid;
+   grid-template-columns:50% 50% ;
+   gap:10px;
 }
 .homestuff img{
   width: 100%;
+  border-radius: 5px;
 }
 
 @media screen and (max-width:500px){
