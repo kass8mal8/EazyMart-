@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Smartphones=()=>{
   const smartphone =[
@@ -18,7 +19,7 @@ const Smartphones=()=>{
       <h3>Smartphones</h3>
       <div className="smartphones">
       <div>
-       <img src={Iphone} width=""/>
+       <Link to="/product"><img src={Iphone} width=""/> </Link>
        <h5>IPhone 12 
        <br/>ksh 17000</h5>
       </div>
