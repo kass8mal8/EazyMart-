@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faBars,faCartShopping, faClose, faUserCircle } from '@fortawesome/free-solid-svg-icons' 
 import "./style.css"
+import {Link}  from 'react-router-dom'
 
 const Header =()=>{
   const avatar="https://aakashhelloworld.github.io/css2/images/avatar-shanai.png"
@@ -19,6 +20,7 @@ const Header =()=>{
         <div className="top-nav" id="toggle">
           <FontAwesomeIcon icon={faClose} className="top-nav--close" onClick={handleToggle}></FontAwesomeIcon>
         <ul className="top-nav--wrapper">
+          <li><Link to="/" >Home</Link></li>
           <li>smartphones</li>
           <li>foodstuff</li>
           <li>home accessories </li>

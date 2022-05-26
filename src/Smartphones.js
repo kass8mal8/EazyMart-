@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+  import { faClose } from '@fortawesome/free-solid-svg-icons' 
+
 
 const Smartphones=()=>{
   const smartphone =[
@@ -13,9 +16,9 @@ const Smartphones=()=>{
     const zero8="https://www.pakmobizone.pk/wp-content/uploads/2020/11/Infinix-Zero-8-Green-Diamond-1.jpg"
 
   const handleClick=(e)=>{
-      document.querySelector('.product-page').style.display='block'
+      document.querySelector('.product-page').classList.toggle('visible')
       document.querySelector('.product-page img').src=e
-
+     document.querySelector('.smartphones ').classList.toggle('hidden')
   }
   const image="https://www.pakmobizone.pk/wp-content/uploads/2020/09/infinix-Hot-10-Ocean-Wave-5.jpg"
     
@@ -45,6 +48,7 @@ const Smartphones=()=>{
       </div>
 
         <div className="product-page">
+          <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
           <img src={image} />
         </div>
     </div>

@@ -78,6 +78,9 @@ body{
   justify-content: space-between;
   gap: 10px;
 }
+.smartphones.hidden{
+  display: none;
+}
 .smartphones img{
   width: 100%;
   height: 70%;
@@ -95,6 +98,9 @@ h5{
 .product-page{
   width: 100%;
   display: none;
+}
+.product-page.visible{
+  display: block;
 }
 .product-page img{
   width: 100%;
