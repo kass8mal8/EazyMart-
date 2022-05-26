@@ -13,7 +13,7 @@ const Smartphones=()=>{
   
     const zero8="https://www.pakmobizone.pk/wp-content/uploads/2020/11/Infinix-Zero-8-Green-Diamond-1.jpg"
 
-   document.querySelectorAll(".smartphones img").forEach(phone=>{
+   document.querySelectorAll(".smartphones div img").forEach(phone=>{
      phone.addEventListener('click', ()=>{
        document.querySelector("product-page").style.display="block"
        alert("hello")
