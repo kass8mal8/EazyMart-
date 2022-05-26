@@ -168,11 +168,18 @@ h3{
   background: greenyellow;
 }
 .slider{
+
   width: 100%;
+  margin-top: 5px;
+  padding:10px;
+  margin-left: -5px;
 }
 .slider img{
   width: 100%;
-  he
+  
+  opacity: 90%;
+  background: lightgray;
+  border-radius: 3px;
 }
 
 @media screen and (max-width:500px){
