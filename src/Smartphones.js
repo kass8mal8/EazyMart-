@@ -13,6 +13,9 @@ const Smartphones=()=>{
   
     const zero8="https://www.pakmobizone.pk/wp-content/uploads/2020/11/Infinix-Zero-8-Green-Diamond-1.jpg"
 
+   const phones=document.getElementsByClassName("smartphone")
+   phones.forEach(phone=()=>{})
+   })
 
   return (
     <div className="smartphones-container">
