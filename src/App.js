@@ -11,7 +11,7 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main/>} />
-        
+          
         </Routes>
       </BrowserRouter>
     </div>

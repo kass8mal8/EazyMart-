@@ -31,21 +31,21 @@ const Smartphones=()=>{
       <div className="smartphones">
       <div >
        <img src={Iphone} width="" onClick={() =>handleClick(Iphone)} /> 
-       <h5>IPhone 12 
-       <br/>ksh 17000</h5>
+       <p>Iphone 12 
+       <br/>ksh 17000</p>
       </div>
       <div>
         <img src={Huawei} width="200" onClick={()=>handleClick(Huawei) } />
-        <h5>Huawei P40 Pro
-        <br/>ksh 16549</h5>
+        <p>Huawei P40 Pro
+        <br/>ksh 16549</p>
       </div>
       <div>
         <img src={Hot10} onClick={()=>handleClick(Hot10)} />
-        <h5>Infinix Hot 10<br/>ksh 8999</h5>
+        <p>Infinix Hot 10<br/>ksh 8999</p>
       </div>
       <div>
          <img src={zero8} onClick={() =>handleClick(zero8)} />
-        <h5>Infinix 08 <br/>ksh 9499</h5>
+        <p>Infinix 08 <br/>ksh 9499</p>
       </div>
       </div>
 

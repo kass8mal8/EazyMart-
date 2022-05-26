@@ -14,7 +14,7 @@ body{
 .h-div h3{
   font-size: 23px;
   font-weight: 700;
-  margin-top: -6px;
+  margin-top: 0px;
   margin-left: 10px;
 }
 .h-div--cart{
@@ -90,18 +90,19 @@ body{
 }
 h3{
   text-align: center;
+  line-height: 17px;
 }
-h5{
-  
-  opacity: 80%;
-}
+
 .product-page{
   width: 100%;
-  display: none;
+  display:none;
+  opacity: 0;
   position: relative;
 }
 .product-page.visible{
-  display: block;
+  display: blo;
+  opacity: 1;
+  transition-duration: 1s ease-in;
 }
 .product-page img{
   width: 100%;
@@ -110,7 +111,7 @@ h5{
   height: 30px;
   position: absolute;
   right: 0px;
-  top: -0px;
+  top: -40px;
   opacity: 70%;
 }
 
