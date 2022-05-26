@@ -156,7 +156,17 @@ h3{
 .homestuff h3{
   margin-top: 40px;
 }
-
+/*home page*/
+.home-container{
+  width: 95%;
+  margin: auto 10px;
+}
+.announcement {
+  width: 100%;
+  background: greenyellow;
+  position: absolute;
+  top: 62px;
+}
 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
