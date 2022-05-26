@@ -3,7 +3,7 @@ import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
 
 
-const Main=()=>{
+const Mainproducts=()=>{
   return(
     <div className="container">
        <Smartphones />
@@ -11,4 +11,4 @@ const Main=()=>{
     </div>   
   )
 }
-export default Main
+export default Mainproducts

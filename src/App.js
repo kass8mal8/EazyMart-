@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Header from './Header'
-import Main from "./Main"
+import Mainproducts from "./Mainproducts"
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Main/>} />
+          <Route path="/products" element={<Mainproducts/>} />
           
         </Routes>
       </BrowserRouter>
