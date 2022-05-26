@@ -1,4 +1,6 @@
 import React from 'react'
+import { faClose } from '@fortawesome/free-solid-svg-icons' 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const HomeAccessories=()=>{
   const blacksneaker="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/59/246303/1.jpg?7199"
@@ -27,6 +29,9 @@ const HomeAccessories=()=>{
         <div>
           <img src={sportshoe} alt=""/>
           <p>Sports fit <br/>ksh 599</p>
+        </div>
+        <div className="product-page">
+          <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
         </div>
       </div> 
      
