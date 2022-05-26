@@ -1,10 +1,10 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 const ProductPage=()=>{
+  const image="https://www.pakmobizone.pk/wp-content/uploads/2020/09/infinix-Hot-10-Ocean-Wave-5.jpg"
   return(
-    <div>
-      Hello
+    <div className="product-page">
+       <img src={image} width=""/>
     </div>
   )
 }

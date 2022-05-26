@@ -19,21 +19,21 @@ const Smartphones=()=>{
       <h3>Smartphones</h3>
       <div className="smartphones">
       <div>
-       <Link to="/product" >home</Link><img src={Iphone} width=""/> 
+       <Link to="/product" ><img src={Iphone} width=""/> </Link>
        <h5>IPhone 12 
        <br/>ksh 17000</h5>
       </div>
       <div>
-        <img src={Huawei} width="200" />
+        <Link to="/product"><img src={Huawei} width="200" /></Link>
         <h5>Huawei P40 Pro
         <br/>ksh 16549</h5>
       </div>
       <div>
-        <img src={Hot10} alt=""/>
+        <Link to="/product"><img src={Hot10} alt=""/></Link>
         <h5>Infinix Hot 10<br/>ksh 8999</h5>
       </div>
       <div>
-        <img src={zero8}/>
+        <Link to="/product"><img src={zero8}/></Link>
         <h5>Infinix 08 <br/>ksh 9499</h5>
       </div>
       </div>
