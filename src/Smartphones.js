@@ -50,7 +50,7 @@ const Smartphones=()=>{
       </div>
 
         <div className="product-page">
-          <FontAwesomeIcon icon={faClose} onClick={handleClose}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faClose} onClick={handleClose} id="product-close"></FontAwesomeIcon>
           <img src={image} />
         </div>
     </div>

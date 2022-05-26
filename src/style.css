@@ -98,6 +98,7 @@ h5{
 .product-page{
   width: 100%;
   display: none;
+  position: relative;
 }
 .product-page.visible{
   display: block;
@@ -105,6 +106,14 @@ h5{
 .product-page img{
   width: 100%;
 }
+#product-close{
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  top: -0px;
+  opacity: 70%;
+}
+
 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
