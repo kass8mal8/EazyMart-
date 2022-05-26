@@ -33,19 +33,23 @@ const Smartphones=()=>{
        <img src={Iphone} width="" onClick={() =>handleClick(Iphone)} /> 
        <p>Iphone 12 
        <br/>ksh 17000</p>
+       <button>add to cart</button>
       </div>
       <div>
         <img src={Huawei} width="200" onClick={()=>handleClick(Huawei) } />
         <p>Camon 17
         <br/>ksh 16549</p>
+        <button>add to cart</button>
       </div>
       <div>
         <img src={Hot10} onClick={()=>handleClick(Hot10)} />
       <p>Camon 15 pro<br/>ksh 8999</p>
+      <button>add to cart</button>
       </div>
       <div>
          <img src={zero8} onClick={() =>handleClick(zero8)} />
         <p>Infinix 08 <br/>ksh 9499</p>
+       <button>add to cart</button>
       </div>
       </div>
 
