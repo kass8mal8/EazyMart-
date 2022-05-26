@@ -19,7 +19,7 @@ const Smartphones=()=>{
       <h3>Smartphones</h3>
       <div className="smartphones">
       <div>
-       <Link to="/product"><img src={Iphone} width=""/> </Link>
+       <Link to="/product" >home</Link><img src={Iphone} width=""/> 
        <h5>IPhone 12 
        <br/>ksh 17000</h5>
       </div>
