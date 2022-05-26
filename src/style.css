@@ -100,7 +100,7 @@ h3{
   position: relative;
 }
 .product-page.visible{
-  display: blo;
+  display: block;
   opacity: 1;
   transition-duration: 1s ease-in;
 }
@@ -114,7 +114,13 @@ h3{
   top: -40px;
   opacity: 70%;
 }
-
+/*home accessories styles*/
+.homestuff{
+   width: 100%;
+}
+.homestuff img{
+  width: 100%;
+}
 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
