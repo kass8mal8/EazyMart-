@@ -15,8 +15,8 @@ const Smartphones=()=>{
 
    const phones=document.querySelectorAll(".smartphones img")
    phones.forEach(phone=>{
-      phone.onClick=()=>{
-        document.querySelector()
+      phone.onclick=()=>{
+        alert("Hello")
       }
    })
   
@@ -27,27 +27,28 @@ const Smartphones=()=>{
       <h3>Smartphones</h3>
       <div className="smartphones">
       <div>
-       <Link to="/product" ><img src={Iphone} width=""/> </Link>
+       <img src={Iphone} width=""/> 
        <h5>IPhone 12 
        <br/>ksh 17000</h5>
       </div>
       <div>
-        <Link to="/product"><img src={Huawei} width="200" /></Link>
+        <img src={Huawei} width="200" />
         <h5>Huawei P40 Pro
         <br/>ksh 16549</h5>
       </div>
       <div>
-        <Link to="/product"><img src={Hot10} alt=""/></Link>
+        <img src={Hot10} alt=""/>
         <h5>Infinix Hot 10<br/>ksh 8999</h5>
       </div>
       <div>
-        <Link to="/product"><img src={zero8}/></Link>
+         <img src={zero8}/>
         <h5>Infinix 08 <br/>ksh 9499</h5>
       </div>
+      </div>
+
         <div className="product-page">
           <img src={image} />
         </div>
-      </div>
     </div>
   )
 }

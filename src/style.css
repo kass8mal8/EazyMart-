@@ -94,6 +94,7 @@ h5{
 }
 .product-page{
   width: 100%;
+  display: none;
 }
 .product-page img{
   width: 100%;
