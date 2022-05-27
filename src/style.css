@@ -13,7 +13,6 @@ a{
   height: 30px;
   padding:10px;
   margin:5px -10px;
-  border-bottom: 1px solid #ccc;
 }
 .h-div h3{
   font-size: 23px;
@@ -77,6 +76,12 @@ a{
   height: 10px;
   justify-content: center;
   align-items: center;
+}
+.container section{
+  background:hsl(25, 100%, 75%);
+  width: 103%;
+  margin-left: -18px;
+  padding:4px 2px;
 }
 .smartphones{
   width: 100%;
