@@ -38,18 +38,10 @@ a{
 .h-div img{
   position: absolute;
   right: 10px;
-  top:14px;
-  height: 30px;
-  width: 30px;
-  display: none;
-}
-.h-div-user{
-  opacity: 60%;
-  position: absolute;
-  right: 15px;
-  width: 30px;
+  top:18px;
   height: 25px;
-  top: 18px;
+  width: 25px;
+  opacity: 70%;
 }
 .top-nav{
   align-items: center;
@@ -170,17 +162,18 @@ h3{
 .intro-paragraph {
   background: whitesmoke;
   padding: 5px;
+  border-radius: 5px;
 }
 .slider{
   width: 100%;
   margin-top: 5px;
   padding:10px;
-  margin-left: -5px;
+  margin-left: -9px;
 }
 .slider img{
   width: 100%;
   background: whitesmoke;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width:500px){
