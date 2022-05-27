@@ -165,10 +165,13 @@ h3{
   width: 100%;
   padding:1px 20px;
   margin: -6px -17px;
-  background: greenyellow;
+  background: lightskyblue;
+}
+.intro-paragraph {
+  background: whitesmoke;
+  padding: 5px;
 }
 .slider{
-
   width: 100%;
   margin-top: 5px;
   padding:10px;
@@ -176,9 +179,7 @@ h3{
 }
 .slider img{
   width: 100%;
-  
-  opacity: 90%;
-  background: lightgray;
+  background: whitesmoke;
   border-radius: 3px;
 }
 

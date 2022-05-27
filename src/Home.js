@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Home=()=>{
-  const image="https://clipground.com/images/clothes-png-for-picsart-5.png"
+  const image="https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png"
   return(
     <div className="home-container">
        <div class="announcement">
@@ -10,7 +10,7 @@ const Home=()=>{
        <div className="slider">
           <img src={image} />
        </div > 
-       <div>
+       <div className="intro-paragraph">
        <p>We have a variety of products on sale for every person,at EazyMart prices are affordable so that nothing ruins your preferences.<br/> Glad to have you shop with us. 
        </p>
          
