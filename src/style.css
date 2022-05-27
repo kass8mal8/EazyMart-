@@ -65,7 +65,18 @@ a{
 .container{
   width: 95%;
   margin:auto 10px;
-
+}
+.container small{
+  background: hsl(25, 100%, 60%);
+  padding: 3px;
+  font-size:x-small;
+  border-radius: 20px;
+  position: absolute;
+  top: 18px;right: 47px;
+  width: 8px;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .smartphones{
   width: 100%;
