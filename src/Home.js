@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Home=()=>{
   const image1="https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png"
@@ -24,7 +25,7 @@ const Home=()=>{
        </p>     
        </div>
        <div className="shopping-btn">
-         <button>start shopping</button>
+         <button><Link to="/products" >start shopping</Link></button>
        </div>
     </div>
   )
