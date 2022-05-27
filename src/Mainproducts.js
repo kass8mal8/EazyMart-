@@ -1,12 +1,14 @@
-import React from "react"
+import React, {useState} from "react"
 import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
 
 
 const Mainproducts=()=>{
+  const [count, setCount]=useState(3)
   return(
     <div className="container">
-       <Smartphones />
+      <p>{count}</p>
+       <Smartphones count={count} setCount={setCount} />
        <HomeAccessories />
     </div>   
   )
