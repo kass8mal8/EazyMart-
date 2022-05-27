@@ -42,17 +42,17 @@ const Smartphones=({count, setCount})=>{
         <img src={Huawei} width="200" onClick={()=>handleClick(Huawei) } />
         <p>Camon 17
         <br/>ksh 16549</p>
-        <button>add to cart</button>
+        <button onClick={handleCount}>add to cart</button>
       </div>
       <div>
         <img src={Hot10} onClick={()=>handleClick(Hot10)} />
       <p>Camon 15 pro<br/>ksh 8999</p>
-      <button>add to cart</button>
+      <button onClick={handleCount}>add to cart</button>
       </div>
       <div>
          <img src={zero8} onClick={() =>handleClick(zero8)} />
         <p>Samsung S21<br/>ksh 9499</p>
-       <button>add to cart</button>
+       <button onClick={handleCount}>add to cart</button>
       </div>
       </div>
 

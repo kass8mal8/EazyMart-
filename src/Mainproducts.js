@@ -4,10 +4,10 @@ import HomeAccessories from "./HomeAccessories "
 
 
 const Mainproducts=()=>{
-  const [count, setCount]=useState(3)
+  const [count, setCount]=useState(0)
   return(
     <div className="container">
-      <p>{count}</p>
+      <small>{count}</small>
        <Smartphones count={count} setCount={setCount} />
        <HomeAccessories />
     </div>   
