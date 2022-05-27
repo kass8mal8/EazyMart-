@@ -3,7 +3,7 @@ import React from 'react'
 import { faClose } from '@fortawesome/free-solid-svg-icons' 
 
 
-const Smartphones=()=>{
+const Smartphones=({count, setCount})=>{
     
     const Iphone ="https://1.bp.blogspot.com/-XWmUPb6yArc/X92DrUq2-gI/AAAAAAAAI2E/AeODkTL8utkua5_lJn0JdjxmAKc7e-rAwCLcBGAsYHQ/s1788/Iphone%2B12.png"
     const Huawei="https://androidgreek.com/wp-content/uploads/2021/05/Techno.png"
@@ -25,6 +25,9 @@ const Smartphones=()=>{
   const image="https://www.pakmobizone.pk/wp-content/uploads/2020/09/infinix-Hot-10-Ocean-Wave-5.jpg"
     
 
+  const handleCount=()=>{
+    setCount(count+1)
+  }
   return (
     <div className="smartphones-container">
       <h3>Smartphones</h3>
@@ -33,7 +36,7 @@ const Smartphones=()=>{
        <img src={Iphone} width="" onClick={() =>handleClick(Iphone)} /> 
        <p>Iphone 12 
        <br/>ksh 17000</p>
-       <button>add to cart</button>
+       <button onClick={handleCount}>add to cart</button>
       </div>
       <div>
         <img src={Huawei} width="200" onClick={()=>handleClick(Huawei) } />
