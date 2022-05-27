@@ -1,7 +1,7 @@
 /*Header styles*/
 body{
   font-family: 'Kumbh sans';
-  font-weight: 400;
+  font-weight: 500;
 }
 a{
   text-decoration: none;
@@ -168,12 +168,27 @@ h3{
   width: 100%;
   margin-top: 5px;
   padding:10px;
-  margin-left: -9px;
+  margin-left: -9p66x;
+  display: flex;
+  overflow:hidden;
+}
+@keyframes move{
+  25%{
+    transform: translateX(-108%);
+  }
+  50%{
+    transform: translateX(-216%);
+  }
+  75%{
+    transform:translateX(-324%)
+  }
 }
 .slider img{
+  animation:move 10s ease-in alternate infinite;  
   width: 100%;
   background: whitesmoke;
   border-radius: 5px;
+  margin:10px;
 }
 .shopping-btn{
    width: 100%;
@@ -213,4 +228,14 @@ h3{
     opacity: 65%;
     margin-left:38px ;
   }
+}
+@media screen and (min-width:380px){
+  .slider img{
+    animation: none;
+    margin-left: -8px;
+  }
+  .slider img:nth-of-type(1){
+     margin-right: 10px;
+  }
+    
 }
