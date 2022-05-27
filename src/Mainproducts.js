@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
-
+import Clothes from './Clothes'
 
 const Mainproducts=()=>{
   const [count, setCount]=useState(0)
@@ -13,6 +13,8 @@ const Mainproducts=()=>{
        </section>
        <Smartphones count={count} setCount={setCount} />
        <HomeAccessories count={count} setCount={setCount} />
+         <Clothes />
+
     </div>   
   )
 }
