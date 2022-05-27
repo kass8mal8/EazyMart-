@@ -9,6 +9,7 @@ const Mainproducts=()=>{
     <div className="container">
       <small>{count}</small>
        <section>
+         
          <p>Shopping experience like no other and with bigger offers than never.Enjoy our products at discounted prices.</p>
        </section>
        <Smartphones count={count} setCount={setCount} />

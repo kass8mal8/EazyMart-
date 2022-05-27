@@ -6,6 +6,9 @@ const Clothes=()=>{
     {src:"https://pngimg.com/uploads/jacket/jacket_PNG8057.png", name:"dress"}
   ]
   return(
+    <div>
+          <h3>Clothes</h3>
+
     <div className="clothes-container">
       {images.map(image=>(
          <div>
@@ -13,6 +16,8 @@ const Clothes=()=>{
          <p>{image.name}</p>
         </div>
       )) }
+    </div>
+    
     </div>
   )
 }
