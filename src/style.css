@@ -81,7 +81,7 @@ a{
   background:hsl(25, 100%, 75%);
   width: 103%;
   margin-left: -18px;
-  padding:4px 2px;
+  padding:4px 20px;
 }
 .smartphones{
   width: 100%;
@@ -173,7 +173,7 @@ h3{
   width: 100%;
   padding:1px 20px;
   margin: -6px -17px;
-  background: lightblue;
+  background:hsl(25, 100%, 75%);
 }
 .intro-paragraph {
   background: whitesmoke;
@@ -184,7 +184,7 @@ h3{
   width: 100%;
   margin-top: 5px;
   padding:10px;
-  margin-left: -9p66x;
+  margin-left: -9px;
   display: flex;
   overflow:hidden;
 }
@@ -212,8 +212,8 @@ h3{
    margin:10px auto;
 }
 .shopping-btn button{
-  background: lightskyblue;
-  border: 1px solid lightskyblue;
+  background: hsl(25, 100%, 60%);
+  border: 1px solid hsl(25, 100%, 60%);
   padding: 15px;
   width: 100%;
   border-radius: 4px;
