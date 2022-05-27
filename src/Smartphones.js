@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { faClose } from '@fortawesome/free-solid-svg-icons' 
-
+import ProductPage from "./ProductPage"
 
 const Smartphones=({count, setCount})=>{
     
@@ -31,6 +31,7 @@ const Smartphones=({count, setCount})=>{
   return (
     <div className="smartphones-container">
       <h3>Smartphones</h3>
+      <ProductPage />
       <div className="smartphones">
       <div >
        <img src={Iphone} width="" onClick={() =>handleClick(Iphone)} /> 
