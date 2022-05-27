@@ -25,7 +25,7 @@ const Home=()=>{
        </p>     
        </div>
        <div className="shopping-btn">
-         <button><Link to="/products" >start shopping</Link></button>
+         <Link to="/products" ><button>start shopping</button></Link>
        </div>
     </div>
   )
