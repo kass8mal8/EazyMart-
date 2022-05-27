@@ -11,9 +11,11 @@ const Home=()=>{
           <img src={image} />
        </div > 
        <div className="intro-paragraph">
-       <p>We have a variety of products on sale for every person,at EazyMart prices are affordable so that nothing ruins your preferences.<br/> Glad to have you shop with us. 
-       </p>
-         
+       <p>We have a variety of products on sale for every person,at EazyMart prices are affordable so that nothing gets your way.<br/> Glad to have you shop with us,we never disappoint.  
+       </p>     
+       </div>
+       <div className="shopping-btn">
+         <button>start shopping</button>
        </div>
     </div>
   )
