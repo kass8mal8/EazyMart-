@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
+import React from 'react'
 
-export const ContactUs = () => {
+export const About = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
