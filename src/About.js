@@ -17,6 +17,8 @@ import React, {useRef} from 'react'
 
   return (
     <div className="container">
+      <p>We are EazyMart your convenient shopping partner of all time. We have great offers just for you can't wait to have you shop with us. </p>
+      <p>Don't hesitate to reach out to us for any queries and complaints, drop your message below. </p>
     <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
