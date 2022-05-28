@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faBars,faCartShopping, faClose, faUserCircle } from '@fortawesome/free-solid-svg-icons' 
+  import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-icons' 
 import "./style.css"
 import {Link}  from 'react-router-dom'
 

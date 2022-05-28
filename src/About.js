@@ -1,5 +1,8 @@
 import emailjs from '@emailjs/browser';
 import React, {useRef} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons' 
+
 
  const About = () => {
   const form = useRef();
@@ -28,6 +31,11 @@ import React, {useRef} from 'react'
       <textarea name="message" />
       <button>send message</button>
     </form>
+    <footer>
+      <h5>Follow us:</h5>
+      <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>      <FontAwesomeIcon icon={faInstagra}></FontAwesomeIcon>
+
+    </footer>
     </div>
   );
 };
