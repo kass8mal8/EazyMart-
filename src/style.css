@@ -10,8 +10,6 @@ a{
 }
 form {
   width: 95%;
-  
-  padding: 5px;
 }
 form button{
   width: 102%;
@@ -275,6 +273,14 @@ h3{
   width: 100%;
   height: 70%;
   border-radius: 3px;
+}
+.facebook, .twitter{
+  color:blue;
+  margin-right:5px ;
+} 
+.instagram{
+  color:lightcoral;
+  margin-right:10px;
 }
 
 @media screen and (max-width:500px){

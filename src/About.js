@@ -32,10 +32,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       <button>send message</button>
     </form>
     <footer>
-      <h5>Follow us:</h5>
       <div className ="footer-icons">
-      <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>      <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faFacebookSquare }></FontAwesomeIcon>
+      <h5>Follow us:</h5>
+      <FontAwesomeIcon icon={faTwitter} className="twitter" ></FontAwesomeIcon>      <FontAwesomeIcon icon={faInstagram} className ="instagram"></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faFacebookSquare } className ="facebook"></FontAwesomeIcon>
      </div>
     </footer>
     </div>
