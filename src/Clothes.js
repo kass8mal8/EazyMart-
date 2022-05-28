@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Link} from 'react'
 
 const Clothes=({count,setCount})=>{
   const handleCount =()=>{
