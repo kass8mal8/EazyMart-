@@ -22,7 +22,6 @@ const Clothes=()=>{
         </div>
       )) }
     </div>
-    
     </div>
   )
 }
