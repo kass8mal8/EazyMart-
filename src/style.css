@@ -76,6 +76,8 @@ form label{
   height: 25px;
   width: 25px;
   opacity: 70%;
+  background:gray;
+  border-radius: 20px;
 }
 .top-nav{
   align-items: center;
@@ -83,6 +85,7 @@ form label{
   margin-left: 10px;
 }
 .top-nav--wrapper li{
+
     margin-right: 20px;
     list-style: none;
     display:inline-flex;
@@ -95,7 +98,6 @@ form label{
 }
 /*Smartphones styles*/
 
-/*Main page styles*/
 .container{
   width: 95%;
   margin:auto 10px;
