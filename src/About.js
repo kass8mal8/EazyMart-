@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import React, {useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons' 
+  import { faTwitter, faFacebookSquare,  faInstagram } from '@fortawesome/free-brands-svg-icons' 
 
 
  const About = () => {
@@ -33,7 +33,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
     </form>
     <footer>
       <h5>Follow us:</h5>
-      <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>      <FontAwesomeIcon icon={faInstagra}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>      <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faFacebookSquare }></FontAwesomeIcon>
 
     </footer>
     </div>
