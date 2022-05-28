@@ -282,6 +282,10 @@ h3{
   color:lightcoral;
   margin-right:10px;
 }
+.about-paragraph{
+   border-left: 5px solid hsl(25, 100%, 60%);
+   padding-left: 5px;
+}
 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
