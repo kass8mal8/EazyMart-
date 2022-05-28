@@ -292,7 +292,7 @@ h3{
 .favorite-icon{
    margin-left: 120px;
    position:relative;
-   margin-top: -90px;
+   margin-top: -1px;
 }
 
 @media screen and (max-width:500px){
