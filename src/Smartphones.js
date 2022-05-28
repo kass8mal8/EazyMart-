@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { faClose } from '@fortawesome/free-solid-svg-icons' 
+import { faClose, faHeart } from '@fortawesome/free-solid-svg-icons' 
 import ProductPage from "./ProductPage"
 
 const Smartphones=({count, setCount})=>{
@@ -40,6 +40,7 @@ const Smartphones=({count, setCount})=>{
            <div>
              <img src={phone.src} onClick={()=>handleClick(phone.src) } />
              <p>{phone.name} <br/>ksh {phone.price} </p>
+             <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon >
              <button onClick={handleCount}>add to cart</button>
            </div>
         ))}
