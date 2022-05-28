@@ -21,8 +21,8 @@ const Header =()=>{
           <FontAwesomeIcon icon={faClose} className="top-nav--close" onClick={handleToggle}></FontAwesomeIcon>
         <ul className="top-nav--wrapper">
           <li><Link to="/" >Home</Link></li>
-          <li><Link to="/products" >products</Link></li>
-          <li><Link to="/about">about</Link></li>      
+          <li><Link to="/products" >Products</Link></li>
+          <li><Link to="/about">About</Link></li>      
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping} className="h-div--cart" onClick={handleCart}></FontAwesomeIcon>

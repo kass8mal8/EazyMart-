@@ -291,11 +291,11 @@ h3{
     top:0px;
     padding: 5px;
     height: 110vh;
-    box-shadow: 0 0px 5px gray ;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.8) ;
   }
   .top-nav.active{
     left:-18px;
-
+    width: 70%;
     transition: 0.4s ease;
     position: absolute;
     z-index:2 ;
