@@ -41,8 +41,8 @@ const Smartphones=({count, setCount})=>{
         {phones.map(phone=>(
            <div>
              <img src={phone.src} onClick={()=>handleClick(phone.src) } />
-             <p>{phone.name} <br/>ksh {phone.price} </p>
-             <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon >
+             <p>{phone.name} <br/>ksh {phone.price} <
+             <FontAwesomeIcon icon={faHeart} className ="favorite-icon"></FontAwesomeIcon ></p>
              <button onClick={handleCount}>add to cart</button>
            </div>
         ))}
