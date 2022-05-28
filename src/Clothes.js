@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Clothes=()=>{
+const Clothes=({count,setCount})=>{
+  const handleCount =()=>{
+    setCount(count+1)
+  }
   const images=[
     {src:"https://pngimg.com/uploads/jacket/jacket_PNG8057.png",name:"Jacket",price:499, id:1 },
     {src:"https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Suit-PNG-Transparent-Image-250x300.png", name:"Black suite",price:1599, id:2}, 
@@ -18,7 +21,7 @@ const Clothes=()=>{
          <div>
          <img src={image.src} />
          <p>{image.name}<br/>ksh {image.price}</p>
-         <button>add to cart</button>
+         <button onClick={handleCount}>add to cart</button>
         </div>
       )) }
     </div>

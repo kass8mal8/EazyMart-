@@ -2,7 +2,10 @@ import React from 'react'
 import { faClose } from '@fortawesome/free-solid-svg-icons' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const HomeAccessories=()=>{
+const HomeAccessories=({count, setCount })=>{
+  const handleCount =()=>{
+    setCount(count+1)
+  }
   const blacksneaker="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/59/246303/1.jpg?7199"
 
   const whitesneaker="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/568724/1.jpg?6621"
@@ -45,7 +48,7 @@ const HomeAccessories=()=>{
         <div>
           <img src={sportshoe} alt=""/>
           <p>Sports fit <br/>ksh 599</p>
-          <button>add to cart </button>
+          <button onClick={handleCount }>add to cart </button>
         </div>
         <div className="product-page">
           <FontAwesomeIcon icon={faClose} onClick={handleClose}></FontAwesomeIcon>
