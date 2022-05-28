@@ -33,9 +33,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
     </form>
     <footer>
       <h5>Follow us:</h5>
+      <div className ="footer-icons">
       <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>      <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
       <FontAwesomeIcon icon={faFacebookSquare }></FontAwesomeIcon>
-
+     </div>
     </footer>
     </div>
   );
