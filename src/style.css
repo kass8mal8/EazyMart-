@@ -297,6 +297,7 @@ h3{
 .count-handlers{
   width: 100%;
   position: relative;
+  display: none;
 }
 .count-handlers ul li{
   list-style-type: none;
