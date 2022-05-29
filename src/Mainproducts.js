@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
-import Foodstuffs from '.Foodstuff  '
+import Foodstuff from './Foodstuff  '
 
 const Mainproducts=()=>{
   const [count, setCount]=useState(0)

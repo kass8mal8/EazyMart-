@@ -12,9 +12,9 @@ const foods=[
             <img src={food.src} alt="" />
             <p>{food.name}<br/>sh {food.price} </p>
         </div>
-        </div>
-
       ))}
+          </div>
+
     </div>
   )
 }
