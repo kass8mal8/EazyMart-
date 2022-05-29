@@ -42,7 +42,7 @@ const Smartphones=({count, setCount})=>{
            <div>
              <img src={phone.src} onClick={()=>handleClick(phone.src) } />
              <p>{phone.name} <br/>ksh {phone.price} </p>
-             <div className="count-handler">
+             <div className="count-handlers">
                <ul>
                  <li>-</li>
                  <li>{count} </li>

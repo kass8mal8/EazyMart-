@@ -294,6 +294,24 @@ h3{
    position:relative;
    margin-top: -1px;
 }
+.count-handlers{
+  width: 100%;
+  border: 1px solid red;
+}
+.count-handlers ul li{
+  list-style-type: none;
+  display:inline-flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.count-handlers ul li:nth-of-type(1),.count-handlers ul li:nth-of-type(3){
+  padding:5px;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 3px;
+  margin:auto 10px;
+  background: hsl(25, 100%, 60%);
+}
 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
