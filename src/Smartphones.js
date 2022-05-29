@@ -33,6 +33,9 @@ const Smartphones=({count, setCount})=>{
   const handleCount=()=>{
     setCount(count+1)
   }
+  const handleReduce=()=>{
+    setCount (count-1)
+  }
   return (
     <div className="smartphones-container">
       <h3>Smartphones</h3>
@@ -44,9 +47,9 @@ const Smartphones=({count, setCount})=>{
              <p>{phone.name} <br/>ksh {phone.price} </p>
              <div className="count-handlers">
                <ul>
-                 <li>-</li>
+                 <li onClick ={handleReduce}>-</li>
                  <li>{count} </li>
-                 <li>+</li>
+                 <li onClick ={handleCount }>+</li>
                </ul>
              </div>
              <button onClick={handleCount}>add to cart</button>
