@@ -181,7 +181,7 @@ h3{
   opacity: 70%;
 }
 /*home accessories styles*/
-.homestuff{
+.homestuff, .foods {
    width: 100%;
    display: grid;
    grid-template-columns:50% 50% ;

@@ -6,14 +6,16 @@ const foods=[
 ]
   return(
     <div className ="container">
-      <div>
+    <div className ="foods">
+
       {foods.map(food=>(
-        <div className ="foods">
+      <div>
+
             <img src={food.src} alt="" />
             <p>{food.name}<br/>sh {food.price} </p>
         </div>
       ))}
-          </div>
+      </div>
 
     </div>
   )
