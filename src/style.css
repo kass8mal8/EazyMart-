@@ -296,18 +296,20 @@ h3{
 }
 .count-handlers{
   width: 100%;
-  border: 1px solid red;
   position: relative;
 }
 .count-handlers ul li{
   list-style-type: none;
   display:inline-flex;
 }
+.count-handlers ul li:nth-of-type(2){
+  margin-left: 20%;
+}
 .count-handlers ul li:nth-of-type(1),.count-handlers ul li:nth-of-type(3){
-  padding:5px;
+  padding:3px 7px;
   font-weight: bolder;
   font-size: 20px;
-  border-radius: 3px;
+  border-radius: 2px;
   background: hsl(25, 100%, 60%);
    position:absolute;
 
@@ -357,5 +359,7 @@ h3{
   .slider img:nth-of-type(1){
      margin-right: 10px;
   }
-    
+.count-handlers ul li:nth-of-type(2){
+    margin-left: 30%;
+  } 
 }
