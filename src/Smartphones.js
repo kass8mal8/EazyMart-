@@ -42,6 +42,13 @@ const Smartphones=({count, setCount})=>{
            <div>
              <img src={phone.src} onClick={()=>handleClick(phone.src) } />
              <p>{phone.name} <br/>ksh {phone.price} </p>
+             <div className="count-handler">
+               <ul>
+                 <li>-</li>
+                 <li>{count} </li>
+                 <li>+</li>
+               </ul>
+             </div>
              <button onClick={handleCount}>add to cart</button>
            </div>
         ))}
