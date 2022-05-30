@@ -1,7 +1,8 @@
 import emailjs from '@emailjs/browser';
 import React, {useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faTwitter, faFacebookSquare,  faInstagram,faClose  } from '@fortawesome/free-brands-svg-icons' 
+  import { faTwitter, faFacebookSquare,  faInstagram } from '@fortawesome/free-brands-svg-icons' 
+  import { faClose } from '@fortawesome/free-solid-svg-icons' 
 
 
  const About = () => {
