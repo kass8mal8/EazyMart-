@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Foodstuff =()=>{
+const Foodstuff =({count, set})=>{
 const foods=[
   {src:"https://capwell.co.ke/wp-content/uploads/2020/03/pearl-pishori.png", name:"Pearl-pishori", price:250, id:1},
   {src:"https://unga-group.com/wp-content/uploads/2019/06/Jogoo-1-300x232.png", name:"Jogoo Unga", price:150, id:2},
@@ -8,6 +8,9 @@ const foods=[
   {src:"https://giantmillers.co.ke/wp-content/uploads/2020/03/canna_maize_meal.png", name:"Canna maize", price:250, id:3},
 
 ]
+const handleCount =()=>{
+  setCount (count+1)
+}
   return(
     <div className ="container">
     <div className ="foods">
@@ -17,6 +20,7 @@ const foods=[
 
             <img src={food.src} alt="" />
             <p>{food.name}<br/>ksh {food.price} </p>
+            <button onClick ={handleCount }>add to cart</button>
         </div>
       ))}
       </div>

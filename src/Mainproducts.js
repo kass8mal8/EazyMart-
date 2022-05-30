@@ -13,7 +13,7 @@ const Mainproducts=()=>{
          
          <p>Shopping experience like no other and with bigger offers than never.Enjoy our products at discounted prices.</p>
        </section>
-       <Foodstuff />
+       <Foodstuff count={count}  setCount ={setCount} />
        <Smartphones count={count} setCount={setCount} />
        <Clothes count={count} setCount={setCount} />
        <HomeAccessories count={count} setCount={setCount} />
