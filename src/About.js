@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import React, {useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faTwitter, faFacebookSquare,  faInstagram } from '@fortawesome/free-brands-svg-icons' 
+  import { faTwitter, faFacebookSquare,  faInstagram,faClose  } from '@fortawesome/free-brands-svg-icons' 
 
 
  const About = () => {
@@ -22,6 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
     <div className="container">
       <div className ="success-msg">
         <p>message sent successfuly</p>
+       <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
       </div>
       <p className ="about-paragraph">We are EazyMart your convenient shopping partner of all time. We have great offers just for you can't wait to have you shop with us. </p>
       <p className ="about-paragraph">Don't hesitate to reach out to us for any queries and complaints, drop your message below. </p>
