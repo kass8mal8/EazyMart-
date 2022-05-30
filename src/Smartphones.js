@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React,{useSt} from 'react'
+import React,{useState } from 'react'
 import { faClose } from '@fortawesome/free-solid-svg-icons' 
 
 import ProductPage from "./ProductPage"
@@ -18,7 +18,7 @@ const Smartphones=({count, setCount})=>{
   
 
   const handleClick=(e)=>{
-      document.querySelector('.product-page').classList.toggle('visible')
+    setIsVisible(true)
       document.querySelector('.product-page img').src=e
      document.querySelector('.smartphones ').classList.toggle('hidden')
   }
