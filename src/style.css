@@ -289,6 +289,12 @@ h3{
    border-left: 5px solid hsl(25, 100%, 60%);
    padding-left: 5px;
 }
+.success-msg{
+    background:#55acce;
+    justify-content: center;
+    position:absolute;
+    top: 50px;padding:1px 5px
+}
 .favorite-icon{
    margin-left: 120px;
    position:relative;
