@@ -6,7 +6,8 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import ProductPage from "./ProductPage"
 
 const Smartphones=({count, setCount})=>{
-    
+  const [isVisible, setIsVisible]=useState(false)
+
   const phones=[
     {src:" https://www.telkomsel.com/sites/default/files/box_media/left/desktop/samsung_S21%2B_device.png",name:"Samsung S21",price:17000,id:1 },   
    {src:" https://androidgreek.com/wp-content/uploads/2021/05/Techno.png",name:"Camon 17",price:15000,id:2 },  
