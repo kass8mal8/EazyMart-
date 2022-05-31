@@ -9,7 +9,7 @@ a{
   color:black;
 }
 a:hover{
-  border-bottom:5px sol hsl(25, 100%, 60%);
+  border-bottom:5px solid hsl(25, 100%, 60%);
 }
 form {
   width: 95%;
@@ -367,7 +367,6 @@ h3{
   .top-nav--close{
     display: block;
     margin-top:35px;
-
     opacity: 65%;
     margin-left:38px ;
   }
@@ -383,4 +382,12 @@ h3{
 .count-handlers ul li:nth-of-type(2){
     margin-left: 30%;
   } 
+}
+@media screen and (min-width:600px){
+  .h-div--bars{
+    display:none;
+  }
+  .smartphones,.homestuff,.foods,.clothes-container{
+    grid-template-columns: 25% 25% 25% 25%;
+  }
 }
