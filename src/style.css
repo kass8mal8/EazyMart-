@@ -294,13 +294,20 @@ h3{
     justify-content: center;
     position:absolute;
     top: 47px;
+    right: 10px;
+}
+.msg-close{
+  position:absolute;
+  top: 5px;
+  right: 10px;
+  color:white;
 }
 .success-msg p{
   margin:3px 10px;
+  margin-right: 30px;
 }
 .favorite-icon{
    margin-left: 120px;
-   
    position:relative;
    margin-top: -1px;
 }
