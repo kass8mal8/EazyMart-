@@ -42,7 +42,7 @@ const Smartphones=({count, setCount})=>{
       <ProductPage />
       <div className="smartphones">
         {phones.map(phone=>(
-           <div>
+           <div key={phone.id}>
              <img src={phone.src} onClick={()=>handleClick(phone.src) } />
              <p>{phone.name} <br/>ksh {phone.price} </p>
              <div className="count-handlers">

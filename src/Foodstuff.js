@@ -10,14 +10,14 @@ const foods=[
 ]
 const handleCount =()=>{
   setCount (count+1)
-  
+
 }
   return(
     <div className ="container">
       <h3>Foodstuff </h3>
     <div className ="foods">
       {foods.map(food=>(
-      <div>
+      <div key={food.id}>
             <img src={food.src} alt="" />
             <p>{food.name}<br/>ksh {food.price} </p>
             <button onClick ={handleCount }>add to cart</button>
