@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Foodstuff =({count, setount})=>{
+const Foodstuff =({count, setCount})=>{
 const foods=[
   {src:"https://megawholesalers.co.ke/images/stories/virtuemart/product/PACK-EXE-All-Purpose-e1429515425104.png", name:"Exe Flour", price:140, id:1},
   {src:"https://unga-group.com/wp-content/uploads/2019/06/Jogoo-1-300x232.png", name:"Jogoo Unga", price:150, id:2},

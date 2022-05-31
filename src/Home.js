@@ -11,7 +11,7 @@ const Home=()=>{
   const image4="https://www.pakmobizone.pk/wp-content/uploads/2020/03/TECNO-Camon-15-Pro-33.png"
   return(
     <div className="home-container">
-       <div class="announcement">
+       <div className="announcement">
          <p>Free shipping on all goods above ksh 20,000 ! </p>
        </div>
        <div className="slider">

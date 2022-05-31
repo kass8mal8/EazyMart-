@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React,{useState } from 'react'
 import { faClose } from '@fortawesome/free-solid-svg-icons' 
-
+import {Link} from 'react-router-dom'
 import ProductPage from "./ProductPage"
 
 const Smartphones=({count, setCount})=>{
@@ -43,7 +43,7 @@ const Smartphones=({count, setCount})=>{
       <div className="smartphones">
         {phones.map(phone=>(
            <div key={phone.id}>
-             <img src={phone.src} onClick={()=>handleClick(phone.src) } />
+            <Link to="/product-page"> <img src={phone.src} onClick={()=>handleClick(phone.src) } /></Link>
              <p>{phone.name} <br/>ksh {phone.price} </p>
              <div className="count-handlers">
                <ul>
