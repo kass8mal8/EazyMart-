@@ -37,7 +37,7 @@ const HomeAccessories=({count, setCount })=>{
         </div>
         <div>
           <img src={whitesneaker} />
-          <p>White fashisneakers<br/>ksh 1199</p>
+          <p>White brand sneakers<br/>ksh 1199</p>
           <button>add to cart </button>
         </div>
         <div>
