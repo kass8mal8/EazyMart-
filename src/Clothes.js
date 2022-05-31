@@ -21,7 +21,7 @@ const Clothes=({count,setCount})=>{
 
     <div className="clothes-container">
       {images.map(image=>(
-         <div key={image}>
+         <div key={image.id}>
          <img src={image.src} />
       
          <p>{image.name}<br/>ksh {image.price}</p>

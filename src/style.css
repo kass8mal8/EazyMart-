@@ -1,5 +1,5 @@
 /*Header styles*/
-*{
+body{
   font-family: 'Kumbh sans';
   font-weight:500;
 }
@@ -19,6 +19,9 @@ form button{
   background: hsl(25, 100%, 60%);
   border: 1px solid hsl(25, 100%, 60%);
   border-radius: 3px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'kumbh sans';
 }
 form input{
   display: block;
@@ -255,13 +258,13 @@ h3{
   padding: 15px;
   width: 100%;
   border-radius: 4px;
-  font-size: 20px;
   font-weight: 500;
+  font-family: 'kumbh sans';
+  font-size: 20px;
 }
 .clothes-container{
   width: 100%;
   display: grid;
-  gap: 10px;
   grid-template-columns: 50% 50%;
 }
 .clothes-container p{
