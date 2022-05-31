@@ -8,14 +8,11 @@ a{
   text-decoration: none;
   color:black;
 }
-a:hover{
-  border-bottom:5px solid hsl(25, 100%, 60%);
-}
 form {
   width: 95%;
 }
 form button{
-  width: 102%;
+  width: 106%;
   margin-top: 5px;
   margin-left: -1px;
   padding: 13px;
@@ -27,7 +24,7 @@ form input{
   display: block;
   outline:none;
   padding: 10px;
-  width: 96%;
+  width: 100%;
   margin-right:80px; 
   border:1px solid gray;
   border-radius: 3px;
@@ -36,7 +33,7 @@ form input:focus{
   border-color: hsl(25, 100%, 60%);
 }
 form textarea{
-  width: 100%;
+  width: 104%;
   border:1px solid gray;
   border-radius: 3px;
 }
@@ -403,5 +400,8 @@ h3{
   }
   footer{
     margin-top: -80px;
+  }
+  a:hover{
+    border-bottom: 5px solid hsl(25, 100%, 60%);
   }
 }
