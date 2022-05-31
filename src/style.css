@@ -399,6 +399,7 @@ h3{
   }
   .about-paragraph{
     border-left: none;
+    margin-left: none;
   }
   footer{
     margin-top: -80px;
