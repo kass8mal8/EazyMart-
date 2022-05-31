@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Foodstuff =({count, setCount})=>{
 const foods=[
@@ -18,7 +19,7 @@ const handleCount =()=>{
     <div className ="foods">
       {foods.map(food=>(
       <div key={food.id}>
-            <img src={food.src} alt="" />
+            <Link to="/product-page"><img src={food.src} alt="" /></Link>
             <p>{food.name}<br/>ksh {food.price} </p>
             <button onClick ={handleCount }>add to cart</button>
         </div>
