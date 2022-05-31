@@ -2,9 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Home=()=>{
-  const image1="https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png"
+  const image1="https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png"
 
-  const image2="https://freepngimg.com/thumb/shoes/27496-2-female-shoes.png"
+  const image2="https://www.transparentpng.com/thumb/clothes/KaU7ZT-blue-women-dress-clothes-hd-image.png"
 
   const image3="https://pngimg.com/uploads/jacket/jacket_PNG8057.png"
 
