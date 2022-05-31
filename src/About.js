@@ -25,12 +25,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   }
   return (
     <div className="container">
+      <div className="about-container">
       {isHide && <div className ="success-msg">
         <p>message sent successfuly</p>
        <FontAwesomeIcon icon={faClose} className="msg-close" onClick={handleMsg}></FontAwesomeIcon>
       </div>} 
-      <p className ="about-paragraph">We are EazyMart your convenient shopping partner of all time. We have great offers just for you can't wait to have you shop with us. </p>
-      <p className ="about-paragraph">Don't hesitate to reach out to us for any queries and complaints, drop your message below. </p>
+      <p className ="about-paragraph">We are EazyMart your convenient shopping partner of all time. We have great offers just for you can't wait to have you shop with us.<br/><br/>Don't hesitate to reach out to us for any queries and complaints, drop your message below. </p>
     <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
@@ -47,6 +47,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       <FontAwesomeIcon icon={faFacebookSquare } className ="facebook"></FontAwesomeIcon>
      </div>
     </footer>
+    </div>
     </div>
   );
 };
