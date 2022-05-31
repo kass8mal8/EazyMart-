@@ -37,7 +37,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       <label>Email</label>
       <input type="email" name="user_email" />
       <label>Message</label>
-      <textarea name="message" />
+      <textarea name="message" cols="7" rows="5"/>
       <button>send message</button>
     </form>
     <footer>
