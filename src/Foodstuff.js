@@ -13,11 +13,10 @@ const handleCount =()=>{
 }
   return(
     <div className ="container">
+      <h3>Foodstuff </h3>
     <div className ="foods">
-
       {foods.map(food=>(
       <div>
-
             <img src={food.src} alt="" />
             <p>{food.name}<br/>ksh {food.price} </p>
             <button onClick ={handleCount }>add to cart</button>
