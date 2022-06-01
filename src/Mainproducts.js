@@ -14,10 +14,10 @@ const Mainproducts=()=>{
          
          <p>Shopping experience like no other and with bigger offers than never.Enjoy our products at discounted prices.</p>
        </section>
-       <Foodstuff count={count}  setCount ={setCount} />
+       <Foodstuff count={count}  setCount ={setCount} isShown={isShown} setIsShown={setIsShown/>
        <Smartphones count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
        <Clothes count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
-       <HomeAccessories count={count} setCount={setCount} isShown/>
+       <HomeAccessories count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
     </div>   
   )
 }
