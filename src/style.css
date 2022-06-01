@@ -289,7 +289,7 @@ h3{
   margin-right:10px;
 }
 .about-paragraph{
-   border-left: 5px solid hsl(25, 100%, 60%);
+   border-left: 5px solid lightgray;
    padding-left: 5px;
 }
 .success-msg{
