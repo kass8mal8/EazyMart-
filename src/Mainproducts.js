@@ -16,8 +16,8 @@ const Mainproducts=()=>{
        </section>
        <Foodstuff count={count}  setCount ={setCount} />
        <Smartphones count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
-       <Clothes count={count} setCount={setCount} />
-       <HomeAccessories count={count} setCount={setCount} />
+       <Clothes count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
+       <HomeAccessories count={count} setCount={setCount} isShown/>
     </div>   
   )
 }
