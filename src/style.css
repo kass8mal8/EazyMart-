@@ -135,6 +135,7 @@ form label{
   font-size: 25px;
   animation:move-up 5s ease-in-out infinite ;
   margin-bottom: -3px;
+  text-align: center;
 }
 @keyframes move-up{
   50%{
@@ -142,7 +143,6 @@ form label{
   }
   100%{
     transform: translateY(-106%) scale(1.05);
-    margin-left: 10px;
   }
 }
 .smartphones{
