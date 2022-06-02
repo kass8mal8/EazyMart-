@@ -50,10 +50,6 @@ const HomeAccessories=({count, setCount })=>{
           <p>Sports fit <br/>ksh 599</p>
           <button onClick={handleCount }>add to cart </button>
         </div>
-        <div className="product-page">
-          <FontAwesomeIcon icon={faClose} onClick={handleClose}></FontAwesomeIcon>
-          <img src={whitesneaker} />
-        </div>
       </div> 
      
     </div>

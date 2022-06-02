@@ -133,15 +133,16 @@ form label{
   margin-top: 3px;
   height: 100%;
   font-size: 25px;
-  animation:move-up 10s ease-in-out infinite ;
+  animation:move-up 5s ease-in-out infinite ;
   margin-bottom: -3px;
 }
 @keyframes move-up{
   50%{
-    transform:translateY(-100%)
+    transform:translateY(-100%);
   }
   100%{
-    transform: translateY(-100%);
+    transform: translateY(-106%) scale(1.05);
+    margin-left: 10px;
   }
 }
 .smartphones{
