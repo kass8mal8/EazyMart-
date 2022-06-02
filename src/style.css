@@ -112,10 +112,11 @@ form label{
   border-radius: 20px;
   position: absolute;
   top: 15px;right: 47px;
-  width: 8px;
+  width: 10px;
   height: 10px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .container section{
   background:hsl(25, 100%, 75%);
@@ -209,7 +210,6 @@ h3{
 .homestuff img{
   width: 100%;
   border-radius: 5px;
-  
   border:3px solid whitesmoke;
 }
 .homestuff p,.foods p{
