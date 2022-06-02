@@ -25,7 +25,7 @@ const Header =()=>{
           <li><Link to="/about">About</Link></li>      
         </ul>
         </div>
-        <FontAwesomeIcon icon="fa-regular fa-cart-shopping" className="h-div--cart" />
+        <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" />
         <img src={avatar} width="50px" alt="avatar"/>
         </div>
     </div>
