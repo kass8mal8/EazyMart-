@@ -382,7 +382,7 @@ h3{
   }
   .top-nav.active{
     left:-18px;
-    width: 70%;
+    width: 50%;
     transition: 0.4s ease;
     position: absolute;
     z-index:2 ;
