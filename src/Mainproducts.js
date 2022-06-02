@@ -6,10 +6,11 @@ import Foodstuff from './Foodstuff  '
 
 const Mainproducts=()=>{
   const [count, setCount]=useState(0)
+
   const [isShown,setIsShown]=useState(true)
   return(
     <div className="container">
-      <small>{count}</small>
+      {count > 0 &&<small id="count">{count}</small>}
        <section>
          
          <p>Best shopping experience </p>
