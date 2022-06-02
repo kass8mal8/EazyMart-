@@ -10,13 +10,14 @@ const foods=[
 
 ]
 const image="https://cdn.shopify.com/s/files/1/1144/7088/files/RUSEEN_Reflective_Apparel-Reflective_Shirt-Unisex-Polyester-Birdseye_Knit-Orange-Long_Sleeve-Reflective_Running_Gear-Reflective_Clothing-Blank-Front.png?1469418611344383116"
+
 const handleCount =()=>{
   setCount (count+1)
 
 }
 const handleShown=(e)=>{
    setIsShown(false)
-   document.querySelector(".product-info img").src=e
+   document.getElementById('product-image').src=e
 }
   return(
     <div className ="container">
@@ -33,7 +34,7 @@ const handleShown=(e)=>{
       ))}
       </div></div> :
       <div className="product-info">
-        <img src={image} alt="" width="200" />
+        <img src={image} alt="" width="200" id="product-image"/>
        </div>}
 
     </div>
