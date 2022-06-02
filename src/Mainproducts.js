@@ -12,7 +12,8 @@ const Mainproducts=()=>{
       <small>{count}</small>
        <section>
          
-         <p>Shopping experience like no other </p><p>Discounts up to 50% off</p>
+         <p>Best shopping experience </p>
+         <p>Discounts up to 50% off</p>
        </section>
        <Clothes count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
        <Smartphones count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
