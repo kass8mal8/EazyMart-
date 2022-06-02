@@ -12,7 +12,7 @@ const Mainproducts=()=>{
       <small>{count}</small>
        <section>
          
-         <p>Shopping experience like no other </p><p>Enjoy products at discounted prices.</p>
+         <p>Shopping experience like no other </p><p>Discounts up to 50% off</p>
        </section>
        <Clothes count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
        <Smartphones count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
