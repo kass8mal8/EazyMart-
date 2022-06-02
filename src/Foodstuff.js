@@ -29,7 +29,7 @@ const handleShown=()=>{
             <button onClick ={handleCount }>add to cart</button>
         </div>
       ))}
-      </div></di : <p>Hello</p>}
+      </div></div> : <p>Hello</p>}
 
     </div>
   )
