@@ -31,6 +31,7 @@ form input{
   margin-right:80px; 
   border:1px solid gray;
   border-radius: 3px;
+  font-family: 'kumbh sans';
 }
 form input:focus{
   border-color: hsl(25, 100%, 60%);
@@ -39,11 +40,12 @@ form textarea{
   width: 104%;
   border:1px solid gray;
   border-radius: 3px;
+  font-family: 'kumbh sans';
 }
 
 form label{
   display: block;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 .h-div{
   display: inline-flex;
