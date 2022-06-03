@@ -19,7 +19,7 @@ export default function App() {
       <BrowserRouter>
         <Header handleCart={handleCart}/>
         {isCartClicked && <div className="cart-content">
-          <div style={{borderBottom:'2px solid #ccc'}}>
+          <div style={{borderBottom:'2px solid #ccc',fontWeight:'bold'}}>
             <p>Cart</p>
           </div>
          {count < 1 ?<p style={{color:'gray',textAlign:'center',marginTop:'22%'}}>You have no items in your cart</p> :<div>
