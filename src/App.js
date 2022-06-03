@@ -22,7 +22,7 @@ export default function App() {
           <div style={{borderBottom:'2px solid #ccc'}}>
             <p>Cart</p>
           </div>
-         {count < 1 ?<p style={{color:'gray',textAlign:'center',marginTop:'20%'}}>You have no items in your cart</p> :<div>
+         {count < 1 ?<p style={{color:'gray',textAlign:'center',marginTop:'22%'}}>You have no items in your cart</p> :<div>
            hello</div>}
         </div>}
         <Routes>
