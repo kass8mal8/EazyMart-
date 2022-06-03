@@ -10,7 +10,7 @@ import ProductPage from './ProductPage'
 export default function App() {
   const handleCart=()=>{
     alert("hello")
-    setsCartClicked(true)
+    setIsCartClicked(true)
   }
   const [count, setCount]=useState(0)
   const [isCartClicked,setIsCartClicked]=useState(false)
@@ -19,6 +19,9 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Header handleCart={handleCart}/>
+        {isCartClicked && <div className="cart-content">
+         <p>You have no items in your cart</p>
+        </div>}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
