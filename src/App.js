@@ -11,6 +11,8 @@ export default function App() {
   const handleCart=()=>{
     alert("hello")
   }
+  const [count, setCount]=useState(0)
+
   return (
     <div>
       <BrowserRouter>
@@ -18,7 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Mainproducts/>} />
+          <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
           <Route path="/product-page" element={<ProductPage/>}/>
         </Routes>
       </BrowserRouter>

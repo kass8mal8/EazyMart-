@@ -4,8 +4,7 @@ import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
 import Foodstuff from './Foodstuff  '
 
-const Mainproducts=()=>{
-  const [count, setCount]=useState(0)
+const Mainproducts=({count,setCount})=>{
 
   const [isShown,setIsShown]=useState(true)
   return(
