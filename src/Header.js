@@ -4,15 +4,14 @@ import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-ico
 import "./style.css"
 import {Link}  from 'react-router-dom'
 
-const Header =()=>{
+const Header =({handleCart})=>{
   const avatar="https://assets.webiconspng.com/uploads/2017/01/Black-User-Icon-300x300.png"
 
   const handleToggle=()=>{
     document.getElementById("toggle").classList.toggle("active")
   }
-  const handleCart=()=>{
        
-  }
+  
   return(
     <div>
         <div className="h-div">
@@ -25,8 +24,8 @@ const Header =()=>{
           <li><Link to="/about">About</Link></li>      
         </ul>
         </div>
-        <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" />
-        <img src={avatar} width="50px" alt="avatar"/>
+        <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
+        <img src={avatar} width="50px" alt="avatar" />
         </div>
     </div>
   )

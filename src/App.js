@@ -8,10 +8,13 @@ import Home from './Home'
 import ProductPage from './ProductPage'
 
 export default function App() {
+  const handleCart=()=>{
+    alert("hello")
+  }
   return (
     <div>
       <BrowserRouter>
-        <Header />
+        <Header handleCart={handleCart}/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
