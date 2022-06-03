@@ -20,7 +20,8 @@ export default function App() {
       <BrowserRouter>
         <Header handleCart={handleCart}/>
         {isCartClicked && <div className="cart-content">
-         <p>You have no items in your cart</p>
+         {count < 1 ?<p>You have no items in your cart</p> :<div>
+           hello</div>}
         </div>}
         <Routes>
           <Route path="/" element={<Home />} />
