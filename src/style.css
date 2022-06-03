@@ -102,9 +102,18 @@ form label{
 }
 /*Smartphones styles*/
 
-.container{
+.container,.cart-content{
   width: 95%;
   margin:auto 10px;
+}
+.cart-content{
+  position: absolute;
+  top: 50px;
+  height: 40%;
+  padding:5px;
+  background: white;
+  border-radius: 3px;
+  z-index: 2;
 }
 .container small{
   background: hsl(25, 100%, 60%);
@@ -388,7 +397,7 @@ h3{
     width: 50%;
     transition: 0.4s ease;
     position: absolute;
-    z-index:2 ;
+    z-index:5 ;
   }
   .top-nav--close{
     display: block;
