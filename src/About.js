@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   const sendEmail = (e) => {
     e.preventDefault();
    setIsHide(true)
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_w84f2ls', 'template_hmp1nom', form.current, 'ZdjRx2ZpvfgTEuvCB ')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
