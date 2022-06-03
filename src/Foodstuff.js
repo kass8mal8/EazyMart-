@@ -18,7 +18,9 @@ const handleCount =()=>{
 const handleShown=(e)=>{
    setIsShown(false)
    let prod=document.getElementById('prod')
-   document.getElementById('product-image').src=e
+
+   document.getElementById('product-image')
+   .src=prod.getAttribute('src')
 }
   return(
     <div className ="container">
