@@ -15,7 +15,7 @@ const handleCount =()=>{
   setCount (count+1)
 
 }
-const handleShown=(e)=>{
+const handleShown=()=>{
    setIsShown(false)
    let prod=document.getElementById('prod')
 
@@ -30,7 +30,7 @@ const handleShown=(e)=>{
     <div className ="foods">
       {foods.map(food=>(
       <div key={food.id}>
-           <img src={food.src} alt="" onClick={()=>handleShown(food.src)} id="prod"/>
+           <img src={food.src} alt="" onClick={handleShown} id="prod"/>
             <p>{food.name}<br/>ksh {food.price} </p>
             <button onClick ={handleCount }>add to cart</button>
         </div>
