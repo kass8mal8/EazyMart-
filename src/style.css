@@ -109,10 +109,12 @@ form label{
 .cart-content{
   position: absolute;
   top: 50px;
+  left: 5%;
   height: 40%;
   padding:5px;
   background: white;
   border-radius: 3px;
+  border: 1px solid ;
   z-index: 2;
 }
 .container small{
