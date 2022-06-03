@@ -330,8 +330,10 @@ h3{
   color:white;
 }
 .success-msg p{
-  margin:3px 10px;
-  margin-right: 50px;
+  margin-top:3px;
+  margin-bottom:3px ;
+  margin-right: 100px;
+  margin-left: 5px;
 }
 .favorite-icon{
    margin-left: 120px;
