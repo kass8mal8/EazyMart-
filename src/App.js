@@ -10,8 +10,10 @@ import ProductPage from './ProductPage'
 export default function App() {
   const handleCart=()=>{
     alert("hello")
+    setsCartClicked(true)
   }
   const [count, setCount]=useState(0)
+  const [isCartClicked,setIsCartClicked]=useState(false)
 
   return (
     <div>
