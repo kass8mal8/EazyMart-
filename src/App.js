@@ -13,6 +13,8 @@ export default function App() {
   }
   const [count, setCount]=useState(0)
   const [isCartClicked,setIsCartClicked]=useState(false)
+ 
+  const src= "https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png"
 
   return (
     <div>
@@ -23,7 +25,7 @@ export default function App() {
             <p>Cart</p>
           </div>
          {count < 1 ?<p style={{color:'gray',textAlign:'center',marginTop:'22%'}}>You have no items in your cart</p> :<div>
-           hello</div>}
+           <img src={src} alt=""/></div>}
         </div>}
         <Routes>
           <Route path="/" element={<Home />} />
