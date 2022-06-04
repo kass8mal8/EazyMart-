@@ -410,12 +410,14 @@ h3{
     margin-left:38px ;
   }
 }
-@media screen and (min-width:380px){
+@media screen and (min-width:400px){
   .slider img{
     animation: none;
     margin-left: -8px;
   }
-  .cart-content
+  .cart-content{
+    height:47%;
+  }
   .slider img:nth-of-type(1){
      margin-right: 10px;
   }
