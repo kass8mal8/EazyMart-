@@ -111,7 +111,7 @@ form label{
   top: 65px;
   width: 90%;
   left: 5%;
-  height: 40%;
+  height: 45%;
   padding:5px;
   background: white;
   border-radius: 3px;
@@ -188,6 +188,7 @@ form label{
   border:1px solid hsl(25, 100%, 60%);
   padding: 10px;
   margin-bottom: 30px;
+  font-family: 'kumbh sans'
 }
 h3{
   text-align: center;

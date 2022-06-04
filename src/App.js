@@ -25,8 +25,8 @@ export default function App() {
             <p>Cart</p>
           </div>
          {count < 1 ?<p style={{color:'gray',textAlign:'center',marginTop:'22%'}}>You have no items in your cart</p> :<div>
-           <img src={src} width="80" style={{background:'whitesmoke',borderRadius:'4px'}} />
-           <button style={{background:'hsl(25,'}}>checkout</button></div>}
+           <img src={src} width="80" style={{background:'whitesmoke',borderRadius:'4px',marginTop:'5px'}} />
+           <button style={{background:'hsl(25,100%,60%)',border:'1px solid hsl(25,100%,60%)',width:'100%',marginTop:'15%',padding:'10px',fontFamily:'kumbh sans'}}>checkout</button></div>}
         </div>}
         <Routes>
           <Route path="/" element={<Home />} />
