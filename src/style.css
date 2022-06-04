@@ -108,7 +108,7 @@ form label{
 }
 .cart-content{
   position: absolute;
-  top: 65px;
+  top: 7px;
   width: 90%;
   left: 5%;
   height: 45%;
@@ -247,9 +247,9 @@ h3{
   background:hsl(25, 100%, 75%);
 }
 .intro-paragraph {
-  background: whitesmoke;
+  border :1px solid whitesmoke;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .slider{
   width: 100%;
