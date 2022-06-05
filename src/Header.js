@@ -22,7 +22,7 @@ const Header =({handleCart})=>{
           <li><Link to="/" >Home</Link></li>
           <li><Link to="/products" >Products</Link></li>
           <li><Link to="/about">About</Link></li> 
-          <li><button>sign up</button></li>     
+          <li><Link to="/signup"><button>sign up</button></Link></li>     
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>

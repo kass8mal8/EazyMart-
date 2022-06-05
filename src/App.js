@@ -5,7 +5,7 @@ import Header from './Header'
 import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
-import ProductPage from './ProductPage'
+import Signup from './Signup'
 
 export default function App() {
   const handleCart=()=>{
@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
-          <Route path="/product-page" element={<ProductPage/>}/>
+          <Route path="/signup" element={<Signup/>}/>
         </Routes>
       </BrowserRouter>
     </div>
