@@ -1,5 +1,7 @@
 import React,{usestate, useRef} from 'react' 
 import {signup} from './firebase '
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 
 const Signup=()=>{
   const emailRef=useRef()
@@ -18,8 +20,10 @@ const Signup=()=>{
       <div><p>Create EazyMart shopping account</p></div>
       <form onSubmit={handleSignup}>
         <label>Email</label>
+        <FontAwesomeIcon icon={faEnvelope}/>
         <input ref={emailRef} type="email" placeholder="email@example.com"/>
         <label>Password</label>
+       <FontAwesomeIcon icon={faLock}/>
         <input ref={passwordRef} type="password" placeholder="password"/>
         <button style={{marginTop:'20px'}}>signup</button>
      </form>
