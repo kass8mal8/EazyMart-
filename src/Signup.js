@@ -15,10 +15,10 @@ const Signup=()=>{
        alert("error")
      }
   }
-  const [isValid, setIsValid]=useState(true)
+  const [isValid, setIsValid]=useState(false)
   const handleChange=(e)=>{
     if(e.target.value < 6){
-        setIsValid(false)
+        setIsValid(true)
     }
   }
   return(
@@ -29,9 +29,9 @@ const Signup=()=>{
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
         <input ref={emailRef} type="email" placeholder="email@example.com"/>
         <label>Password</label>
-        {!(isValid) && <small>password less than 6 characters</small>}
+        {isValid && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
-        <input ref={passwordRef} type="password" placeholder="password" onChange={() =>handleChange(e)} />
+        <input ref={passwordRef} type="password" placeholder="password" onChange={handleChange} />
         <button style={{marginTop:'20px'}}>signup</button>
      </form>
     </div>
