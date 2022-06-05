@@ -106,7 +106,7 @@ form label{
   width: 95%;
   margin:auto 10px;
 }
-.cart-content{
+.cart-content.show{
   position: absolute;
   top: 70px;
   width: 90%;
@@ -117,6 +117,10 @@ form label{
   border-radius: 3px;
   border: 1px solid whitesmoke;
   z-index: 2;
+  display:block;
+}
+.cart-content{
+  display:none;
 }
 .container small{
   background: hsl(25, 100%, 60%);

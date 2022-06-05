@@ -10,6 +10,7 @@ import ProductPage from './ProductPage'
 export default function App() {
   const handleCart=()=>{
     setIsCartClicked(true)
+    document.querySelector('.cart-content ').classList.toggle('show') 
   }
   const [count, setCount]=useState(0)
   const [isCartClicked,setIsCartClicked]=useState(false)
@@ -20,7 +21,7 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Header handleCart={handleCart}/>
-        {isCartClicked && <div className="cart-content">
+         <div className="cart-content">
           <div style={{borderBottom:'2px solid #ccc',fontWeight:'bold'}}>
             <p>Cart</p>
           </div>
@@ -28,7 +29,7 @@ export default function App() {
            <div style={{display:'flex',flexFlow:'row'}}>
            <img src={src} width="80" style={{background:'whitesmoke',borderRadius:'4px',marginTop:'5px'}} /></div>
            <button style={{background:'hsl(25,100%,60%)',border:'1px solid hsl(25,100%,60%)',width:'100%',marginTop:'27%',padding:'10px',fontFamily:'kumbh sans',borderRadius:'2px'}}>checkout</button></div>}
-        </div>}
+        </div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
