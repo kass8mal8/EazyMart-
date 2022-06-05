@@ -12,10 +12,11 @@ a{
   color: hsl(25, 100%, 65%);
   margin-top: 12px;
   position:absolute;
-  margin-left:px ;
+  margin-left:5px ;
 }
 #sign-form input{
   padding-left: 25px;
+  width: 94%;
 }
 form {
   width: 95%;
@@ -437,6 +438,9 @@ h3{
   .slider img{
     animation: none;
     margin-left: -8px;
+  }
+  #sign-form input{
+    width: 96%;
   }
   .cart-content{
     height:47%;
