@@ -10,11 +10,12 @@ const Signup=()=>{
        await signup(emailRef.current.value, passwordRef.current.value)
      }
      catch{
-       alert
+       alert("error")
      }
   }
   return(
     <div className="container">
+      <div><p>Create EazyMart shopping account</p></div>
       <form onSubmit={handleSignup}>
         <label>Email</label>
         <input ref={emailRef} type="email"/>
