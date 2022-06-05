@@ -12,15 +12,12 @@ const Signup=()=>{
        await signup(emailRef.current.value, passwordRef.current.value)
      }
      catch{
-       alert("error")
+    
+       setIsValid(true)
      }
   }
   const [isValid, setIsValid]=useState(false)
-  const handleChange=(e)=>{
-    if(e.target.value < 6){
-        setIsValid(true)
-    }
-  }
+  
   return(
     <div className="container">
       <div><p>Create EazyMart shopping account</p></div>
@@ -31,7 +28,7 @@ const Signup=()=>{
         <label>Password</label>
         {isValid && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
-        <input ref={passwordRef} type="password" placeholder="password" onChange={handleChange} />
+        <input ref={passwordRef} type="password" placeholder="password"  />
         <button style={{marginTop:'20px'}}>signup</button>
      </form>
     </div>

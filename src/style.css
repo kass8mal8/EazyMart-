@@ -17,6 +17,14 @@ a{
   padding-left: 25px;
   width: 94%;
 }
+#sign-form small{
+  position: relative;
+  float: right;
+  border: none;
+  background: none;
+  width:auto;
+  height: auto;
+}
 form {
   width: 95%;
 }
