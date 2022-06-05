@@ -18,12 +18,12 @@ const Signup=()=>{
   return(
     <div className="container">
       <div><p>Create EazyMart shopping account</p></div>
-      <form onSubmit={handleSignup}>
+      <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>
-        <FontAwesomeIcon icon={faEnvelope}/>
+        <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
         <input ref={emailRef} type="email" placeholder="email@example.com"/>
         <label>Password</label>
-       <FontAwesomeIcon icon={faLock}/>
+       <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
         <input ref={passwordRef} type="password" placeholder="password"/>
         <button style={{marginTop:'20px'}}>signup</button>
      </form>

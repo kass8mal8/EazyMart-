@@ -8,6 +8,15 @@ a{
   text-decoration: none;
   color:black;
 }
+.sign-icons{
+  color: hsl(25, 100%, 65%);
+  margin-top: 12px;
+  position:absolute;
+  margin-left:px ;
+}
+#sign-form input{
+  padding-left: 25px;
+}
 form {
   width: 95%;
 }
