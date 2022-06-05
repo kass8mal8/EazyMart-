@@ -6,9 +6,14 @@ const Signup=()=>{
     
   }
   return(
-    <div>
-      <label>Email</label>
-      <input type="email"/>
+    <div className="container">
+      <form>
+        <label>Email</label>
+        <input type="email"/>
+        <label>Password</label>
+        <input type="password"/>
+        <button>signup</button>
+     </form>
     </div>
   )
 }
