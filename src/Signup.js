@@ -18,10 +18,10 @@ const Signup=()=>{
       <div><p>Create EazyMart shopping account</p></div>
       <form onSubmit={handleSignup}>
         <label>Email</label>
-        <input ref={emailRef} type="email"/>
+        <input ref={emailRef} type="email" placeholder="email@example.com"/>
         <label>Password</label>
-        <input ref={passwordRef} type="password"/>
-        <button >signup</button>
+        <input ref={passwordRef} type="password" placeholder="password"/>
+        <button style={{marginTop:'20px'}}>signup</button>
      </form>
     </div>
   )
