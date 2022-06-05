@@ -399,7 +399,12 @@ h3{
   .top-nav button{
     border: 1px solid hsl(25, 100%, 60%);
     background: hsl(25, 100%, 60%);
+    border-radius:3px;
     font-family:'kumbh sans' ;
+    padding:10px;
+    width: 100%;
+    font-size: medium;
+    font-weight: bold;
   }
   .top-nav.active{
     left:-18px;
