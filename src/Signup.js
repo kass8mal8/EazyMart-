@@ -1,4 +1,4 @@
-import React,{usestate, useRef} from 'react' 
+import React,{useState, useRef} from 'react' 
 import {signup} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
@@ -15,6 +15,12 @@ const Signup=()=>{
        alert("error")
      }
   }
+  const [isValid, setIsValid]=useState(true)
+  const handleChange=(e)=>{
+    if(e.target.value < 6){
+        setIsValid(false)
+    }
+  }
   return(
     <div className="container">
       <div><p>Create EazyMart shopping account</p></div>
@@ -23,8 +29,9 @@ const Signup=()=>{
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
         <input ref={emailRef} type="email" placeholder="email@example.com"/>
         <label>Password</label>
+        {!(isValid) && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
-        <input ref={passwordRef} type="password" placeholder="password"/>
+        <input ref={passwordRef} type="password" placeholder="password" onChange={() =>handleChange(e)} />
         <button style={{marginTop:'20px'}}>signup</button>
      </form>
     </div>
