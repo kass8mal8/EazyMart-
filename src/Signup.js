@@ -6,11 +6,16 @@ const Signup=()=>{
   const passwordRef=useRef()
 
   async function handleSignup(){
-    await signup(ema)
+     try{
+       await signup(emailRef.current.value, passwordRef.current.value)
+     }
+     catch{
+       alert
+     }
   }
   return(
     <div className="container">
-      <form>
+      <form onSubmit={handleSignup}>
         <label>Email</label>
         <input ref={emailRef} type="email"/>
         <label>Password</label>
