@@ -396,6 +396,11 @@ h3{
     height: 110vh;
     box-shadow: 0 0px 5px rgba(0,0,0,0.8) ;
   }
+  .top-nav button{
+    border: 1px solid hsl(25, 100%, 60%);
+    background: hsl(25, 100%, 60%);
+    font-family:'kumbh sans' ;
+  }
   .top-nav.active{
     left:-18px;
     width: 50%;
