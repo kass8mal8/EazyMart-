@@ -3,13 +3,14 @@ import {signup} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 
-const Signup=()=>{
+const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
 
   async function handleSignup(){
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
+       setCreated
      }
      catch{
     

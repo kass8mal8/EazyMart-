@@ -4,14 +4,17 @@ import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-ico
 import "./style.css"
 import {Link}  from 'react-router-dom'
 
-const Header =({handleCart})=>{
+const Header =({handleCart, created})=>{
   const avatar="https://assets.webiconspng.com/uploads/2017/01/Black-User-Icon-300x300.png"
 
   const handleToggle=()=>{
     document.getElementById("toggle").classList.toggle("active")
   }
-       
-  
+    
+  const src="https://images.vexels.com/media/users/3/210527/isolated/preview/71c747a01eb13d811dca5af298211ecd-smiling-black-woman-realistic-character-by-vexels.png"
+  if(created){
+    document.getElementById('avatar').src=src
+  }
   return(
     <div>
         <div className="h-div">
@@ -26,7 +29,7 @@ const Header =({handleCart})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
-        <img src={avatar} width="50px" alt="avatar" />
+        <img src={avatar} width="50px" id="avatar" />
         </div>
     </div>
   )
