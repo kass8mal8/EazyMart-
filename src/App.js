@@ -14,13 +14,14 @@ export default function App() {
   }
   const [count, setCount]=useState(0)
   const [isCartClicked,setIsCartClicked]=useState(false)
+  const [created, setCreated]=useState(false)
  
   const src= "https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png"
 
   return (
     <div>
       <BrowserRouter>
-        <Header handleCart={handleCart}/>
+        <Header handleCart={handleCart} created={created}  setCreated={setCreated} />
          <div className="cart-content">
           <div style={{borderBottom:'2px solid #ccc',fontWeight:'bold'}}>
             <p>Cart</p>
@@ -34,7 +35,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
-          <Route path="/signup" element={<Signup/>}/>
+          <Route path="/signup" element={<Signup created={created} setCreated={setCreated } />}/>
         </Routes>
       </BrowserRouter>
     </div>
