@@ -2,17 +2,20 @@ import React,{usestate, useRef} from 'react'
 import {signup} from './firebase '
 
 const Signup=()=>{
-  async function handleSignup(email, password){
-    
+  const emailRef=useRef()
+  const passwordRef=useRef()
+
+  async function handleSignup(){
+    await signup(ema)
   }
   return(
     <div className="container">
       <form>
         <label>Email</label>
-        <input type="email"/>
+        <input ref={emailRef} type="email"/>
         <label>Password</label>
-        <input type="password"/>
-        <button>signup</button>
+        <input ref={passwordRef} type="password"/>
+        <button >signup</button>
      </form>
     </div>
   )
