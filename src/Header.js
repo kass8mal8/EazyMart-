@@ -11,7 +11,7 @@ const Header =({handleCart, created})=>{
     document.getElementById("toggle").classList.toggle("active")
   }
     
-  const src="https://images.vexels.com/media/users/3/210527/isolated/preview/71c747a01eb13d811dca5af298211ecd-smiling-black-woman-realistic-character-by-vexels.png"
+  const src="https://raw.githubusercontent.com/ahmadseleem/Atom-Classy-icons/master/Free-Atom/Free-icon.png"
   if(created){
     let x=document.getElementById('avatar')
     x.src=src
