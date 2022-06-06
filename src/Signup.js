@@ -1,4 +1,5 @@
-import React,{useState, useRef} from 'react' 
+import React,{useState, useRef} from 'react'
+import {useHistory} from 'react-router-dom' 
 import {signup} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
@@ -7,10 +8,12 @@ const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
 
+  const history=useHistory()
   async function handleSignup(){
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
        setCreated(true)
+       history.push('/products') 
      }
      catch{
        alert('error')
