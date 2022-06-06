@@ -11,7 +11,7 @@ const Header =({handleCart, created})=>{
     document.getElementById("toggle").classList.toggle("active")
   }
     
-  const src="https://raw.githubusercontent.com/ahmadseleem/Atom-Classy-icons/master/Free-Atom/Free-icon.png"
+  const src="https://raw.gith"
   if(created){
     document.getElementById('avatar').src=src
   }
