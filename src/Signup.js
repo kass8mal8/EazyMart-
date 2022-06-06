@@ -11,20 +11,20 @@ const Signup=({setCreated})=>{
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
        setCreated(true)
-    setIsPending(true)
      }
      catch{
        alert('error')
        setIsValid(true)
      }
+     setTimeout(()=>{
+       setIsPending()
+     })
   }
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
-  
 
   return(
     <div className="container">
-      {isPending &&  <div>Loading...</div>} 
       <div><p>Create EazyMart shopping account</p>
       <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>
@@ -34,7 +34,7 @@ const Signup=({setCreated})=>{
         {isValid && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
         <input ref={passwordRef} type="password" placeholder="password"  />
-        <button style={{marginTop:'20px'}}>signup</button>
+        <button style={{marginTop:'20px'}}>sign up {isPending && <>loading... </>} </button>
      </form>
      </div> 
     </div>
