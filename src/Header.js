@@ -25,6 +25,7 @@ const Header =({handleCart, created})=>{
           <li><Link to="/" >Home</Link></li>
           <li><Link to="/products" >Products</Link></li>
           <li><Link to="/about">About</Link></li> 
+          <li>Create account </li>
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>

@@ -417,7 +417,6 @@ h3{
     box-shadow: 0 0px 5px rgba(0,0,0,0.8) ;
   }
   .top-nav button{
-    padding:10px;
   }
   .top-nav.active{
     left:-18px;
