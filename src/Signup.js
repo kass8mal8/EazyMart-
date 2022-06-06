@@ -8,6 +8,7 @@ const Signup=({setCreated})=>{
   const passwordRef=useRef()
 
   async function handleSignup(){
+    
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
        setCreated(true)
@@ -18,7 +19,7 @@ const Signup=({setCreated})=>{
      }
   }
   const [isValid, setIsValid]=useState(false)
-  const [isPending, setIs]=useState(false)
+  const [isPending, setIsPending ]=useState(false)
   
 
   return(
