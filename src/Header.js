@@ -13,7 +13,9 @@ const Header =({handleCart, created})=>{
     
   const src="https://images.vexels.com/media/users/3/210527/isolated/preview/71c747a01eb13d811dca5af298211ecd-smiling-black-woman-realistic-character-by-vexels.png"
   if(created){
-    document.getElementById('avatar').src=src
+    let x=document.getElementById('avatar')
+    x.src=src
+    x.style.opacity="1"
   }
   return(
     <div>
