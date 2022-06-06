@@ -11,7 +11,7 @@ const Header =({handleCart, created})=>{
     document.getElementById("toggle").classList.toggle("active")
   }
     
-  const src="https://raw.gith"
+  const src="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
   if(created){
     document.getElementById('avatar').src=src
   }
