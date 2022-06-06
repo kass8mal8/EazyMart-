@@ -8,7 +8,7 @@ const Signup=({setCreated})=>{
   const passwordRef=useRef()
 
   async function handleSignup(){
-    
+    setIsPending(true)
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
        setCreated(true)
