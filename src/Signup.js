@@ -24,8 +24,8 @@ const Signup=({setCreated})=>{
 
   return(
     <div className="container">
-      {isPending && <div>Loading...</div> }
-      <div><p>Create EazyMart shopping account</p></div>
+      {isPending ?  <div>Loading...</div> :
+      <div><p>Create EazyMart shopping account</p>
       <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
@@ -36,6 +36,7 @@ const Signup=({setCreated})=>{
         <input ref={passwordRef} type="password" placeholder="password"  />
         <button style={{marginTop:'20px'}}>signup</button>
      </form>
+     </div>} 
     </div>
   )
 }
