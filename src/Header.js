@@ -14,7 +14,6 @@ const Header =({handleCart, created})=>{
   const src="https://raw.githubusercontent.com/ahmadseleem/Atom-Classy-icons/master/Free-Atom/Free-icon.png"
   if(created){
     document.getElementById('avatar').src=src
-    alert("yay")
   }
   return(
     <div>

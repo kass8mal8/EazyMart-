@@ -13,7 +13,7 @@ const Signup=({setCreated})=>{
        setCreated(true)
      }
      catch{
-       alert('')
+       alert('error')
        setIsValid(true)
      }
   }
