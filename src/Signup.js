@@ -24,6 +24,7 @@ const Signup=({setCreated})=>{
 
   return(
     <div className="container">
+      {isPending && <div>Loading...</div> }
       <div><p>Create EazyMart shopping account</p></div>
       <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>

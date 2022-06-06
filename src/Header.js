@@ -29,7 +29,7 @@ const Header =({handleCart, created})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
-        <img src={avatar} width="50px" id="avatar" />
+        <img src={src} width="50px" id="avatar" />
         </div>
     </div>
   )
