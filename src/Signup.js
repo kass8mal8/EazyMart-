@@ -18,7 +18,9 @@ const Signup=({setCreated})=>{
      }
   }
   const [isValid, setIsValid]=useState(false)
+  const [isPending, setIs]=useState(false)
   
+
   return(
     <div className="container">
       <div><p>Create EazyMart shopping account</p></div>
