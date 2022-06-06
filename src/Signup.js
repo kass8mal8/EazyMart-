@@ -8,12 +8,10 @@ const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
 
-  const history=useHistory()
   async function handleSignup(){
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
        setCreated(true)
-       history.push('/products') 
      }
      catch{
        alert('error')
