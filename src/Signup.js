@@ -10,10 +10,10 @@ const Signup=({setCreated})=>{
   async function handleSignup(){
      try{
        await signup(emailRef.current.value, passwordRef.current.value)
-       setCreated
+       setCreated(true)
      }
      catch{
-    
+       alert('')
        setIsValid(true)
      }
   }
