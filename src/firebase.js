@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+import {getAuth, createUserWithEmailAndPassword, GooAuth} from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -14,7 +14,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth=getAuth()
+export const auth=getAuth()
+export const provider=new GoogleAuthProvider()
 
 export function signup(email, password){
    createUserWithEmailAndPassword(auth, email, password)
