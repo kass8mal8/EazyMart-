@@ -10,7 +10,7 @@ const Signup=({setCreated})=>{
 
    function handleSignup(){
      
-       createUserWithEmailAndPassword(auth, provider, emailRef.current.value, passwordRef.current.value). then(()=>{
+       createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value). then(()=>{
         setCreated(true)
 
        }). catch((error)=>{
