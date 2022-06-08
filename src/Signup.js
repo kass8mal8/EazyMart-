@@ -13,13 +13,13 @@ const Signup=({setCreated})=>{
        createUserWithEmailAndPassword(auth, provider, emailRef.current.value, passwordRef.current.value). then(()=>{
         setCreated(true)
 
-       }). catch(()=>{
+       }). catch((error)=>{
         setIsValid(true)
 
        })
      
        setIsPending()
-     }
+     
   }
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
