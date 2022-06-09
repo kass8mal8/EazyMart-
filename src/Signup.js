@@ -14,7 +14,7 @@ const Signup=({setCreated})=>{
 
    async function handleSignup(){
        setIsPending(true) 
-       try(
+       try{
           await( emailRef.current.value, passwordRef.current.value)
           setCreated(true)
        } catch{
