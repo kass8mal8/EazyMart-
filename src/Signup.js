@@ -28,16 +28,12 @@ const Signup=({setCreated})=>{
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
 
-  const handleGoogleSigIn=() =>{
+  const handleGoogleSignIn=() =>{
      signInWithPopup(auth, provider) 
   } 
 
   return(
     <div className="container">
-      {selectMethod && <div style={{width:'100%',background:'whitesmoke',border:'1px solid whitesmoke', borderRadius:'3px' } } >
-          <GoogleButton onClick={handleGoogleSignIn} />
-          <button onClick={() =>setSelectMethod(false) } style={{background:'hsl(25,100,60%',border:'1px solid hsl(25,100,60%)',padding:'12px'}} >Sign In with Email</button>
-       </div>} 
 
       <div><p>Create EazyMart shopping account</p>
       <form onSubmit={handleSignup} id="sign-form">
@@ -51,6 +47,13 @@ const Signup=({setCreated})=>{
         <button style={{marginTop:'20px'}}>sign up {isPending && <p>loading... </p>} </button>
      </form>
      </div> 
+     
+    {selectMethod && 
+    <div style={{width:'100%',background:'whitesmoke',border:'1px solid whitesmoke', borderRadius:'3px' } } >
+        <GoogleButton onClick={handleGoogleSignIn} />
+        <button onClick={() =>setSelectMethod(false) } style={{background:'hsl(25,100,60%',border:'1px solid hsl(25,100,60%)',padding:'12px'}} >Sign In with Email</button>
+     </div>}  
+       
     </div>
   )
 }
