@@ -91,7 +91,7 @@ form label{
   height: 25px;
   margin-top: -3px;
 }
-.h-div img{
+#avatar{
   position: absolute;
   right: 10px;
   top:18px;

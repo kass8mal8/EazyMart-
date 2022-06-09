@@ -1,10 +1,29 @@
 import React,{useState, useRef} from 'react'
-import {signup, googlesignin} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
-import {GoogleButton} from 'react-google-button' 
+import {GoogleButton} from 'react-google-button'
+
+/*firebase authentication */
+import { initializeApp } from "firebase/app";
+import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 
 const Signup=({setCreated})=>{
+  
+   // Your web app's Firebase configuration
+   const firebaseConfig = {
+       apiKey: "AIzaSyCIMC-BGvBeO4VUg7DbPJq-F0Z_z87LyAM",
+       authDomain: "eazy-mart-auth.firebaseapp.com",
+       projectId: "eazy-mart-auth",
+       storageBucket: "eazy-mart-auth.appspot.com",
+       messagingSenderId: "749499150162",
+       appId: "1:749499150162:web:f49130694ac44b3c40948b"
+   };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth=getAuth()
+  const provider=new GoogleAuthProvider()
+  
   const emailRef=useRef()
   const passwordRef=useRef()
 
@@ -14,25 +33,31 @@ const Signup=({setCreated})=>{
  
   const [selectMethod, setSelectMethod] =useState(true) 
 
-  async function handleSignup(){
+  const handleSignup=()=>{
        setIsPending(true) 
-       try{
-          await signup( emailRef.current.value, passwordRef.current.value)
-          setCreated(true)
-       } catch{
-          setIsValid(true)
-       } 
+       
+       createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
+       .then(()=>{
+           console.log("logged in successfully :) ");
+            setCreated(true)
+       })
+       .catch((error)=>{
+           console.log(error.message);
+       })
        setIsPending(false)
      
   }
   
   
-  async function handleGoogleSignIn(){
-      try {
-        await googlesignin()
-      } catch (error) {
-        console.log(error.message);
-      }
+  const handleGoogleSignIn=()=>{
+      signInWithPopup(auth, provider)
+      .then(()=>{
+          console.log("logged in successfully :) ")
+          setCreated(true)
+      })
+      .catch((error)=>{
+          console.log(error.message)
+      })
    }
    
   return(
