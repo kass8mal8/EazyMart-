@@ -39,6 +39,7 @@ const Signup=({setCreated})=>{
 
   return(
     <div className="container">
+    
     {selectMethod && 
     <div>
        <GoogleButton onClick={handleGoogleSignIn} />
@@ -46,7 +47,6 @@ const Signup=({setCreated})=>{
     </div>} 
     
       <div><p>Create EazyMart shopping account</p>
-      
       <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
@@ -55,10 +55,10 @@ const Signup=({setCreated})=>{
         {isValid && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
         <input ref={passwordRef} type="password" placeholder="password"  />
-        <button style={{marginTop:'20px'}}>sign up {isPending && <>loading... </>} </button>
+        <button style={{marginTop:'20px'}}>sign up {isPending && <p>loading... </p>} </button>
      </form>
-     
      </div> 
+     
     </div>
   )
 }
