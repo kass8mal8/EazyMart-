@@ -53,9 +53,9 @@ const Signup=({setCreated})=>{
      </div> 
      
     {selectMethod && 
-    <div style={{width:'100%',background:'whitesmoke',border:'1px solid whitesmoke', borderRadius:'3px' } } >
+    <div className="method-selection" >
         <GoogleButton onClick={handleGoogleSignIn} />
-        <button onClick={() =>setSelectMethod(false) } style={{background:'hsl(25,100,60%',border:'1px solid hsl(25,100,60%)',padding:'12px'}} >Sign In with Email</button>
+        <button onClick={() =>setSelectMethod(false) }>Sign In with Email</button>
      </div>}  
        
     </div>
