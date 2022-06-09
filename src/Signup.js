@@ -4,6 +4,7 @@ import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {GoogleButton} from 'react-google-button'
 import UserProfile from './UserProfile'
 
+
 /*firebase authentication */
 import { initializeApp } from "firebase/app";
 import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth"

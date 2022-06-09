@@ -425,7 +425,8 @@ h3{
   background-color: hsl(25, 100%, 60%);
   border: 1px solid hsl(25, 100%, 60%);
   padding: 12px; 
-  margin-left: 10%;
+  margin-left: 5%;
+  width:40%;
 }
 .google-btn{
   text-justify: center;
@@ -484,7 +485,7 @@ h3{
       width: 59%;
   }
   .google-btn {
-     margin-left: 20%;
+     margin-left: 25%;
   }
 }
 @media screen and (min-width:600px){
