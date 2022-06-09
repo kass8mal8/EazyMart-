@@ -63,6 +63,7 @@ const Signup=({setCreated})=>{
       })
    }
    
+   
   return(
     <div className="container">
 
@@ -72,7 +73,7 @@ const Signup=({setCreated})=>{
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
       </div>} 
       
-      <UserProfile user={user}  />
+      {user.Email && <img src={user.photoURL} className="avatar" style={{zIndex:'2'}} />} 
       
       <div>
       <p>Create EazyMart shopping account</p>

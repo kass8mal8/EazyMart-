@@ -11,7 +11,7 @@ const Header =({handleCart, created})=>{
     document.getElementById("toggle").classList.toggle("active")
   }
     
-  const src="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
+  const avatar="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
  
   const handleSignOut=()=>{
     
@@ -35,7 +35,7 @@ const Header =({handleCart, created})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
-        <UserProfile />
+         <img src={avatar} className="avatar" alt='avatar'/> 
         </div>
     </div>
   )
