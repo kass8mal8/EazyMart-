@@ -408,11 +408,11 @@ h3{
   align-items: center;
   text-align: center;
   position: absolute;
-  padding-top: 10%;
-  top: 15%;
+  padding-top: 25%;
+  top: 6%;
   bottom: 20%;
   width: 90%;
-  height:60%;
+  height:50%;
   z-index: 2;
 }
 .method-selection button{
@@ -428,7 +428,7 @@ h3{
 }
 .google-btn{
   text-justify: center;
-  margin-left: 15%;
+  margin-left: 20%;
 }
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
