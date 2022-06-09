@@ -409,7 +409,7 @@ h3{
   text-align: center;
   position: absolute;
   padding-top: 25%;
-  top: 6%;
+  top: 10%;
   bottom: 20%;
   width: 90%;
   height:50%;
@@ -418,12 +418,12 @@ h3{
 .method-selection button{
   background-color: hsl(25, 100%, 60%);
   border: 1px solid hsl(25, 100%, 60%);
-  padding: 15px;
+  padding: 12px;
   font-family: "Kumbh sans";
   font-weight: 500;
   font-size: 20px;
   margin-top: 15px;
-  width: 60%;
+  width: 58%;
   color: #fff;
 }
 .google-btn{

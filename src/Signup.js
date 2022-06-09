@@ -41,7 +41,7 @@ const Signup=({setCreated})=>{
      {selectMethod &&
       <div className="method-selection" >
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
-        <button onClick={() =>setSelectMethod(false) }>Sign In with Email</button>
+        <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
       </div>} 
       
       <div>
