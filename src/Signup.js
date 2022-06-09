@@ -3,6 +3,7 @@ import {signup} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleAuthProvider, signInWithPopup, getAuth} from "firebase/auth"
+import {GoogleButton} from 'react-google-button' 
 
 const Signup=({setCreated})=>{
   const emailRef=useRef()
@@ -15,7 +16,7 @@ const Signup=({setCreated})=>{
    async function handleSignup(){
        setIsPending(true) 
        try{
-          await( emailRef.current.value, passwordRef.current.value)
+          await signup( emailRef.current.value, passwordRef.current.value)
           setCreated(true)
        } catch{
           setIsValid(true)
