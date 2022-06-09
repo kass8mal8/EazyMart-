@@ -33,9 +33,9 @@ const Signup=({setCreated})=>{
 
   return(
     <div className="container">
-      {selectMethod && <div>
+      {selectMethod && <div style={{width:'100%',background:'whitesmoke',border:'1px solid whitesmoke', borderRadius:'3px' } } >
           <GoogleButton onClick={handleGoogleSignIn} />
-          <button onClick={() =>SetSelectMethod(false) } >Sign In with Email</button>
+          <button onClick={() =>SetSelectMethod(false) } style={{background:'hsl(25,100,60%',border:'1px solid hsl(25,100,60%)',padding:'12px'}} >Sign In with Email</button>
        </div>} 
 
       <div><p>Create EazyMart shopping account</p>
