@@ -1,5 +1,5 @@
  import { initializeApp } from "firebase/app";
- import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+ import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 
  // Your web app's Firebase configuration
  const firebaseConfig = {
@@ -14,9 +14,14 @@
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
  const auth=getAuth()
+ const provider=new GoogleAuthProvider()
 
- export function signup(email, password) {
+ export const signup=(email, password) =>{
         return createUserWithEmailAndPassword(auth, email, password) 
  } 
+ 
+ export const googlesignin=() => {
+     return signInWithPopup(auth, provider)
+ }
 
   

@@ -1,41 +1,38 @@
 import React,{useState, useRef} from 'react'
-import {signup} from './firebase '
+import {signup, googlesignin} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
-import {GoogleAuthProvider, signInWithPopup, getAuth} from "firebase/auth"
 import {GoogleButton} from 'react-google-button' 
 
 const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
-  const auth=getAuth() 
 
   const provider=new GoogleAuthProvider() 
   const [selectMethod, setSelectMethod] =useState(true) 
 
-   async function handleSignup(){
+   async const handleSignup=()=>{
        setIsPending(true) 
        try{
           await signup( emailRef.current.value, passwordRef.current.value)
           setCreated(true)
        } catch{
           setIsValid(true)
-       }
-     
+       } 
        setIsPending(false)
      
   }
+  
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
 
-  const handleGoogleSignIn=() =>{
-     signInWithPopup(auth, provider). then(()=>{
-       console.log("logged in successfully")
-     }).catch((err)=>{
-       console.log(err.message)
-     })
-  } 
-
+  async const handleGoogleSignIn=()=> {
+      try {
+        await googlesignin()
+      } catch (error) {
+        console.log(error.message);
+      }
+  }
   return(
     <div className="container">
 
@@ -48,13 +45,13 @@ const Signup=({setCreated})=>{
         {isValid && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
         <input ref={passwordRef} type="password" placeholder="password"  />
-        <button style={{marginTop:'20px'}}>sign up {isPending && <p>loading... </p>} </button>
+        <button style={{marginTop:'20px'}}> {isPending ? <>loading... </> : <>signup</>} </button>
      </form>
      </div> 
      
     {selectMethod && 
     <div className="method-selection" >
-        <GoogleButton onClick={handleGoogleSignIn} />
+        <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign In with Email</button>
      </div>}  
        
