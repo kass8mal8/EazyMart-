@@ -91,7 +91,7 @@ form label{
   height: 25px;
   margin-top: -3px;
 }
-#avatar{
+.avatar{
   position: absolute;
   right: 10px;
   top:18px;
@@ -425,11 +425,12 @@ h3{
   background-color: hsl(25, 100%, 60%);
   border: 1px solid hsl(25, 100%, 60%);
   padding: 12px; 
+  margin-left: 10%;
 }
 .google-btn{
   text-justify: center;
-  margin-left: 20%;
-}
+  margin-left: 10%;
+} 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
     display: block;
@@ -481,6 +482,9 @@ h3{
   } 
   .method-selection button{
       width: 59%;
+  }
+  .google-btn {
+     margin-left: 20%;
   }
 }
 @media screen and (min-width:600px){

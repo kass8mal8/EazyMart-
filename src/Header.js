@@ -5,7 +5,6 @@ import "./style.css"
 import {Link}  from 'react-router-dom'
 
 const Header =({handleCart, created})=>{
-  const avatar="https://assets.webiconspng.com/uploads/2017/01/Black-User-Icon-300x300.png"
 
   const handleToggle=()=>{
     document.getElementById("toggle").classList.toggle("active")
@@ -35,7 +34,6 @@ const Header =({handleCart, created})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
-        <img src={src} width="50px" id="avatar" />
         </div>
     </div>
   )

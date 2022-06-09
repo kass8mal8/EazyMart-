@@ -1,4 +1,4 @@
-import React,{useState, useRef} from 'react'
+import React,{useState, useRef, useHistory} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
@@ -30,6 +30,7 @@ const Signup=({setCreated})=>{
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
  
+  const history=useHistory()
  
   const [selectMethod, setSelectMethod] =useState(true) 
 
@@ -48,10 +49,12 @@ const Signup=({setCreated})=>{
      
   }
   
-  
+  const [user, setUser] =useState({})
   const handleGoogleSignIn=()=>{
       signInWithPopup(auth, provider)
-      .then(()=>{
+      .then((result)=>{
+          const user=result.user
+          setUser(user)
           console.log("logged in successfully :) ")
           setCreated(true)
       })
@@ -68,6 +71,8 @@ const Signup=({setCreated})=>{
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
       </div>} 
+      
+      <UsererProfile user={user} />
       
       <div>
       <p>Create EazyMart shopping account</p>
