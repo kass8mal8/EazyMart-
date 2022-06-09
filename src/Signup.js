@@ -1,31 +1,43 @@
 import React,{useState, useRef} from 'react'
-import {auth,provider} from './firebase '
+import {signup} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
-import { createUserWithEmailAndPassword} from "firebase/auth"
+import {GoogleAuthProvider, signInWithPopup, getAuth} from "firebase/auth"
 
 const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
+  const auth=getAuth() 
 
-   function handleSignup(){
+  const provider=new GoogleAuthProvider() 
+  const [selectMethod, setSelectMethod] =useState(true) 
+
+   async function handleSignup(){
+       setIsPending(true) 
+       try(
+          await( emailRef.current.value, passwordRef.current.value)
+          setCreated(true)
+       } catch{
+          setIsValid(true)
+       }
      
-       createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value). then(()=>{
-        setCreated(true)
-
-       }). catch((error)=>{
-        setIsValid(true)
-
-       })
-     
-       setIsPending()
+       setIsPending(false)
      
   }
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
 
+  const handleGoogleSigIn=() =>{
+     signInWithPopup(auth, provider) 
+  } 
+
   return(
     <div className="container">
+      {selectMethod && <div>
+          <GoogleButton onClick={handleGoogleSignIn} />
+          <button onClick={handleEmailSignIn} >Sign In with Email</button>
+       </div>} 
+
       <div><p>Create EazyMart shopping account</p>
       <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>
@@ -35,7 +47,7 @@ const Signup=({setCreated})=>{
         {isValid && <small>password less than 6 characters</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
         <input ref={passwordRef} type="password" placeholder="password"  />
-        <button style={{marginTop:'20px'}}>sign up {isPending && <>loading... </>} </button>
+        <button style={{marginTop:'20px'}}>sign up {isPending && <p>loading... </p>} </button>
      </form>
      </div> 
     </div>
