@@ -73,7 +73,7 @@ const Signup=({setCreated})=>{
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
       </div>} 
       
-      <UserProfile user={user} />
+      <UserProfile user={user}  />
       
       <div>
       <p>Create EazyMart shopping account</p>

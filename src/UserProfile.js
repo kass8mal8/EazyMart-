@@ -5,9 +5,12 @@ const UserProfile = ({user})=>{
 
    return (
       <div>
-          {user.Email ?
-          <img src = {user.photoURL} className="avatar" /> :
-          <img src={avatar} className="avatar" />} 
+      
+         <img src={avatar} className="avatar" alt='avatar'/>
+         
+          {user.Email && 
+          <img src = {user.photoURL} className="avatar" alt='avatar'/>  } 
+       
       </div>
      )
 }
