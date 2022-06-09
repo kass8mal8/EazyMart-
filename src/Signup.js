@@ -11,7 +11,7 @@ const Signup=({setCreated})=>{
   const provider=new GoogleAuthProvider() 
   const [selectMethod, setSelectMethod] =useState(true) 
 
-   async const handleSignup=()=>{
+  async function handleSignup(){
        setIsPending(true) 
        try{
           await signup( emailRef.current.value, passwordRef.current.value)
@@ -26,13 +26,13 @@ const Signup=({setCreated})=>{
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
 
-  async const handleGoogleSignIn=()=> {
+  async function handleGoogleSignIn(){
       try {
         await googlesignin()
       } catch (error) {
         console.log(error.message);
       }
-  }
+   }
   return(
     <div className="container">
 

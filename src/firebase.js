@@ -16,12 +16,12 @@
  const auth=getAuth()
  const provider=new GoogleAuthProvider()
 
- export const signup=(email, password) =>{
-        return createUserWithEmailAndPassword(auth, email, password) 
+ export function signup(email, password) {
+       return createUserWithEmailAndPassword(auth, email, password) 
  } 
  
- export const googlesignin=() => {
-     return signInWithPopup(auth, provider)
+ export function googlesignin(){
+      return signInWithPopup(auth, provider)
  }
 
   
