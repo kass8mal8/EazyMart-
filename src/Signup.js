@@ -2,6 +2,7 @@ import React,{useState, useRef, useHistory} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
+import UserProfile from './UserProfile'
 
 /*firebase authentication */
 import { initializeApp } from "firebase/app";
@@ -72,7 +73,7 @@ const Signup=({setCreated})=>{
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
       </div>} 
       
-      <UsererProfile user={user} />
+      <UserProfile user={user} />
       
       <div>
       <p>Create EazyMart shopping account</p>
