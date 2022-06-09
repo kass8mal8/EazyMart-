@@ -2,15 +2,15 @@ import React,{useState, useRef} from 'react'
 import {signup} from './firebase '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
-/*import {GoogleAuthProvider, signInWithPopup, getAuth} from "firebase/auth"*/
+import {GoogleAuthProvider, signInWithPopup, getAuth} from "firebase/auth"
 import {GoogleButton} from 'react-google-button' 
 
 const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
-  //const auth=getAuth() 
+  const auth=getAuth() 
 
- // const provider=new GoogleAuthProvider() 
+  const provider=new GoogleAuthProvider() 
   const [selectMethod, setSelectMethod] =useState(true) 
 
    async function handleSignup(){
@@ -29,7 +29,11 @@ const Signup=({setCreated})=>{
   const [isPending, setIsPending ]=useState(false)
 
   const handleGoogleSignIn=() =>{
-     /*signInWithPopup(auth, provider) */
+     signInWithPopup(auth, provider). then(()=>{
+       console.log("logged in successfully")
+     }).catch((err)=>{
+       console.log(err.message)
+     })
   } 
 
   return(
@@ -48,11 +52,11 @@ const Signup=({setCreated})=>{
      </form>
      </div> 
      
-    /*{selectMethod && 
+    {selectMethod && 
     <div style={{width:'100%',background:'whitesmoke',border:'1px solid whitesmoke', borderRadius:'3px' } } >
         <GoogleButton onClick={handleGoogleSignIn} />
         <button onClick={() =>setSelectMethod(false) } style={{background:'hsl(25,100,60%',border:'1px solid hsl(25,100,60%)',padding:'12px'}} >Sign In with Email</button>
-     </div>}  */
+     </div>}  
        
     </div>
   )
