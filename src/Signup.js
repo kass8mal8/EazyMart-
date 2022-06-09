@@ -38,10 +38,12 @@ const Signup=({setCreated})=>{
   return(
     <div className="container">
 
-    {selectMethod ? <div className="method-selection" >
+     {selectMethod &&
+      <div className="method-selection" >
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign In with Email</button>
-     </div> :
+      </div>} 
+      
       <div>
       <p>Create EazyMart shopping account</p>
       <form onSubmit={handleSignup} id="sign-form">
@@ -54,9 +56,7 @@ const Signup=({setCreated})=>{
         <input ref={passwordRef} type="password" placeholder="password"  />
         <button style={{marginTop:'20px'}}> {isPending ? <>loading... </> : <>signup</>} </button>
      </form>
-     </div>} 
-     
-  
+     </div> 
        
     </div>
   )
