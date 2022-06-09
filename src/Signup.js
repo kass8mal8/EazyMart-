@@ -8,7 +8,10 @@ const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
 
-  const provider=new GoogleAuthProvider() 
+  const [isValid, setIsValid]=useState(false)
+  const [isPending, setIsPending ]=useState(false)
+ 
+ 
   const [selectMethod, setSelectMethod] =useState(true) 
 
   async function handleSignup(){
@@ -23,9 +26,7 @@ const Signup=({setCreated})=>{
      
   }
   
-  const [isValid, setIsValid]=useState(false)
-  const [isPending, setIsPending ]=useState(false)
-
+  
   async function handleGoogleSignIn(){
       try {
         await googlesignin()
@@ -33,10 +34,16 @@ const Signup=({setCreated})=>{
         console.log(error.message);
       }
    }
+   
   return(
     <div className="container">
 
-      <div><p>Create EazyMart shopping account</p>
+    {selectMethod ? <div className="method-selection" >
+        <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
+        <button onClick={() =>setSelectMethod(false) }>Sign In with Email</button>
+     </div> :
+      <div>
+      <p>Create EazyMart shopping account</p>
       <form onSubmit={handleSignup} id="sign-form">
         <label>Email</label>
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
@@ -47,13 +54,9 @@ const Signup=({setCreated})=>{
         <input ref={passwordRef} type="password" placeholder="password"  />
         <button style={{marginTop:'20px'}}> {isPending ? <>loading... </> : <>signup</>} </button>
      </form>
-     </div> 
+     </div>} 
      
-    {selectMethod && 
-    <div className="method-selection" >
-        <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
-        <button onClick={() =>setSelectMethod(false) }>Sign In with Email</button>
-     </div>}  
+  
        
     </div>
   )
