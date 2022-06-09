@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-icons' 
 import "./style.css"
 import {Link}  from 'react-router-dom'
+import UserProfile from './UserProfile '
 
 const Header =({handleCart, created})=>{
 
@@ -34,6 +35,7 @@ const Header =({handleCart, created})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
+        <UserProfile />
         </div>
     </div>
   )

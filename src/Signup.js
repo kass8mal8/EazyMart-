@@ -1,4 +1,4 @@
-import React,{useState, useRef, useHistory} from 'react'
+import React,{useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
@@ -31,7 +31,6 @@ const Signup=({setCreated})=>{
   const [isValid, setIsValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
  
-  const history=useHistory()
  
   const [selectMethod, setSelectMethod] =useState(true) 
 
