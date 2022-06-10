@@ -14,7 +14,6 @@ const Clothes=({count,setCount})=>{
     {src:"https://cdn.shopify.com/s/files/1/1144/7088/files/RUSEEN_Reflective_Apparel-Reflective_Shirt-Unisex-Polyester-Birdseye_Knit-Orange-Long_Sleeve-Reflective_Running_Gear-Reflective_Clothing-Blank-Front.png?1469418611344383116", name:"Long sleeve shirt",price:250, id:3}, 
     {src:"https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png", name:"Shirt",price:99, id:4} 
 
-
   ]
   return(
     <div>
