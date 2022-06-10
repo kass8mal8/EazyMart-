@@ -7,7 +7,8 @@ import {useHistory} from 'react-router-dom'
 
 /*firebase authentication */
 import { initializeApp } from "firebase/app";
-import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth"
+import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
+import {signup} from './firebase'
 /*end of firebase auth*/
 
 const Signup=({setCreated})=>{
@@ -33,26 +34,19 @@ const Signup=({setCreated})=>{
   const [isPasswordValid, setIsPasswordValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
  
- /*exporting signout function*/
- export function signout(){
-   return signOut(auth)
- }
- /*end of signout function*/
+ 
   const [selectMethod, setSelectMethod] =useState(true) 
 
   const handleSignup=()=>{
        setIsPending(true) 
-       
-       createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-       .then(()=>{
-           console.log("logged in successfully :) ");
-            setCreated(true)
-            history.push('/products')
-       })
-       .catch((error)=>{
-           console.log(error.message);
-       })
-       setIsPending(false)
+       try{
+         await signup(emailRef.current.value, passwordRef.current.value )
+           setCreated(true)
+       }
+       catch(error) {
+         console.log(error.message)
+       }
+       setIsPending(false) 
      
   }
   
