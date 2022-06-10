@@ -133,11 +133,11 @@ form label{
   border-radius: 3px;
   border: 1px solid whitesmoke;
   z-index: 2;
-  opacity:1;
+  display:block;
   transition-duration: 0.2s;
 }
 .cart-content{
-  opacity:0;
+  display:none;
   transition-duration: 0.2s;
 }
 .container small{
