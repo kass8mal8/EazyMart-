@@ -6,8 +6,16 @@ import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
 import Signup from './Signup'
+import {auth} from './firebase'
+import {onAuthStateChanged} from 'firebase/auth'
 
 export default function App() {
+  
+   /*checking if user is currently logged in*/
+  const [user, setUser] =useState({})
+  onAuthStateChanged(auth, (currentUser)=>{
+     setUser(currentUser)
+  })
   
   const handleCart=()=>{
     setIsCartClicked(true)
@@ -24,7 +32,7 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header handleCart={handleCart} created={created}  setCreated={setCreated} />
+        <Header handleCart={handleCart} created={created}  setCreated={setCreated} user={user} />
          <div className="cart-content">
           <div style={{borderBottom:'2px solid #ccc',fontWeight:'bold'}}>
             <p>Cart</p>
@@ -41,7 +49,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
-          <Route path="/signup" element={<Signup created={created} setCreated={setCreated } />}/>
+          <Route path="/signup" element={<Signup created={created} setCreated={setCreated } user={user} />}/>
         </Routes>
         
       </BrowserRouter>

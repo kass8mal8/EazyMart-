@@ -6,7 +6,7 @@ import {Link}  from 'react-router-dom'
 import {auth} from './firebase'
 import {signOut} from 'firebase/auth'
 
-const Header =({handleCart,created,setCreated})=>{
+const Header =({handleCart,created,setCreated, user})=>{
 
   const handleToggle=()=>{
     document.getElementById("toggle").classList.toggle("active")
@@ -23,7 +23,11 @@ const Header =({handleCart,created,setCreated})=>{
           console.log(error.message)
       }
   }
- 
+  
+  
+  if (user) {
+      document.querySelector('.avatar').src='user.photoURL'
+  }
   return(
     <div>
         <div className="h-div">
@@ -53,7 +57,7 @@ const Header =({handleCart,created,setCreated})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
-         <img src={avatar} className="avatar" alt='avatar'/> 
+          <img src={avatar} className="avatar" alt='avatar'/>
         </div>
     </div>
   )

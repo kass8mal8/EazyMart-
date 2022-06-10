@@ -6,7 +6,7 @@ import {auth} from './firebase'
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, onAuthStateChanged} from 'firebase/auth'
 
 
-const Signup=({setCreated})=>{
+const Signup=({setCreated, user})=>{
   
   const emailRef=useRef()
   const passwordRef=useRef()
@@ -28,11 +28,7 @@ const Signup=({setCreated})=>{
      
   }
 
-  /*checking if user is currently logged in*/
-  const [user, setUser] =useState({})
-  onAuthStateChanged(auth, (currentUser)=>{
-     setUser(currentUser)
-  })
+
   
   
   const handleGoogleSignIn=async()=>{
