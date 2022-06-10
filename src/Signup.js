@@ -51,12 +51,6 @@ const Signup=({setCreated, user})=>{
       
       {selectMethod &&
       <div className="method-selection" >
-        {user &&
-        <div>
-           <h3>Email address:{user.Email} </h3>
-           <p>Name:{user.displayName} </p>
-           <img src={user.photoURL} className="avatar" style={{width:'27px', height:'27px', zIndex:'2'}} />
-        </div>} 
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email
         </button>
