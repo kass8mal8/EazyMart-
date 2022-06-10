@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-icons' 
 import "./style.css"
@@ -14,9 +14,13 @@ const Header =({handleCart, created})=>{
     
   const avatar="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
  
-  const handleSignOut=async()=>{
+  const [isUserSignedOut, setIsUserSignedOut]=useState(false)
+ 
+  async function handleSignOut() {
       try{
         await signOut()
+        setIsUserSignedOut(true)
+        alert("logged out successfully ")
       }catch(error ){
         console.log(error.message)
       }
@@ -30,13 +34,24 @@ const Header =({handleCart, created})=>{
         <h3>EazyMart</h3>
         
         <div className="top-nav" id="toggle">
-          <FontAwesomeIcon icon={faClose} className="top-nav--close" onClick={handleToggle}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faClose} className="top-nav--close" onClick={handleToggle}>
+          </FontAwesomeIcon>
         <ul className="top-nav--wrapper">
-          <li><Link to="/" >Home</Link></li>
-          <li><Link to="/products" >Products</Link></li>
-          <li><Link to="/about">About</Link></li> 
-          {created ? <li onClick={handleSignOut} >Signout</li> :
-          <li><Link to="/signup" >Create account </Link> </li>} 
+          <li>
+             <Link to="/" >Home</Link>
+          </li>
+          <li>
+             <Link to="/products" >Products</Link>
+          </li>
+          <li>
+              <Link to="/about">About</Link>
+          </li> 
+          {created ? 
+          <li onClick={handleSignOut} >Sign ou
+          </li> :
+          <li>
+              <Link to="/signup" >Sign up </Link> 
+          </li>} 
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
