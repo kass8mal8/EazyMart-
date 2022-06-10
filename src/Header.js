@@ -6,7 +6,7 @@ import {Link}  from 'react-router-dom'
 import {auth} from './firebase'
 import {signOut} from 'firebase/auth'
 
-const Header =({handleCart,created,setCreated, user})=>{
+const Header =({handleCart,isUserCreated,setIsUserCreated, user})=>{
 
   const handleToggle=()=>{
     document.getElementById("toggle").classList.toggle("active")
@@ -17,7 +17,7 @@ const Header =({handleCart,created,setCreated, user})=>{
   const handleSignOut = async ()=> {
       try{
           await signOut(auth)
-          setCreated(false)
+          setIsUserCreated(false)
           alert("logged out successfully ")
       }catch(error ){
           console.log(error.message)
@@ -46,7 +46,7 @@ const Header =({handleCart,created,setCreated, user})=>{
           <li>
               <Link to="/about">About</Link>
           </li> 
-          {created ? 
+          {isUserCreated ? 
           <li onClick={handleSignOut} >Sign out
           </li> :
           <li>

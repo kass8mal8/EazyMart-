@@ -6,7 +6,7 @@ import {auth} from './firebase'
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, onAuthStateChanged} from 'firebase/auth'
 
 
-const Signup=({setCreated, user})=>{
+const Signup=({setIsUserCreated, user})=>{
   
   const emailRef=useRef()
   const passwordRef=useRef()
@@ -19,7 +19,7 @@ const Signup=({setCreated, user})=>{
        setIsPending(true) 
        try{
           const user=await createUserWithEmailAndPassword (auth,emailRef.current.value, passwordRef.current.value )
-           setCreated(true)
+           setIsUserCreated(true)
        }
        catch(error) {
          console.log(error.message)
@@ -36,7 +36,7 @@ const Signup=({setCreated, user})=>{
      try{  
         const user=await signInWithPopup(auth, provider)
          console.log("logged in successfully :) ")
-         setCreated(true)
+         setIsUserCreated(true)
           
       }
       catch(error){
