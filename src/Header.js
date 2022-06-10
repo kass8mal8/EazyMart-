@@ -25,9 +25,7 @@ const Header =({handleCart,created,setCreated, user})=>{
   }
   
   
-  if (user) {
-      document.querySelector('.avatar').src='user.photoURL'
-  }
+  
   return(
     <div>
         <div className="h-div">
@@ -57,7 +55,9 @@ const Header =({handleCart,created,setCreated, user})=>{
         </ul>
         </div>
         <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
-          <img src={avatar} className="avatar" alt='avatar'/>
+          {user ? 
+           <img src={user.photoURL} className="avatar" alt='avatar'/>  : 
+           <img src={avatar} className="avatar" alt='avatar'/>} 
         </div>
     </div>
   )
