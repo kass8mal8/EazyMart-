@@ -2,12 +2,13 @@ import React,{useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
-import UserProfile from './UserProfile'
+import {useHistory} from 'react-router-dom'
 
 
 /*firebase authentication */
 import { initializeApp } from "firebase/app";
-import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
+import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth"
+/*end of firebase auth*/
 
 const Signup=({setCreated})=>{
   
@@ -29,10 +30,14 @@ const Signup=({setCreated})=>{
   const emailRef=useRef()
   const passwordRef=useRef()
 
-  const [isValid, setIsValid]=useState(false)
+  const [isPasswordValid, setIsPasswordValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
  
- 
+ /*exporting signout function*/
+ export function signOut(){
+   return signOut(auth)
+ }
+ /*end of signout function*/
   const [selectMethod, setSelectMethod] =useState(true) 
 
   const handleSignup=()=>{
@@ -42,6 +47,7 @@ const Signup=({setCreated})=>{
        .then(()=>{
            console.log("logged in successfully :) ");
             setCreated(true)
+            history.push('/products')
        })
        .catch((error)=>{
            console.log(error.message);
@@ -49,6 +55,8 @@ const Signup=({setCreated})=>{
        setIsPending(false)
      
   }
+  
+  const history =useHistory()
   
   const [user, setUser] =useState({})
   const handleGoogleSignIn=()=>{
@@ -58,6 +66,7 @@ const Signup=({setCreated})=>{
           setUser(user)
           console.log("logged in successfully :) ")
           setCreated(true)
+          history.push('/products')
       })
       .catch((error)=>{
           console.log(error.message)
@@ -72,9 +81,12 @@ const Signup=({setCreated})=>{
       <div className="method-selection" >
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
-      </div>} 
-      
-      {user.Email && <img src={user.photoURL} className="avatar" style={{zIndex:'2'}} />} 
+         
+        {user.Email && 
+         <img src={user.photoURL} />} 
+      </div>
+     } 
+    
       
       <div>
       <p>Create EazyMart shopping account</p>
@@ -83,7 +95,8 @@ const Signup=({setCreated})=>{
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
         <input ref={emailRef} type="email" placeholder="email@example.com"/>
         <label>Password</label>
-        {isValid && <small>password less than 6 characters</small>}
+        {isPasswordValid &&
+        <small>{error.message}</small>}
        <FontAwesomeIcon icon={faLock} className ="sign-icons"/>
         <input ref={passwordRef} type="password" placeholder="password"  />
         <button style={{marginTop:'20px'}}> {isPending ? <>loading... </> : <>signup</>} </button>

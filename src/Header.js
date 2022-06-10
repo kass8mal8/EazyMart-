@@ -4,6 +4,7 @@ import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-ico
 import "./style.css"
 import {Link}  from 'react-router-dom'
 import UserProfile from './UserProfile '
+import {signOut} from './Signup'
 
 const Header =({handleCart, created})=>{
 
@@ -13,8 +14,12 @@ const Header =({handleCart, created})=>{
     
   const avatar="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
  
-  const handleSignOut=()=>{
-    
+  const handleSignOut=async()=>{
+      try{
+        await signOut()
+      }catch(error ){
+        console.log(error.message)
+      }
   }
  
   return(
