@@ -402,11 +402,10 @@ h3{
 }
 .method-selection{
   background: whitesmoke;
-  background: whitesmoke;
+  border-radius: 5px;
   padding: 10px;
   justify-content: center;
   align-items: center;
-  text-align: center;
   position: absolute;
   padding-top: 25%;
   top: 12%;
@@ -426,11 +425,13 @@ h3{
   border: 1px solid hsl(25, 100%, 60%);
   padding: 12px; 
   margin-left: 5%;
-  width:40%;
+  width:50%;
 }
 .google-btn{
   text-justify: center;
   margin-left: 10%;
+  font-family: "kumbh sans";
+  font-weight: bold;
 } 
 @media screen and (max-width:500px){
   .top-nav--wrapper li{
@@ -481,6 +482,9 @@ h3{
   .count-handlers ul li:nth-of-type(2){
     margin-left: 30%;
   } 
+  .method-selection{
+    text-align: center;
+  }
   .method-selection button{
       width: 59%;
   }

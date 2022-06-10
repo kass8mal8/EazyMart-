@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-icons' 
 import "./style.css"
 import {Link}  from 'react-router-dom'
-import UserProfile from './UserProfile '
 import {auth} from './firebase'
+import {signOut} from 'firebase/auth'
 
 const Header =({handleCart,created,setCreated})=>{
 
@@ -14,7 +14,7 @@ const Header =({handleCart,created,setCreated})=>{
     
   const avatar="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
  
-  async function handleSignOut() {
+  const handleSignOut = async ()=> {
       try{
           await signOut(auth)
           setCreated(false)
