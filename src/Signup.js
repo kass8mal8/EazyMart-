@@ -34,7 +34,7 @@ const Signup=({setCreated})=>{
   const [isPending, setIsPending ]=useState(false)
  
  /*exporting signout function*/
- export function signOut(){
+ export function signout(){
    return signOut(auth)
  }
  /*end of signout function*/
