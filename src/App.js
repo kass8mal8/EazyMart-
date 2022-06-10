@@ -1,6 +1,6 @@
 import React, {useState } from "react";
 import "./style.css";
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Header from './Header'
 import Mainproducts from "./Mainproducts"
 import About from './About'
@@ -48,7 +48,7 @@ export default function App() {
            You have no items in your cart
          </p> :
          <div>
-            <p style={{marginTop:'5%', textAlign:'center'}} >You have <b>{count}</b> items in your cart</p>
+            <p style={{marginTop:'5%', textAlign:'center'}} >You have {count} items in your cart</p>
             <Link to="/cart" >
             <button style={{background:'hsl(25,100%,60%)',
               border:'1px solid hsl(25,100%,60%)',
