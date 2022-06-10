@@ -6,8 +6,6 @@ import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
 import Signup from './Signup'
-import {auth} from './firebase'
-import {onAuthStateChanged} from 'firebase/auth'
 
 export default function App() {
   
