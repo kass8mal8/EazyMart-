@@ -4,7 +4,7 @@ import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-ico
 import "./style.css"
 import {Link}  from 'react-router-dom'
 import UserProfile from './UserProfile '
-import {signout} from './firebase'
+import {auth} from './firebase'
 
 const Header =({handleCart,created,setCreated})=>{
 
@@ -16,7 +16,7 @@ const Header =({handleCart,created,setCreated})=>{
  
   async function handleSignOut() {
       try{
-          await signout()
+          await signOut(auth)
           setCreated(false)
           alert("logged out successfully ")
       }catch(error ){

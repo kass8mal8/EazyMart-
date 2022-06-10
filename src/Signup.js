@@ -2,8 +2,8 @@ import React,{useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
-import {signup, googleSignin} from './firebase'
-import {onAuthStateChanged, getAuth} from 'firebase/auth'
+import {auth} from './firebase'
+import {onAuthStateChanged, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 
 
 const Signup=({setCreated})=>{
@@ -18,7 +18,7 @@ const Signup=({setCreated})=>{
   const handleEmailSignup=async()=>{
        setIsPending(true) 
        try{
-           const user=await signup(emailRef.current.value, passwordRef.current.value )
+          const user=await createUserWithEmailAndPassword (auth,emailRef.current.value, passwordRef.current.value )
            setCreated(true)
        }
        catch(error) {
@@ -28,16 +28,16 @@ const Signup=({setCreated})=>{
      
   }
 
-  /*checking if user was currently logged in*/
-  const auth=getAuth()
+  /*checking if user is currently logged in*/
   const [user, setUser] =useState({})
   onAuthStateChanged(auth, (currentUser)=>{
      setUser(currentUser)
   })
   
   const handleGoogleSignIn=async()=>{
+    const provider=new GoogleAuthProvider()
      try{  
-         const user=await googleSignin()
+        const user=await signInWithPopup(auth, provider)
          console.log("logged in successfully :) ")
          setCreated(true)
           
@@ -51,20 +51,20 @@ const Signup=({setCreated})=>{
   return(
     <div className="container">
 
-     {selectMethod &&
+      
+      {selectMethod &&
       <div className="method-selection" >
         <h3>Logged in as:{user ?.Email} </h3>
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
-        <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
-         
-        {user.Email && 
-         <img src={user.photoURL} />} 
+        <button onClick={() =>setSelectMethod(false) }>Sign in with Email
+        </button>
       </div>
      } 
-    
-      
+     
       <div>
+      {/*signup form*/} 
       <p>Create EazyMart shopping account</p>
+      
       <form onSubmit={handleEmailSignup} id="sign-form">
         <label>Email</label>
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
@@ -76,7 +76,7 @@ const Signup=({setCreated})=>{
         <input ref={passwordRef} type="password" placeholder="password"  />
         <button style={{marginTop:'20px'}}> {isPending ? <>loading... </> : <>signup</>} </button>
      </form>
-     </div> 
+     </div>
        
     </div>
   )
