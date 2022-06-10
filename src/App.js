@@ -26,7 +26,6 @@ export default function App() {
   const [user, setUser] =useState({})
   onAuthStateChanged(auth, (currentUser)=>{
      setUser(currentUser)
-     setIsUserCreated(true)
   })
   
  
