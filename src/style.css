@@ -134,11 +134,9 @@ form label{
   border: 1px solid whitesmoke;
   z-index: 2;
   display:block;
-  transition-duration: 0.2s;
 }
 .cart-content{
   display:none;
-  transition-duration: 0.2s;
 }
 .container small{
   background: hsl(25, 100%, 60%);
