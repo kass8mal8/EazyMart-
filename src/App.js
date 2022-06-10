@@ -6,6 +6,7 @@ import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
 import Signup from './Signup'
+import Cart from './Cart'
 import {auth} from './firebase'
 import {onAuthStateChanged} from 'firebase/auth'
 
@@ -40,10 +41,25 @@ export default function App() {
             <p>Cart</p>
           </div>
           
-         {count < 1 ?<p style={{color:'gray',textAlign:'center',marginTop:'22%'}}>You have no items in your cart</p> :<div>
-           <div style={{display:'flex',flexFlow:'row'}}>
-           <img src={src} width="80" style={{background:'whitesmoke',borderRadius:'4px',marginTop:'5px'}} /></div>
-           <button style={{background:'hsl(25,100%,60%)',border:'1px solid hsl(25,100%,60%)',width:'100%',marginTop:'27%',padding:'10px',fontFamily:'kumbh sans',borderRadius:'2px'}}>checkout</button></div>}
+         {count < 1 ?
+         <p style={{color:'gray',
+           textAlign:'center',
+           marginTop:'22%'}}>
+           You have no items in your cart
+         </p> :
+         <div>
+            <p style={{marginTop:'5%', textAlign:'center'}} >You have <b>{count}</b> items in your cart</p>
+            <Link to="/cart" >
+            <button style={{background:'hsl(25,100%,60%)',
+              border:'1px solid hsl(25,100%,60%)',
+              width:'100%',
+              marginTop:'15%',
+              padding:'10px',
+              fontFamily:'kumbh sans',
+              borderRadius:'2px'}}>proceed to checkout
+             </button>
+             </Link>
+         </div>}
            
         </div>
         
@@ -52,6 +68,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
           <Route path="/signup" element={<Signup isUserCreated={isUserCreated} setIsUserCreated={setIsUserCreated } user={user} />}/>
+          <Route path="/cart" element={<Cart/>} />
         </Routes>
         
       </BrowserRouter>
