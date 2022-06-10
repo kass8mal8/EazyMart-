@@ -6,6 +6,8 @@ import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
 import Signup from './Signup'
+import {auth} from './firebase'
+import {onAuthStateChanged} from 'firebase/auth'
 
 export default function App() {
   
@@ -14,6 +16,7 @@ export default function App() {
     document.querySelector('.cart-content ').classList.toggle('show') 
   }
   
+
   const [count, setCount]=useState(0)
   const [isCartClicked,setIsCartClicked]=useState(false)
   const [created, setCreated]=useState(false)

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
 import {auth} from './firebase'
-import {onAuthStateChanged, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 
 
 const Signup=({setCreated})=>{
@@ -34,6 +34,7 @@ const Signup=({setCreated})=>{
      setUser(currentUser)
   })
   
+  
   const handleGoogleSignIn=async()=>{
     const provider=new GoogleAuthProvider()
      try{  
@@ -54,7 +55,12 @@ const Signup=({setCreated})=>{
       
       {selectMethod &&
       <div className="method-selection" >
-        <h3>Logged in as:{user ?.Email} </h3>
+        {user &&
+        <div>
+           <h3>Email address:{user ?.Email} </h3>
+           <p>Name:{user.displayName} </p>
+           <img src={user.photoURL} />
+        </div>} 
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email
         </button>
