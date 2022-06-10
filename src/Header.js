@@ -12,7 +12,7 @@ const Header =({handleCart,isUserCreated,setIsUserCreated, user})=>{
     document.getElementById("toggle").classList.toggle("active")
   }
     
-  const avatar="https://raw.githubusercontent.com/Infernus101/ProfileUI/0690f5e61a9f7af02c30342d4d6414a630de47fc/icon.png"
+  const avatar="https://www.freeiconspng.com/uploads/profile-icon-9.png"
  
   const handleSignOut = async ()=> {
       try{
