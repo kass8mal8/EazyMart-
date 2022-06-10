@@ -2,45 +2,23 @@ import React,{useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
+import {signup, googleSignin} from './firebase'
+import {onAuthStateChanged, getAuth} from 'firebase/auth'
 
-
-
-/*firebase authentication */
-import { initializeApp } from "firebase/app";
-import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
-import {signup} from './firebase'
-/*end of firebase auth*/
 
 const Signup=({setCreated})=>{
-  
-   // Your web app's Firebase configuration
-   const firebaseConfig = {
-       apiKey: "AIzaSyCIMC-BGvBeO4VUg7DbPJq-F0Z_z87LyAM",
-       authDomain: "eazy-mart-auth.firebaseapp.com",
-       projectId: "eazy-mart-auth",
-       storageBucket: "eazy-mart-auth.appspot.com",
-       messagingSenderId: "749499150162",
-       appId: "1:749499150162:web:f49130694ac44b3c40948b"
-   };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth=getAuth()
-  const provider=new GoogleAuthProvider()
   
   const emailRef=useRef()
   const passwordRef=useRef()
 
   const [isPasswordValid, setIsPasswordValid]=useState(false)
   const [isPending, setIsPending ]=useState(false)
- 
- 
   const [selectMethod, setSelectMethod] =useState(true) 
 
-  const handleSignup=()=>{
+  const handleEmailSignup=async()=>{
        setIsPending(true) 
        try{
-         await signup(emailRef.current.value, passwordRef.current.value )
+           const user=await signup(emailRef.current.value, passwordRef.current.value )
            setCreated(true)
        }
        catch(error) {
@@ -50,20 +28,23 @@ const Signup=({setCreated})=>{
      
   }
 
-  
+  /*checking if user was currently logged in*/
+  const auth=getAuth()
   const [user, setUser] =useState({})
-  const handleGoogleSignIn=()=>{
-      signInWithPopup(auth, provider)
-      .then((result)=>{
-          const user=result.user
-          setUser(user)
-          console.log("logged in successfully :) ")
-          setCreated(true)
+  onAuthStateChanged(auth, (currentUser)=>{
+     setUser(currentUser)
+  })
+  
+  const handleGoogleSignIn=async()=>{
+     try{  
+         const user=await googleSignin()
+         console.log("logged in successfully :) ")
+         setCreated(true)
           
-      })
-      .catch((error)=>{
+      }
+      catch(error){
           console.log(error.message)
-      })
+      }
    }
    
    
@@ -72,6 +53,7 @@ const Signup=({setCreated})=>{
 
      {selectMethod &&
       <div className="method-selection" >
+        <h3>{user.Email} </h3>
         <GoogleButton onClick={handleGoogleSignIn} className="google-btn"/>
         <button onClick={() =>setSelectMethod(false) }>Sign in with Email</button>
          
@@ -83,7 +65,7 @@ const Signup=({setCreated})=>{
       
       <div>
       <p>Create EazyMart shopping account</p>
-      <form onSubmit={handleSignup} id="sign-form">
+      <form onSubmit={handleEmailSignup} id="sign-form">
         <label>Email</label>
         <FontAwesomeIcon icon={faEnvelope} className="sign-icons"/>
         <input ref={emailRef} type="email" placeholder="email@example.com"/>
