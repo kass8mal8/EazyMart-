@@ -2,7 +2,7 @@ import React,{useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock,faEnvelope } from '@fortawesome/free-solid-svg-icons' 
 import {GoogleButton} from 'react-google-button'
-import {useHistory} from 'react-router-dom'
+
 
 
 /*firebase authentication */
@@ -49,8 +49,7 @@ const Signup=({setCreated})=>{
        setIsPending(false) 
      
   }
-  
-  const history =useHistory()
+
   
   const [user, setUser] =useState({})
   const handleGoogleSignIn=()=>{
@@ -60,7 +59,7 @@ const Signup=({setCreated})=>{
           setUser(user)
           console.log("logged in successfully :) ")
           setCreated(true)
-          history.push('/products')
+          
       })
       .catch((error)=>{
           console.log(error.message)
