@@ -29,27 +29,40 @@ const HomeAccessories=({count, setCount })=>{
       <h3>Footwear</h3>
       <div className="homestuff">
         <div>
-          <img src={blacksneaker} width="" onClick={()=>handleClick(blacksneaker)} />
-          <p>Black fashion sneakers <br/>ksh 999</p>
-          <button onClick={()=>setCount(count+1)}>add to cart
+          <img src={blacksneaker} 
+          onClick={()=>handleClick(blacksneaker)}/>
+          <p>Black fashion sneakers
+               <br/>ksh 999
+          </p>
+          <button
+               onClick={()=>setCount(count+1)}>
+               add to cart
           </button>
         </div>
         <div>
           <img src={whitesneaker} />
           <p>White brand sneakers<br/>ksh 1199</p>
-          <button onClick={()=>setCount(count+1)}>add to cart
+          <button 
+               onClick={()=>setCount(count+1)}>
+               add to cart
           </button>
         </div>
         <div>
           <img src={blacklady} />
           <p>Low heels ladies... <br/>ksh 525</p>
-          <button onClick={()=>setCount(count+1)}>add to cart 
+          <button 
+               onClick={()=>setCount(count+1)}>
+               add to cart 
           </button>
         </div>
         <div>
-          <img src={sportshoe} alt=""/>
-          <p>Sports fit <br/>ksh 599</p>
-          <button onClick={()=>setCount(count+1)}>add to cart
+          <img src={sportshoe} />
+          <p>Sports fit 
+               <br/>ksh 599
+          </p>
+          <button
+               onClick={()=>setCount(count+1)}>
+               add to cart
           </button>
         </div>
       </div> 

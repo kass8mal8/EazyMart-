@@ -25,7 +25,7 @@ const App=() =>{
   /*checking if user is currently logged in*/
   const [user, setUser] =useState({})
   onAuthStateChanged(auth, (currentUser)=>{
-     setUser(currentUser)
+      setUser(currentUser)
   })
   
  
@@ -34,19 +34,24 @@ const App=() =>{
   return (
     <div>
       <BrowserRouter>
-        <Header handleCart={handleCart}  isUserCreated={isUserCreated}  setIsUserCreated={setIsUserCreated} user={user} count={count} />
+        <Header
+            handleCart={handleCart}
+            isUserCreated={isUserCreated} 
+            setIsUserCreated={setIsUserCreated}
+            user={user} 
+            count={count} />
                   
          <div className="cart-content">
             <div style={
                {borderBottom:'2px solid #ccc',
-                fontWeight:'bold'}}>
+               fontWeight:'bold'}}>
                 <p>Cart</p>
             </div>
          {count < 1 ?
          <p style={{color:'gray',
-           textAlign:'center',
-           marginTop:'22%'}}>
-           You have no items in your cart
+            textAlign:'center',
+            marginTop:'22%'}}>
+            You have no items in your cart
          </p> :
          <div>
             <img src={src} width='100' />
@@ -57,7 +62,8 @@ const App=() =>{
               marginTop:'15%',
               padding:'10px',
               fontFamily:'kumbh sans',
-              borderRadius:'2px'}}>proceed to checkout
+              borderRadius:'2px'}}>
+              proceed to checkout
             </button>
          </div>}
          </div>
@@ -66,7 +72,9 @@ const App=() =>{
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
+          <Route path="/products" element={<Mainproducts 
+                  count={count} 
+                  setCount={setCount}/>} />
           <Route path="/signup" element={<Signup isUserCreated={isUserCreated} setIsUserCreated={setIsUserCreated } user={user} />}/>
         </Routes>
         

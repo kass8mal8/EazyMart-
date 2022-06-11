@@ -10,18 +10,35 @@ const Mainproducts=({count,setCount})=>{
   return(
     <div className="container">
       {count > 0 &&
-       <small id="count">{count}</small>}
+           <small id="count">
+               {count}
+           </small>}
        <section>
-         
          <p>Best shopping experience </p>
          <p>Discounts up to 50% off</p>
        </section>
-       <Clothes count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
-       <Smartphones count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
+       <Clothes 
+            count={count} 
+            setCount={setCount} 
+            isShown={isShown} 
+            setIsShown={setIsShown}/>
+       <Smartphones 
+            count={count} 
+            setCount={setCount} 
+            isShown={isShown} 
+            setIsShown={setIsShown}/>
 
-       <Foodstuff count={count}  setCount ={setCount} isShown={isShown} setIsShown={setIsShown}/>
+       <Foodstuff 
+            count={count}  
+            setCount ={setCount} 
+            isShown={isShown} 
+            setIsShown={setIsShown}/>
 
-       <HomeAccessories count={count} setCount={setCount} isShown={isShown} setIsShown={setIsShown}/>
+       <HomeAccessories 
+            count={count} 
+            setCount={setCount} 
+            isShown={isShown} 
+            setIsShown={setIsShown}/>
     </div>   
   )
 }
