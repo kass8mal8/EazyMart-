@@ -54,12 +54,11 @@ const Header =({handleCart,isUserCreated,setIsUserCreated, user, count})=>{
           </li>} 
         </ul>
         </div>
-        <FontAwesomeIcon icon={faCartShopping}className="h-div--cart" onClick={handleCart}/>
+        <FontAwesomeIcon icon={faCartShopping} className="h-div--cart" onClick={handleCart}/>
           {user ? 
            <img src={user.photoURL} className="avatar" alt='avatar'/>  : 
            <img src={avatar} className="avatar" alt='avatar' style={
-             {background:'whitesmoke', 
-              padding:'1px', 
+             {padding:'1px', 
               top:'15px'
              } } />} 
         </div>
