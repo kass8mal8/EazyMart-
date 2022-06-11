@@ -5,8 +5,7 @@ import Header from './Header'
 import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
-import Signup from './Signup'
-import Cart from './Cart'
+import Signup from './Signup' 
 import {auth} from './firebase'
 import {onAuthStateChanged} from 'firebase/auth'
 
@@ -52,7 +51,6 @@ export default function App() {
             {marginTop:'5%',
             textAlign:'center'}} >You have {count} items in your cart
             </p>
-            <Link to="/cart" >
             <button style={{background:'hsl(25,100%,60%)',
               border:'1px solid hsl(25,100%,60%)',
               width:'100%',
@@ -61,7 +59,6 @@ export default function App() {
               fontFamily:'kumbh sans',
               borderRadius:'2px'}}>proceed to checkout
              </button>
-             </Link>
          </div>}
          </div>
  
@@ -71,7 +68,6 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Mainproducts count={count} setCount={setCount}/>} />
           <Route path="/signup" element={<Signup isUserCreated={isUserCreated} setIsUserCreated={setIsUserCreated } user={user} />}/>
-          <Route path="/cart" element={<Cart/>} />
         </Routes>
         
       </BrowserRouter>
