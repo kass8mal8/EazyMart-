@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Header from './Header'
@@ -6,20 +6,19 @@ import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
 import Signup from './Signup' 
-import {auth} from './firebase'
-import {onAuthStateChanged} from 'firebase/auth'
+import { auth } from './firebase'
+import { onAuthStateChanged } from 'firebase/auth'
 
 const App=() =>{
   
 
   const handleCart=()=>{
-    setIsCartClicked(true)
-    document.querySelector('.cart-content ').classList.toggle('show') 
+     alert('hello world')
+     document.querySelector('.cart-content ').classList.toggle('show') 
   }
   
 
-  const [count, setCount]=useState(0)
-  const [isCartClicked,setIsCartClicked]=useState(false)
+  const [count, setCount]=useState(0) 
   const [isUserCreated, setIsUserCreated]=useState(false)
   
   /*checking if user is currently logged in*/
