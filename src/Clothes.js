@@ -1,12 +1,7 @@
 import React, {Link} from 'react'
 
 const Clothes=({count,setCount})=>{
-  const handleCount =()=>{
-    setCount(count+1)
-  }
-  const handleReduce=()=>{
-    setCount (count-1)
-  }
+  
   const images=[
     
     {src:"https://pngimg.com/uploads/jacket/jacket_PNG8057.png",name:"Polo Jacket",price:499, id:1 },
@@ -25,16 +20,9 @@ const Clothes=({count,setCount})=>{
          <img src={image.src} />
       
          <p>{image.name}<br/>ksh {image.price}</p>
-         <div className="count-handlers">
-           <ul>
-             <li onClick ={handleReduce}>-</li>
-             <li>{count} </li>
-             <li onClick ={handleCount }>+</li>
 
-           </ul>
-          </div>
-
-         <button onClick={handleCount}>add to cart</button>
+         <button onClick={()=>setCount(count+1)}>add to cart
+         </button>
         </div>
       )) }
     </div>

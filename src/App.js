@@ -9,7 +9,7 @@ import Signup from './Signup'
 import {auth} from './firebase'
 import {onAuthStateChanged} from 'firebase/auth'
 
-export default function App() {
+const App=() =>{
   
 
   const handleCart=()=>{
@@ -47,18 +47,16 @@ export default function App() {
            You have no items in your cart
          </p> :
          <div>
-            <p style={
-            {marginTop:'5%',
-            textAlign:'center'}} >You have {count} items in your cart
-            </p>
-            <button style={{background:'hsl(25,100%,60%)',
+            <img src={src} width='100' />
+            <button style={
+              {background:'hsl(25,100%,60%)',
               border:'1px solid hsl(25,100%,60%)',
               width:'100%',
               marginTop:'15%',
               padding:'10px',
               fontFamily:'kumbh sans',
               borderRadius:'2px'}}>proceed to checkout
-             </button>
+            </button>
          </div>}
          </div>
  
@@ -74,3 +72,4 @@ export default function App() {
     </div>
   );
 }
+export default App 

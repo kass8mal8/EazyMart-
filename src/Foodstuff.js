@@ -32,15 +32,16 @@ const handleShown=()=>{
       <div key={food.id}>
            <img src={food.src} alt="" onClick={handleShown} id="prod"/>
             <p>{food.name}<br/>ksh {food.price} </p>
-            <button onClick ={handleCount }>add to cart</button>
+            <button onClick ={()=>setCount(count+1)}>add to cart
+            </button>
         </div>
       ))}
-      </div></div> :
-      <div className="product-info">
-        <img src={image} alt="" width="200" id="product-image"/>
-       </div>}
-
-    </div>
+      </div>
+      </div> :
+          <div className="product-info">
+            <img src={image} alt="" width="200" id="product-image"/>
+          </div>}
+      </div>
   )
 }
 export default Foodstuff

@@ -9,7 +9,8 @@ const Mainproducts=({count,setCount})=>{
   const [isShown,setIsShown]=useState(true)
   return(
     <div className="container">
-      {count > 0 &&<small id="count">{count}</small>}
+      {count > 0 &&
+       <small id="count">{count}</small>}
        <section>
          
          <p>Best shopping experience </p>
