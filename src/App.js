@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./style.css";
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {
+   BrowserRouter, 
+   Routes, 
+   Route}
+from 'react-router-dom'
 import Header from './Header'
 import Mainproducts from "./Mainproducts"
 import About from './About'
@@ -76,10 +80,21 @@ const App =()=>{
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Mainproducts 
+          <Route 
+            path="/products" 
+            element={
+               <Mainproducts 
                   count={count} 
-                  setCount={setCount}/>} />
-          <Route path="/signup" element={<Signup isUserCreated={isUserCreated} setIsUserCreated={setIsUserCreated } user={user} />}/>
+                  setCount={setCount}/>
+               }/>
+          <Route
+            path="/signup" 
+            element={
+               <Signup 
+                  isUserCreated={isUserCreated}
+                  setIsUserCreated={setIsUserCreated } 
+                  user={user} />
+            }/>
         </Routes>
         
       </BrowserRouter>
