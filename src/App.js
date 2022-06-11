@@ -9,7 +9,7 @@ import Signup from './Signup'
 import { auth } from './firebase'
 import { onAuthStateChanged } from 'firebase/auth'
 
-const App=() =>{
+const App =()=>{
   
 
   const handleCart=()=>{
@@ -41,27 +41,32 @@ const App=() =>{
             count={count} />
                   
          <div className="cart-content">
-            <div style={
-               {borderBottom:'2px solid #ccc',
-               fontWeight:'bold'}}>
+            <div 
+            style={{
+               borderBottom:'2px solid #ccc',
+               fontWeight:'bold'
+            }}>
                 <p>Cart</p>
             </div>
          {count < 1 ?
-         <p style={{color:'gray',
+         <p style={{
+            color:'gray',
             textAlign:'center',
             marginTop:'22%'}}>
             You have no items in your cart
          </p> :
          <div>
             <img src={src} width='100' />
-            <button style={
-              {background:'hsl(25,100%,60%)',
+            <button 
+            style={{
+              background:'hsl(25,100%,60%)',
               border:'1px solid hsl(25,100%,60%)',
               width:'100%',
               marginTop:'15%',
               padding:'10px',
               fontFamily:'kumbh sans',
-              borderRadius:'2px'}}>
+              borderRadius:'2px'
+            }}>
               proceed to checkout
             </button>
          </div>}

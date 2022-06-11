@@ -57,10 +57,11 @@ const Header =({handleCart,isUserCreated,setIsUserCreated, user, count})=>{
         <FontAwesomeIcon icon={faCartShopping} className="h-div--cart" onClick={handleCart}/>
           {user ? 
            <img src={user.photoURL} className="avatar" alt='avatar'/>  : 
-           <img src={avatar} className="avatar" alt='avatar' style={
-             {padding:'1px', 
-              top:'15px'
-             } } />} 
+           <img src={avatar} className="avatar" alt='avatar' 
+               style={{
+                  padding:'1px', 
+                  top:'15px'
+               }} />} 
         </div>
     </div>
   )
