@@ -3,8 +3,7 @@ import "./style.css";
 import {
    BrowserRouter, 
    Routes, 
-   Route,
-   useNavigate}
+   Route}
 from 'react-router-dom'
 import Header from './Header'
 import Mainproducts from "./Mainproducts"
@@ -31,7 +30,6 @@ const App =()=>{
       setUser(currentUser)
   })
   
-  const navigate=useNavigate()
   
  
   const src= "https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png"
@@ -91,8 +89,7 @@ const App =()=>{
             path="/signup" 
             element={
                <Signup 
-                  user={user} 
-                  navigate={navigate} />
+                  user={user} />
             }/>
         </Routes>
         

@@ -9,9 +9,10 @@ import {
    GoogleAuthProvider, 
    onAuthStateChanged} 
 from 'firebase/auth'
+import {useNavigate} from 'react-router-dom'
 
 
-const Signup=({ user, navigate})=>{
+const Signup=({user})=>{
   
   const emailRef=useRef()
   const passwordRef=useRef()
@@ -20,7 +21,8 @@ const Signup=({ user, navigate})=>{
   const [isPending, setIsPending ]=useState(false)
   const [selectMethod, setSelectMethod] =useState(true) 
 
-
+  const navigate=useNavigate()
+  
   const handleEmailSignup=async()=>{
        setIsPending(true) 
        try{
