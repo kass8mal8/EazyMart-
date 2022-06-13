@@ -11,7 +11,7 @@ import {
 from 'firebase/auth'
 
 
-const Signup=({setIsUserCreated, user})=>{
+const Signup=({ user, navigate})=>{
   
   const emailRef=useRef()
   const passwordRef=useRef()
@@ -20,11 +20,12 @@ const Signup=({setIsUserCreated, user})=>{
   const [isPending, setIsPending ]=useState(false)
   const [selectMethod, setSelectMethod] =useState(true) 
 
+
   const handleEmailSignup=async()=>{
        setIsPending(true) 
        try{
           const user=await createUserWithEmailAndPassword (auth,emailRef.current.value, passwordRef.current.value )
-             setIsUserCreated(true)
+             navigate('/products')
        }
        catch(error) {
          console.log(error.message)
@@ -41,7 +42,7 @@ const Signup=({setIsUserCreated, user})=>{
      try{  
         const user=await signInWithPopup(auth, provider)
          console.log("logged in successfully :) ")
-         setIsUserCreated(true)
+         navigate('/products')
           
       }
       catch(error){
@@ -66,10 +67,11 @@ const Signup=({setIsUserCreated, user})=>{
      } 
      
       <div>
-      {/*signup form*/} 
       <p>Create EazyMart shopping account</p>
       
-      <form onSubmit={handleEmailSignup} id="sign-form">
+      <form
+         onSubmit={handleEmailSignup} 
+         id="sign-form">
         <label>Email</label>
         <FontAwesomeIcon 
             icon={faEnvelope} 

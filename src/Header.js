@@ -6,7 +6,7 @@ import "./style.css"
 import {auth} from './firebase'
 import {signOut} from 'firebase/auth'
 
-const Header =({handleCart,isUserCreated,setIsUserCreated, user, count})=>{
+const Header =({handleCart,user, count})=>{
 
   const handleToggle=()=>{
     document.getElementById("toggle").classList.toggle("active")
@@ -17,7 +17,6 @@ const Header =({handleCart,isUserCreated,setIsUserCreated, user, count})=>{
   const handleSignOut = async ()=> {
       try{
           await signOut(auth)
-          setIsUserCreated(false)
           alert("logged out successfully ")
       }catch(error ){
           console.log(error.message)
@@ -52,7 +51,7 @@ const Header =({handleCart,isUserCreated,setIsUserCreated, user, count})=>{
           <li>
               <Link to="/about">About</Link>
           </li> 
-          {isUserCreated ? 
+          {user ? 
           <li onClick={handleSignOut} >Sign out
           </li> :
           <li>

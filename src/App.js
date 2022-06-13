@@ -3,7 +3,8 @@ import "./style.css";
 import {
    BrowserRouter, 
    Routes, 
-   Route}
+   Route,
+   useNavigate}
 from 'react-router-dom'
 import Header from './Header'
 import Mainproducts from "./Mainproducts"
@@ -23,13 +24,14 @@ const App =()=>{
   
 
   const [count, setCount]=useState(0) 
-  const [isUserCreated, setIsUserCreated]=useState(false)
   
   /*checking if user is currently logged in*/
   const [user, setUser] =useState({})
   onAuthStateChanged(auth, (currentUser)=>{
       setUser(currentUser)
   })
+  
+  const navigate=useNavigate()
   
  
   const src= "https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png"
@@ -39,8 +41,6 @@ const App =()=>{
       <BrowserRouter>
         <Header
             handleCart={handleCart}
-            isUserCreated={isUserCreated} 
-            setIsUserCreated={setIsUserCreated}
             user={user} 
             count={count} />
                   
@@ -91,9 +91,8 @@ const App =()=>{
             path="/signup" 
             element={
                <Signup 
-                  isUserCreated={isUserCreated}
-                  setIsUserCreated={setIsUserCreated } 
-                  user={user} />
+                  user={user} 
+                  navigate={navigate} />
             }/>
         </Routes>
         
