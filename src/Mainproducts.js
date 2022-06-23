@@ -22,8 +22,8 @@ const Mainproducts = ( {isAccountCreated} ) => {
                fontWeight:'bold', 
                color:'gray'
             }}>
-                <p>Cart</p>
-            </div>
+            <p>Cart</p>
+         </div>
          {count < 1 ?
          <p style={{
             color:'gray',
@@ -57,8 +57,9 @@ const Mainproducts = ( {isAccountCreated} ) => {
       {/*End of cart content display */} 
          
       {count > 0  &&
-          <small className="badge-counter"> {count} 
-          </small>
+         <small className="badge-counter"> 
+            {count} 
+         </small>
       }
       
        <section>
@@ -71,6 +72,7 @@ const Mainproducts = ( {isAccountCreated} ) => {
             setCount={setCount} 
             isShown={isShown} 
             setIsShown={setIsShown}/>
+            
        <Smartphones 
             count={count} 
             setCount={setCount} 

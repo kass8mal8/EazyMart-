@@ -9,7 +9,7 @@ import {
    GoogleAuthProvider, 
    onAuthStateChanged} 
 from 'firebase/auth'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 
 
 const Signup=({user, setIsAccountCreated })=>{
@@ -101,6 +101,9 @@ const Signup=({user, setIsAccountCreated })=>{
                <>signin</>
             } 
         </button>
+        <p className='consent'>
+            By creating an account,I consent to EazyMart <Link to='#'>terms of service</Link> and abide by them.
+        </p>
      </form>
      </div>
        

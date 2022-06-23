@@ -8,7 +8,9 @@ a {
    text-decoration: none;
    color: black;
 }
-
+.consent a{
+   color: blue;
+}
 .sign-icons {
    color: hsl(25, 100%, 65%);
    margin-top: 12px;
