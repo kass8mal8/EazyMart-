@@ -30,7 +30,6 @@ const App =()=>{
   })
   
   
- 
   const src= "https://pluspng.com/img-png/clothes-png-hd-dress-shirt-png-hd-png-image-480.png"
 
   return (
@@ -57,6 +56,8 @@ const App =()=>{
                user={user} 
                setIsAccountCreated={setIsAccountCreated} />
             }/>
+          <Route path="/checkout"
+               element={ <Checkout/> }/>   
         </Routes>
         
       </BrowserRouter>

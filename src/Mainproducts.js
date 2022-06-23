@@ -10,6 +10,7 @@ const Mainproducts = ( {isAccountCreated} ) => {
    const [isShown, setIsShown] = useState(true)
    const [count, setCount] = useState(0)
    const navigate=useNavigate()
+   
    return (
       <div className="container">
         
@@ -55,14 +56,16 @@ const Mainproducts = ( {isAccountCreated} ) => {
       </div>
       {/*End of cart content display */} 
          
-      {count > 0 &&
+      {count > 0  &&
           <small className="badge-counter"> {count} 
           </small>
       }
+      
        <section>
          <p>Best shopping experience </p>
          <p>Discounts up to 50% off</p>
        </section>
+       
        <Clothes 
             count={count} 
             setCount={setCount} 
