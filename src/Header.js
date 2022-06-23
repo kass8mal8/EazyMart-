@@ -1,31 +1,32 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faCartShopping, faClose, } from '@fortawesome/free-solid-svg-icons' 
+import { faBars, faCartShopping, faClose, } from '@fortawesome/free-solid-svg-icons'
 import "./style.css"
-import {auth} from './firebase'
-import {signOut} from 'firebase/auth'
+import { auth } from './firebase'
+import { signOut } from 'firebase/auth'
 
-const Header =({handleCart,user, count})=>{
+const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
 
-  const handleToggle=()=>{
-    document.getElementById("toggle").classList.toggle("active")
-  }
-    
-  const avatar="https://cdn3.iconfinder.com/data/icons/gray-toolbar-3/512/user-512.png"
- 
-  const handleSignOut = async ()=> {
-      try{
-          await signOut(auth)
-          alert("logged out successfully ")
-      }catch(error ){
-          console.log(error.message)
+   const handleToggle = () => {
+      document.getElementById("toggle").classList.toggle("active")
+   }
+
+   const avatar = "https://cdn3.iconfinder.com/data/icons/gray-toolbar-3/512/user-512.png"
+
+   const handleSignOut = async () => {
+      try {
+         await signOut(auth)
+         alert("logged out successfully ")
+         setIsAccountCreated(false)
+      } catch (error) {
+         console.log(error.message)
       }
-  }
-  
-  
-  return(
-    <div>
+   }
+
+
+   return (
+      <div>
         <div className="h-div">
         
         <FontAwesomeIcon 
@@ -43,19 +44,28 @@ const Header =({handleCart,user, count})=>{
           </FontAwesomeIcon>
         <ul className="top-nav--wrapper">
           <li>
-             <Link to="/" >Home</Link>
+             <Link to="/" >
+                 Home
+             </Link>
           </li>
           <li>
-             <Link to="/products" >Products</Link>
+             <Link to="/products" >
+                 Products
+             </Link>
           </li>
           <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">
+                 About
+              </Link>
           </li> 
-          {user ? 
-          <li onClick={handleSignOut} >Sign out
+          {user && isAccountCreated ? 
+          <li onClick={handleSignOut} >
+            Sign out
           </li> :
           <li>
-              <Link to="/signup" >Sign up </Link> 
+              <Link to="/signup" >
+                 Sign up 
+              </Link> 
           </li>} 
         </ul>
         </div>
@@ -77,9 +87,10 @@ const Header =({handleCart,user, count})=>{
                style={{
                   padding:'1px', 
                   top:'15px'
-               }} />} 
+               }} />
+          } 
         </div>
     </div>
-  )
+   )
 }
 export default Header

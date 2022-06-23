@@ -20,14 +20,13 @@ const App =()=>{
      alert('hello world')
      document.querySelector('.cart-content ').classList.toggle('show') 
   }
-  
-
-  const [count, setCount]=useState(0) 
+  const [isAccountCreated,setIsAccountCreated ]=useState(false)
   
   /*checking if user is currently logged in*/
   const [user, setUser] =useState({})
   onAuthStateChanged(auth, (currentUser)=>{
       setUser(currentUser)
+      setIsAccountCreated(true)
   })
   
   
@@ -40,56 +39,23 @@ const App =()=>{
         <Header
             handleCart={handleCart}
             user={user} 
-            count={count} />
-                  
-         <div className="cart-content">
-            <div 
-            style={{
-               borderBottom:'2px solid #ccc',
-               fontWeight:'bold'
-            }}>
-                <p>Cart</p>
-            </div>
-         {count < 1 ?
-         <p style={{
-            color:'gray',
-            textAlign:'center',
-            marginTop:'22%'}}>
-            You have no items in your cart
-         </p> :
-         <div>
-            <img src={src} width='100' />
-            <button 
-            style={{
-              background:'hsl(25,100%,60%)',
-              border:'1px solid hsl(25,100%,60%)',
-              width:'100%',
-              marginTop:'15%',
-              padding:'10px',
-              fontFamily:'kumbh sans',
-              borderRadius:'2px'
-            }}>
-              proceed to checkout
-            </button>
-         </div>}
-         </div>
- 
-          
+            isAccountCreated={isAccountCreated} 
+            setIsAccountCreated={setIsAccountCreated} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route 
             path="/products" 
             element={
-               <Mainproducts 
-                  count={count} 
-                  setCount={setCount}/>
-               }/>
+            <Mainproducts
+               isAccountCreated={isAccountCreated} /> 
+            }/>
           <Route
             path="/signup" 
             element={
-               <Signup 
-                  user={user} />
+            <Signup 
+               user={user} 
+               setIsAccountCreated={setIsAccountCreated} />
             }/>
         </Routes>
         

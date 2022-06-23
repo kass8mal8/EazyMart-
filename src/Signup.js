@@ -12,7 +12,7 @@ from 'firebase/auth'
 import {useNavigate} from 'react-router-dom'
 
 
-const Signup=({user})=>{
+const Signup=({user, setIsAccountCreated })=>{
   
   const emailRef=useRef()
   const passwordRef=useRef()
@@ -28,6 +28,7 @@ const Signup=({user})=>{
        try{
           const user=await createUserWithEmailAndPassword (auth,emailRef.current.value, passwordRef.current.value )
              navigate('/products')
+             setIsAccountCreated(true)
        }
        catch(error) {
          console.log(error.message)
@@ -35,23 +36,18 @@ const Signup=({user})=>{
        setIsPending(false) 
      
   }
-
-
-  
   
   const handleGoogleSignIn=async()=>{
-    const provider=new GoogleAuthProvider()
+     const provider=new GoogleAuthProvider()
      try{  
         const user=await signInWithPopup(auth, provider)
-         console.log("logged in successfully :) ")
          navigate('/products')
-          
+         setIsAccountCreated(true)
       }
       catch(error){
           console.log(error.message)
       }
    }
-   
    
   return(
     <div className="container">
@@ -79,11 +75,14 @@ const Signup=({user})=>{
             icon={faEnvelope} 
             className="sign-icons">
         </FontAwesomeIcon>
-        <input ref={emailRef} type="email" placeholder="email@example.com"/>
+        <input 
+            ref={emailRef}
+            type="email"
+            placeholder="email@example.com"/>
         <label>Password</label>
         
         {isPasswordValid &&
-            <small>
+            <small className="error-message" >
                {error.message}
             </small>
         }
@@ -91,7 +90,10 @@ const Signup=({user})=>{
             icon={faLock} 
             className ="sign-icons">
        </FontAwesomeIcon>
-        <input ref={passwordRef} type="password" placeholder="password"  />
+        <input
+            ref={passwordRef}
+            type="password" 
+            placeholder="password"  />
         <button 
             style={{marginTop:'20px'}}> 
             {isPending ? 
