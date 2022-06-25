@@ -39,6 +39,7 @@ const Signup=({user, setIsAccountCreated })=>{
   
   const handleGoogleSignIn=async()=>{
      const provider=new GoogleAuthProvider()
+     setIsPending(true)
      try{  
         const user=await signInWithPopup(auth, provider)
          navigate('/products')
@@ -47,10 +48,19 @@ const Signup=({user, setIsAccountCreated })=>{
       catch(error){
           console.log(error.message)
       }
+      setIsPending(false)
    }
    
   return(
     <div className="container">
+    
+      {isPending && 
+         <div className='spinner'>
+            <p className='p1'></p>
+            <p className='p2'></p>
+            <p className='p3'>loading...</p>
+         </div>
+      } 
 
       {selectMethod &&
          <div className="method-selection" >
@@ -96,10 +106,7 @@ const Signup=({user, setIsAccountCreated })=>{
             placeholder="password"  />
         <button 
             style={{marginTop:'20px'}}> 
-            {isPending ? 
-               <>signing in... </> : 
-               <>signin</>
-            } 
+            signin
         </button>
         <p className='consent'>
             By creating an account,I consent to EazyMart <Link to='#'>terms of service</Link> and abide by them.

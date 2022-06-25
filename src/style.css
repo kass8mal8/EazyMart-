@@ -8,9 +8,11 @@ a {
    text-decoration: none;
    color: black;
 }
-.consent a{
+
+.consent a {
    color: blue;
 }
+
 .sign-icons {
    color: hsl(25, 100%, 65%);
    margin-top: 12px;
@@ -473,6 +475,88 @@ h3 {
    font-family: "kumbh sans";
    font-weight: bold;
 }
+
+/*Start of spinner animation */
+.spinner {
+   background: white;
+   height: 400px;
+   margin-top: 30%;
+   margin-left: 0%;
+}
+
+.p1 {
+   width: 20px;
+   height: 20px;
+   border: 2px solid hsl(25, 100%, 80%);
+   border-right-color: white;
+   border-left-color: white;
+   border-radius: 100%;
+   margin-top: 35%;
+   position: absolute;
+   margin-left: 45%;
+   animation: clockwise 4s ease infinite;
+}
+
+.p2 {
+   width: 20px;
+   height: 20px;
+   border: 2px solid hsl(25, 100%, 40%);
+   border-top-color: white;
+   border-bottom-color: white;
+   border-radius: 100%;
+   margin-top: 35%;
+   position: absolute;
+   margin-left: 45%;
+   animation: anticlockwise 4s ease infinite;
+}
+
+.p3 {
+   position: absolute;
+   margin-top: 45%;
+   margin-left: 43%;
+}
+
+@keyframes clockwise {
+   25% {
+      transform: rotate(360deg) scale(1.8);
+      border-width: 1px;
+   }
+
+   50% {
+      transform: rotate(720deg);
+   }
+
+   75% {
+      transform: rotate(1080deg) scale(1.8);
+      border-width: 1px;
+   }
+
+   100% {
+      transform: rotate(1440deg);
+   }
+}
+
+@keyframes anticlockwise {
+   25% {
+      transform: rotate(-360deg);
+   }
+
+   50% {
+      transform: rotate(-720deg) scale(2);
+      border-width: 1px;
+   }
+
+   75% {
+      transform: rotate(-1080deg);
+   }
+
+   100% {
+      transform: rotate(-1440deg) scale(2);
+      border-width: 1px;
+   }
+}
+
+/*End of spinner animation */
 
 @media screen and (max-width:500px) {
    .top-nav--wrapper li {
