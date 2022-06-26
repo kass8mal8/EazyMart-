@@ -46,7 +46,7 @@ const Mainproducts = ( {isAccountCreated} ) => {
               borderRadius:'2px'
             }} 
             onClick={()=>{
-               user && isAccountCreated
+               user
                ? navigate('/checkout')
                : navigate('/signup')}
             }>
