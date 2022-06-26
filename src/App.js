@@ -9,7 +9,8 @@ import Header from './Header'
 import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
-import Signup from './Signup' 
+import Signup from './Signup'
+import Checkout from './Checkout'
 import { auth } from './firebase'
 import { onAuthStateChanged } from 'firebase/auth'
 
