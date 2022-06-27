@@ -12,7 +12,7 @@ const Mainproducts = ( {isAccountCreated, user} ) => {
    const navigate=useNavigate()
    
    const handleCheckOut=()=>{
-      user ? 
+      user || isAccountCreated ? 
       navigate('/checkout') : navigate('/signup')
    }
    return (
