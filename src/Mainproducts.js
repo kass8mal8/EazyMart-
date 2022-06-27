@@ -11,6 +11,10 @@ const Mainproducts = ( {isAccountCreated} ) => {
    const [count, setCount] = useState(0)
    const navigate=useNavigate()
    
+   const handleCheckOut=()=>{
+      user ? 
+      navigate('/checkout') : navigate('/signup')
+   }
    return (
       <div className="container">
         
@@ -45,11 +49,7 @@ const Mainproducts = ( {isAccountCreated} ) => {
               fontFamily:'kumbh sans',
               borderRadius:'2px'
             }} 
-            onClick={()=>{
-               user
-               ? navigate('/checkout')
-               : navigate('/signup')}
-            }>
+            onClick={handleCheckOut} >
               proceed to checkout
             </button>
          </div>}

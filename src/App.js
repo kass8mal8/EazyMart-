@@ -10,6 +10,7 @@ import Mainproducts from "./Mainproducts"
 import About from './About'
 import Home from './Home'
 import Signup from './Signup'
+import Complete from './Complete'
 import { auth } from './firebase'
 import { onAuthStateChanged } from 'firebase/auth'
 
@@ -17,7 +18,6 @@ const App =()=>{
   
 
   const handleCart=()=>{
-     alert('hello world')
      document.querySelector('.cart-content ').classList.toggle('show') 
   }
   const [isAccountCreated,setIsAccountCreated ]=useState(false)
@@ -56,6 +56,7 @@ const App =()=>{
                user={user} 
                setIsAccountCreated={setIsAccountCreated} />
             }/>
+          <Route path="checkout" element={<Complete/>} />
         </Routes>
         
       </BrowserRouter>
