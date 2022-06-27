@@ -47,7 +47,8 @@ const App =()=>{
             path="/products" 
             element={
             <Mainproducts
-               isAccountCreated={isAccountCreated} /> 
+               isAccountCreated={isAccountCreated}
+               user={user} /> 
             }/>
           <Route
             path="/signup" 

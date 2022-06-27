@@ -5,7 +5,7 @@ import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
 import Foodstuff from './Foodstuff  '
 
-const Mainproducts = ( {isAccountCreated} ) => {
+const Mainproducts = ( {isAccountCreated, user} ) => {
 
    const [isShown, setIsShown] = useState(true)
    const [count, setCount] = useState(0)
