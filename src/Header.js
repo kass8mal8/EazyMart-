@@ -58,7 +58,7 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
                  About
               </Link>
           </li> 
-          {user ? 
+          {user || isAccountCreated ? 
           <li onClick={handleSignOut} >
             Sign out
           </li> :
