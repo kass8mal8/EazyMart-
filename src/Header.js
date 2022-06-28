@@ -58,7 +58,7 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
                  About
               </Link>
           </li> 
-          {user || isAccountCreated ? 
+          {user ? 
           <li onClick={handleSignOut} >
             Sign out
           </li> :
@@ -86,7 +86,7 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
                alt='icon' 
                style={{
                   padding:'1px', 
-                  top:'15px'
+                  opacity:'65%'
                }} />
           } 
         </div>
