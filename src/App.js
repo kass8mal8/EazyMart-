@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import gmail from './gmail.png '
 import "./style.css";
 import {
    BrowserRouter, 
@@ -35,7 +34,6 @@ const App =()=>{
   return (
     <div>
       <BrowserRouter>
-      <img src={gmail} />
         <Header
             handleCart={handleCart}
             user={user} 
