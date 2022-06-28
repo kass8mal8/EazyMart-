@@ -441,8 +441,7 @@ h3 {
 }
 
 .method-selection {
-   background: whitesmoke;
-   border-radius: 5px;
+   background: white;
    padding: 10px;
    justify-content: center;
    align-items: center;
