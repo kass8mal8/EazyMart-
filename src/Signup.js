@@ -34,6 +34,7 @@ const Signup=({user, setIsAccountCreated })=>{
          console.log(error.message)
        }
        setIsPending(false) 
+       setIsAccountCreated(true)
      
   }
   
@@ -109,6 +110,7 @@ const Signup=({user, setIsAccountCreated })=>{
             signin
         </button>
         <p className='consent'>
+        <input type='radio' />
             By creating an account,I consent to EazyMart <Link to='#'>terms of service</Link> and abide by them.
         </p>
      </form>
