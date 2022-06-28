@@ -34,7 +34,6 @@ const Signup=({user, setIsAccountCreated })=>{
          console.log(error.message)
        }
        setIsPending(false) 
-       setIsAccountCreated(true)
      
   }
   
