@@ -639,6 +639,10 @@ h3 {
    .clothes-container {
       grid-template-columns: 25% 25% 25% 25%;
    }
+   
+  .cart-content{
+     height: 55%;
+  }
 
    .about-container {
       display: grid;

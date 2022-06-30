@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import {useNavigate} from 'react-router-dom'
 import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
-import Clothes from './Clothes'
-import Foodstuff from './Foodstuff '
+import Clothes, {source} from './Clothes'
+import Foodstuff from './Foodstuff' 
 
 const Mainproducts = ( {isAccountCreated, user} ) => {
 
@@ -44,6 +44,7 @@ const Mainproducts = ( {isAccountCreated, user} ) => {
          </p> :
          <div>
             <p>
+              <img src={source} width='50'/>
                You have {count} items in your cart
             </p>
             <button 
