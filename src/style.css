@@ -554,6 +554,13 @@ h3 {
       border-width: 1px;
    }
 }
+.aside-content aside{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   gap: 10px;
+   justify-content: center;
+   align-items: center;
+}
 
 /*End of spinner animation */
 

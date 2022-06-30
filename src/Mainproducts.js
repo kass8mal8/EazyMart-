@@ -1,20 +1,27 @@
 import React, { useState } from "react"
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
-import Foodstuff from './Foodstuff' 
+import Foodstuff from './Foodstuff'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-const Mainproducts = ( {isAccountCreated, user} ) => {
+const Mainproducts = ({ isAccountCreated, user }) => {
 
    const [isShown, setIsShown] = useState(true)
    const [count, setCount] = useState(0)
-   const navigate=useNavigate()
-   
-   const handleCheckOut=()=>{
-      user || isAccountCreated ? 
-      navigate('/checkout') : navigate('/signup')
+   const navigate = useNavigate()
+
+   const handleCheckOut = () => {
+      user || isAccountCreated ?
+         navigate('/checkout') : navigate('/signup')
    }
+
+   const imgSrc = "https://pngimg.com/uploads/jacket/jacket_PNG8057.png"
+   const src = "https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Suit-PNG-Transparent-Image-250x300.png"
+
+
    return (
       <div className="container">
         
@@ -43,13 +50,43 @@ const Mainproducts = ( {isAccountCreated, user} ) => {
             You have no items in your cart
          </p> :
          <div>
-            <p>
-               You have {count} items in your cart
-            </p>
+            {/*checking if count is one to display a single image */}
+            {count == 1
+             ?<div style={{
+                display:'grid', 
+                gridTemplateColumns:'50% 50%', 
+                gap:'10px', 
+                justifyContent:'center'
+             }}>
+             <img src={imgSrc} width='50' />
+               <aside>
+                <FontAwesomeIcon icon={faTrash}/>
+                <p>ksh 499</p>
+              </aside>
+             </div>
+            : 
+             <div className='aside-content'>
+               <aside>
+                  <img src={imgSrc} width='50' />
+                  <nav>
+                   <FontAwesomeIcon icon={faTrash}/>
+                      <p>ksh 499</p>
+                  </nav>
+               </aside>
+               <aside>
+                  <img src={src} width='50' />
+                  <nav>
+                   <FontAwesomeIcon icon={faTrash}/>
+                   <p>ksh 1599</p>
+                  </nav>
+               </aside>
+             </div>
+            } 
+            
             <button 
             style={{
               background:'hsl(25,100%,60%)',
-              border:'1px solid hsl(25,100%,60%)',
+              border:'1px solid hsl(25,100%,60%)' ,
               width:'100%',
               marginTop:'15%',
               padding:'10px',
