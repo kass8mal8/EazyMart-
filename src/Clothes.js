@@ -31,7 +31,7 @@ const Clothes = ({ count, setCount }) => {
       }]
 
    const handleCount=(src,price)=>{
-      export const source=src
+      //const source=src
       setCount(count+1)
    }
 
