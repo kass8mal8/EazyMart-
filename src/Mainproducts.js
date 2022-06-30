@@ -56,13 +56,14 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                 display:'grid', 
                 gridTemplateColumns:'70% 30%', 
                 gap:'10px', 
-                justifyContent:'center'
+                justifyContent:'center', 
+                marginTop:'15px', 
+                marginLeft:'10px'
              }}>
              <img src={imgSrc} width='55' />
                <aside>
                 <FontAwesomeIcon icon={faTrashCan} style={{
-                   opacity:'65%',
-                   marginTop:'10px'
+                   opacity:'60%',
                 }}/>
                 <p>ksh 499</p>
               </aside>
@@ -73,8 +74,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                   <img src={imgSrc} width='55' />
                   <nav>
                    <FontAwesomeIcon icon={faTrashCan} style={{
-                      opacity:'65%', 
-                      marginTop:'10px'
+                      opacity:'60%', 
                    }}/>
                       <p>ksh 499</p>
                   </nav>
@@ -83,8 +83,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                   <img src={src} width='55' />
                   <nav>
                    <FontAwesomeIcon icon={faTrashCan} style={{
-                      opacity:'65%', 
-                      marginTop:'10px'
+                      opacity:'60%', 
                    }}/>
                    <p>ksh 1599</p>
                   </nav>
@@ -97,7 +96,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
               background:'hsl(25,100%,60%)',
               border:'1px solid hsl(25,100%,60%)' ,
               width:'100%',
-              marginTop:'15%',
+              marginTop:'5%',
               padding:'10px',
               fontFamily:'kumbh sans',
               borderRadius:'2px'
