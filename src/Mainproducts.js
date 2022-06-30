@@ -5,7 +5,7 @@ import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
 import Foodstuff from './Foodstuff'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 const Mainproducts = ({ isAccountCreated, user }) => {
 
@@ -54,29 +54,38 @@ const Mainproducts = ({ isAccountCreated, user }) => {
             {count == 1
              ?<div style={{
                 display:'grid', 
-                gridTemplateColumns:'50% 50%', 
+                gridTemplateColumns:'70% 30%', 
                 gap:'10px', 
                 justifyContent:'center'
              }}>
-             <img src={imgSrc} width='50' />
+             <img src={imgSrc} width='55' />
                <aside>
-                <FontAwesomeIcon icon={faTrash}/>
+                <FontAwesomeIcon icon={faTrashCan} style={{
+                   opacity:'65%',
+                   marginTop:'10px'
+                }}/>
                 <p>ksh 499</p>
               </aside>
              </div>
             : 
              <div className='aside-content'>
                <aside>
-                  <img src={imgSrc} width='50' />
+                  <img src={imgSrc} width='55' />
                   <nav>
-                   <FontAwesomeIcon icon={faTrash}/>
+                   <FontAwesomeIcon icon={faTrashCan} style={{
+                      opacity:'65%', 
+                      marginTop:'10px'
+                   }}/>
                       <p>ksh 499</p>
                   </nav>
                </aside>
                <aside>
-                  <img src={src} width='50' />
+                  <img src={src} width='55' />
                   <nav>
-                   <FontAwesomeIcon icon={faTrash}/>
+                   <FontAwesomeIcon icon={faTrashCan} style={{
+                      opacity:'65%', 
+                      marginTop:'10px'
+                   }}/>
                    <p>ksh 1599</p>
                   </nav>
                </aside>
