@@ -5,10 +5,10 @@ import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
 import Foodstuff from './Foodstuff  '
 
-const Mainproducts = ( {isAccountCreated, user} ) => {
+const Mainproducts = ( {isAccountCreated, user, count, setCount} ) => {
 
    const [isShown, setIsShown] = useState(true)
-   const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
    const navigate=useNavigate()
    
    const handleCheckOut=()=>{
@@ -56,11 +56,6 @@ const Mainproducts = ( {isAccountCreated, user} ) => {
       </div>
       {/*End of cart content display */} 
          
-      {count > 0  &&
-         <small className="badge-counter"> 
-            {count} 
-         </small>
-      }
       
        <section>
          <p>Best shopping experience </p>

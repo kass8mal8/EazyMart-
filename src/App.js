@@ -21,6 +21,7 @@ const App =()=>{
      document.querySelector('.cart-content ').classList.toggle('show') 
   }
   const [isAccountCreated,setIsAccountCreated ]=useState(false)
+  const [count, setCount]=useState(0)
   
   /*checking if user is currently logged in*/
   const [user, setUser] =useState({})
@@ -33,6 +34,12 @@ const App =()=>{
 
   return (
     <div>
+       {count > 0  &&
+         <small className="badge-counter"> 
+            {count} 
+         </small>
+      }
+      
       <BrowserRouter>
         <Header
             handleCart={handleCart}
@@ -47,7 +54,9 @@ const App =()=>{
             element={
             <Mainproducts
                isAccountCreated={isAccountCreated}
-               user={user} /> 
+               user={user} 
+               count={count} 
+               setCount={setCount} /> 
             }/>
           <Route
             path="/signup" 
