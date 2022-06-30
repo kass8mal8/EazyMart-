@@ -3,12 +3,12 @@ import {useNavigate} from 'react-router-dom'
 import Smartphones from "./Smartphones "
 import HomeAccessories from "./HomeAccessories "
 import Clothes from './Clothes'
-import Foodstuff from './Foodstuff  '
+import Foodstuff from './Foodstuff '
 
-const Mainproducts = ( {isAccountCreated, user, count, setCount} ) => {
+const Mainproducts = ( {isAccountCreated, user} ) => {
 
    const [isShown, setIsShown] = useState(true)
-  // const [count, setCount] = useState(0)
+   const [count, setCount] = useState(0)
    const navigate=useNavigate()
    
    const handleCheckOut=()=>{
@@ -17,6 +17,13 @@ const Mainproducts = ( {isAccountCreated, user, count, setCount} ) => {
    }
    return (
       <div className="container">
+        
+      {count > 0  &&
+         <small className="badge-counter"> 
+            {count} 
+         </small>
+      }
+      
         
       {/*Start of cart content display */}        
       <div className="cart-content">
