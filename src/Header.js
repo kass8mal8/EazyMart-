@@ -6,7 +6,7 @@ import "./style.css"
 import { auth } from './firebase'
 import { signOut } from 'firebase/auth'
 
-const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
+const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated }) => {
 
    const handleToggle = () => {
       document.getElementById("toggle").classList.toggle("active")
@@ -19,12 +19,14 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
          await signOut(auth)
          alert("logged out successfully ")
          setIsAccountCreated(false)
-      } catch (error) {
+      }
+      catch (error) {
          console.log(error.message)
       }
    }
 
 
+   const [title, setTitle] = useState('EazyMart')
    return (
       <div>
         <div className="h-div">
@@ -34,7 +36,7 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
           className="h-div--bars" 
           onClick={handleToggle}>
         </FontAwesomeIcon>
-        <h3>EazyMart</h3>
+        <h3>{title} </h3>
         
         <div className="top-nav" id="toggle">
           <FontAwesomeIcon 
@@ -43,17 +45,17 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
                onClick={handleToggle}>
           </FontAwesomeIcon>
         <ul className="top-nav--wrapper">
-          <li>
+          <li onClick={()=>title !== 'EazyMart' ? setTitle('EazyMart') : ''} >
              <Link to="/" >
                  Home
              </Link>
           </li>
-          <li>
+          <li onClick={()=>setTitle('Products')} >
              <Link to="/products" >
                  Products
              </Link>
           </li>
-          <li>
+          <li onClick={()=>setTitle('About')} >
               <Link to="/about">
                  About
               </Link>
@@ -62,7 +64,7 @@ const Header = ({ handleCart, user, setIsAccountCreated, isAccountCreated}) => {
           <li onClick={handleSignOut} >
             Sign out
           </li> :
-          <li>
+          <li onClick={()=>setTitle('Signup')} >
               <Link to="/signup" >
                  Sign up 
               </Link> 
