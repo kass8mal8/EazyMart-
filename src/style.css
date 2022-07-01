@@ -553,7 +553,7 @@ h3 {
       border-width: 1px;
    }
 }
-.aside-content aside{
+.aside-content {
    display: grid;
    padding: 5px;
    grid-template-columns: 70% 30%;
