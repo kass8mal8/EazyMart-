@@ -146,7 +146,7 @@ form label {
    top: 70px;
    width: 90%;
    left: 5%;
-   height: 50%;
+   height: auto;
    padding: 5px;
    background: white;
    border-radius: 3px;
@@ -613,7 +613,7 @@ h3 {
    }
 
    .cart-content {
-      height: 55%;
+      height: auto;
    }
 
    .slider img:nth-of-type(1) {
@@ -650,7 +650,8 @@ h3 {
    }
    
   .cart-content{
-     height: 55%;
+     width: 50%;
+     height: auto;
   }
 
    .about-container {

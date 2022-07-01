@@ -96,7 +96,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
               background:'hsl(25,100%,60%)',
               border:'1px solid hsl(25,100%,60%)' ,
               width:'100%',
-              marginTop:'5px',
+              marginTop:'15px' ,
               padding:'10px',
               fontFamily:'kumbh sans',
               borderRadius:'2px'
