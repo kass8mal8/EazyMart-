@@ -60,7 +60,12 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                 marginTop:'15px', 
                 marginLeft:'10px'
              }}>
-             <img src={imgSrc} width='55' />
+             <img src={imgSrc} width='60' 
+               style={{
+                  background:'whitesmoke', 
+                  padding:'5px', 
+                  borderRadius:'3px'
+               }}/>
                <aside>
                 <FontAwesomeIcon icon={faTrashCan} style={{
                    opacity:'60%',
@@ -71,7 +76,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
             : 
              <div className='aside-content'>
                <aside>
-                  <img src={imgSrc} width='55' />
+                  <img src={imgSrc} />
                   <nav>
                    <FontAwesomeIcon icon={faTrashCan} style={{
                       opacity:'60%', 
@@ -80,7 +85,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                   </nav>
                </aside>
                <aside>
-                  <img src={src} width='55' />
+                  <img src={src} />
                   <nav>
                    <FontAwesomeIcon icon={faTrashCan} style={{
                       opacity:'60%', 

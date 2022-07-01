@@ -555,12 +555,19 @@ h3 {
 }
 .aside-content aside{
    display: grid;
+   padding: 5px;
    grid-template-columns: 70% 30%;
    gap: 10px;
    justify-content: center;
    align-items: center;
    margin-top: 15px;
    margin-left: 10px;
+}
+.aside-content img{
+   background: whitesmoke;
+   padding: 5px;
+   border-radius:3px ;
+   width: 60px;
 }
 
 /*End of spinner animation */
@@ -646,6 +653,7 @@ h3 {
    
   .cart-content.show{
      width: 50%;
+     left: auto;
      right:15px;
   }
 
