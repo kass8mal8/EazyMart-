@@ -27,7 +27,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
    ]
 
    const handleDelete =(id)=>{
-      images.filter(img=>img.id !== id)
+      image.filter(img=>img.id !== id)
    }
 
    return (
