@@ -21,6 +21,11 @@ const Mainproducts = ({ isAccountCreated, user }) => {
    const imgSrc = "https://pngimg.com/uploads/jacket/jacket_PNG8057.png"
    const src = "https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Suit-PNG-Transparent-Image-250x300.png"
 
+   const image = [
+      { src: "https://pngimg.com/uploads/jacket/jacket_PNG8057.png", id: 1, price:499},
+      { src: "https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Suit-PNG-Transparent-Image-250x300.png", id: 2,price:1599 }
+   ]
+
 
    return (
       <div className="container">
@@ -74,26 +79,21 @@ const Mainproducts = ({ isAccountCreated, user }) => {
               </aside>
              </div>
             : 
-             <div className='aside-content'>
-               <aside>
-                  <img src={imgSrc} />
-                  <nav>
-                   <FontAwesomeIcon icon={faTrashCan} style={{
+            <div>
+            {image.map(img=>(
+               <div className='aside-content'>
+                <aside>
+                  <img src={img.src} />
+                </aside>
+                <nav>
+                  <FontAwesomeIcon icon={faTrashCan} style={{
                       opacity:'60%', 
                    }}/>
-                      <p>ksh 499</p>
-                  </nav>
-               </aside>
-               <aside>
-                  <img src={src} />
-                  <nav>
-                   <FontAwesomeIcon icon={faTrashCan} style={{
-                      opacity:'60%', 
-                   }}/>
-                   <p>ksh 1599</p>
-                  </nav>
-               </aside>
-             </div>
+                     <p>{img.price}</p>
+                </nav>
+               </div> )
+            )}
+            </div>
             } 
             
             <button 
