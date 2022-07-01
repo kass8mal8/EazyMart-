@@ -91,7 +91,7 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                 <nav>
                   <FontAwesomeIcon icon={faTrashCan} style={{
                       opacity:'60%', 
-                   }} onClick={()=>handleDelete(id)}/>
+                   }} onClick={()=>handleDelete(img.id)}/>
                      <p>{img.price}</p>
                 </nav>
                </div> )
