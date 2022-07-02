@@ -26,9 +26,9 @@ const Mainproducts = ({ isAccountCreated, user }) => {
       { src: "https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Suit-PNG-Transparent-Image-250x300.png", id: 2,price:1599 }
    ]
 
-  /* const handleDelete =(id)=>{
-      image.filter(img=>img.id !== id)
-   }*/
+   const handleDelete =(id)=>{
+      image.filter(Image=>Image.id !== id)
+   }
 
    return (
       <div className="container">
@@ -89,9 +89,11 @@ const Mainproducts = ({ isAccountCreated, user }) => {
                   <img src={img.src} />
                 </aside>
                 <nav>
-                  <FontAwesomeIcon icon={faTrashCan} style={{
+                  <FontAwesomeIcon 
+                     icon={faTrashCan} style={{
                       opacity:'60%', 
-                   }} onClick={image.filter(image=>image.id !== img.id)}/>
+                   }}
+                   onClick={()=>handleDelete(img.id)}/>
                      <p>{img.price}</p>
                 </nav>
                </div> )
