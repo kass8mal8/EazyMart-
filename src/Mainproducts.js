@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useNavigate } from 'react-router-dom'
-import Smartphones from "./Smartphones "
-import HomeAccessories from "./HomeAccessories "
+import Smartphones from "./Smartphones"
+import HomeAccessories from "./HomeAccessories"
 import Clothes from './Clothes'
 import Foodstuff from './Foodstuff'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
